@@ -1,0 +1,14 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+th {
+    text-align: center;
+    font-weight: bold;
+}
+td {
+    list-style: none;
+    line-height: 22px;
+    padding: 2px;
+}

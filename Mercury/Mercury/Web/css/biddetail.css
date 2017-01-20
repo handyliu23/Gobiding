@@ -1,0 +1,77 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    line-height: 2em;
+    color: #333;
+}
+
+table
+{
+    border-left: 1px solid #333;
+    border-top: 1px solid #333;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0px;
+    border-collapse: collapse;
+    boder: 1px solid #333;
+}
+th
+{
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap;
+    border: solid 1px #333;
+    height: 36px;
+    padding: 0 5px;
+    line-height: 2em;    
+}
+td
+{
+    list-style: none;
+    border: solid 1px #333;
+    margin: 0;
+    height: 36px;
+    padding: 0 5px;
+    line-height: 2em;
+}
+p
+{
+    adding: 5 5px;
+    padding-bottom: 10px;
+    clear: both;
+    text-indent: 2em;
+    line-height: 2em;
+    text-align: left;
+}
+
+.title1
+{
+    font-weight: bolder;
+}
+
+h1
+{
+    font-size: 18px;
+}
+li
+{
+    line-height: 2em;
+}
+h3
+{
+    font-size: 16px;
+    line-height: 3em;
+}
+ol
+{
+    padding-left: 1em;
+}
+span
+{
+    font-family: "微软雅黑";
+    font-size: 14px;
+    line-height: 2em;
+}
