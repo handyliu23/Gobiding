@@ -202,6 +202,11 @@ namespace MercurySpider
                 Console.WriteLine("ExceuteList Page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + spider.SpiderId + spider.SpiderName + ":" + page);
                 string html = "";
 
+                if (spider.SpiderUrl.Contains("chinabidding"))
+                {
+                    Thread.Sleep(3000);
+                }
+
                 try
                 {
                     #region 获取列表页
@@ -960,6 +965,9 @@ namespace MercurySpider
                     return;
                 }
 
+                //带链接的地址全部转为目标站点绝对地址
+                bid.BidContent = ChangeVirtualAddress(bid.BidContent, spider.SpiderUrl);
+
                 //content - attachment
                 bid.BidFileName = GetAttachElement("<a href=\"(?<v>.*?)\">(?<x>.*?)</a>", bid.BidContent, bid);
 
@@ -1092,6 +1100,28 @@ namespace MercurySpider
                 loger.Add(log);
                 return;
             }
+        }
+
+        public string ChangeVirtualAddress(string html, string url)
+        {
+            Regex regex = new Regex("href=\"(?<v>.*?)\"", RegexOptions.None);
+            Group g = null;
+            string host = GetDomainName(url);
+
+            var matchs = regex.Matches(html);
+            if (matchs.Count > 0)
+            {
+                for (int i = 0; i < matchs.Count; i++)
+                {
+                    g = matchs[i].Groups["v"];
+                    if (!g.Value.Contains("http://") && !g.Value.Contains("mailto"))   //虚拟地址 -〉绝对地址
+                    {
+                        html = html.Replace(g.Value, url.Substring(0, url.IndexOf(":")) + "://" + host + "/" + g.Value);
+                    }
+                }
+            }
+
+            return html;
         }
 
         private DateTime GetTime(string timeStamp)
@@ -1480,6 +1510,14 @@ namespace MercurySpider
                     request.Headers.Add("Accept-Language", "zh-CN,zh;q=0.8");
                     request.Headers.Add("Upgrade-Insecure-Requests", "1");
                 }
+                if (url.Contains("www.chinabidding.com"))
+                {
+                    request.ContentType = "application/x-www-form-urlencoded";
+                    request.Headers.Add("Origin", "http://www.chinabidding.com");
+                    request.Headers.Add("Accept-Encoding", "gzip, deflate");
+                    request.Headers.Add("Accept-Language", "zh-CN,zh;q=0.8");
+                    request.Headers.Add("Upgrade-Insecure-Requests", "1");
+                }
 
                 StringBuilder builder = new StringBuilder();
                 if (url.Contains("http://123.234.82.17/"))  //青岛市公共资源交易网
@@ -1505,7 +1543,7 @@ namespace MercurySpider
 
                 //获取响应内容  
                 string html = "";
-                if (url.Contains("www.jszb.com"))
+                if (url.Contains("www.jszb.com") || url.Contains("www.chinabidding.com"))
                 {
                     GZipStream gzip = new GZipStream(stream, CompressionMode.Decompress);
                     using (StreamReader reader = new StreamReader(gzip, Encoding.GetEncoding(encode)))
