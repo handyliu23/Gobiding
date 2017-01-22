@@ -260,6 +260,13 @@
                     <asp:TextBox runat="server" ID="txtCountPerPage" Width="100" Height="26"></asp:TextBox>
                 </td>
             </tr>
+            <tr>
+                <th>Cookies:
+                </th>
+                <td colspan="5">
+                    <asp:TextBox TextMode="MultiLine" runat="server" ID="txtCookies" Width="800" Height="48"></asp:TextBox>
+                </td>
+            </tr>
         </table>
         <br />
         <asp:HiddenField runat="server" ID="hdnSaveSpiderId" />

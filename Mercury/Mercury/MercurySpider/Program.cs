@@ -10,6 +10,7 @@ using System.Web;
 using Mercury.Model;
 using System.Data;
 using System.Globalization;
+using System.IO.Compression;
 
 namespace MercurySpider
 {
@@ -64,7 +65,7 @@ namespace MercurySpider
 
                 request.Method = "Get";
                 if (!url.Contains("www.jzggzy.cn") && !url.Contains("222.178.87.199") && !url.Contains("www.wzzbtb.com") && !url.Contains("www.zjggzy.gov.cn")
-                    && !url.Contains("www.zjbid.cn") && !url.Contains("www.gzggzy.cn"))
+                    && !url.Contains("www.zjbid.cn") && !url.Contains("www.gzggzy.cn") && !url.Contains("www.jszb.com"))
                 {
                     request.ContentType = "text/html; charset=utf-8";
                 }
@@ -104,6 +105,7 @@ namespace MercurySpider
                 {
                     request.Referer = "http://www.hljcg.gov.cn/xwzs!index.action";
                 }
+
                 var response = (HttpWebResponse)request.GetResponse();
                 StreamReader streamReader = new StreamReader(response.GetResponseStream(), Encoding.GetEncoding(encode));
                 Thread.Sleep(100);
@@ -302,6 +304,19 @@ namespace MercurySpider
                             requestCookies.Add(new HttpCookie("ASP.NET_SessionId", "ajfbigjvv1gmf345uu1huw45"));
                             requestCookies.Add(new HttpCookie("_gscu_1258514303", "83721715eccpwb17|pv:7"));
                             requestCookies.Add(new HttpCookie("_gscbrs_1258514303", "1"));
+                        }
+
+                        if (!string.IsNullOrEmpty(spider.Cookies))
+                        {
+                            List<string> cookiestr = spider.Cookies.Split(';').ToList();
+                            foreach (string cookie in cookiestr)
+                            {
+                                List<string> itemcookistr = cookie.Split('=').ToList();
+                                if (itemcookistr.Count > 1)
+                                {
+                                    requestCookies.Add(new HttpCookie(itemcookistr.ElementAt(0).Trim(), itemcookistr.ElementAt(1).Trim()));
+                                }
+                            }
                         }
 
                         html = GetHtmlByPost(spider.SpiderUrl, spider.EncodeType, page, spider.PageParameter, requestCookies);
@@ -1423,7 +1438,8 @@ namespace MercurySpider
                 }
 
                 request.Method = "POST";
-                request.ContentType = "application/x-www-form-urlencoded";
+                if (!url.Contains("www.jszb.com"))
+                    request.ContentType = "application/x-www-form-urlencoded";
                 request.CookieContainer = cc;
                 request.KeepAlive = true;
                 request.UserAgent =
@@ -1433,11 +1449,8 @@ namespace MercurySpider
                 request.Referer = url;
                 request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
                 request.Timeout = 10000;
+                request.ContentType = "application/json;charset=UTF-8";
 
-                if (url.Contains("www.qzzb.gov.cn"))
-                {
-                    request.ContentType = "application/json;charset=UTF-8";
-                }
                 if (url.Contains("ynggzy.com"))
                 {
                     request.Headers.Add("useajaxprep", "true");
@@ -1446,6 +1459,23 @@ namespace MercurySpider
                 if (url.Contains("hljcg.gov.cn"))
                 {
                     request.Headers.Add("Origin", "http://www.hljcg.gov.cn");
+                    request.Headers.Add("Accept-Encoding", "gzip, deflate");
+                    request.Headers.Add("Accept-Language", "zh-CN,zh;q=0.8");
+                    request.Headers.Add("Upgrade-Insecure-Requests", "1");
+                }
+                if (url.Contains("www.jszb.com"))
+                {
+                    request.ContentType = "application/x-www-form-urlencoded";
+                    request.Headers.Add("Origin", "http://www.jszb.com.cn");
+                    request.Headers.Add("Accept-Encoding", "gzip, deflate");
+                    request.Headers.Add("Accept-Language", "zh-CN,zh;q=0.8");
+                    request.Headers.Add("Upgrade-Insecure-Requests", "1");
+                }
+
+                if (url.Contains("www.ynggzyxx.gov"))
+                {
+                    request.ContentType = "application/x-www-form-urlencoded";
+                    request.Headers.Add("Origin", "http://www.ynggzyxx.gov.cn");
                     request.Headers.Add("Accept-Encoding", "gzip, deflate");
                     request.Headers.Add("Accept-Language", "zh-CN,zh;q=0.8");
                     request.Headers.Add("Upgrade-Insecure-Requests", "1");
@@ -1475,9 +1505,20 @@ namespace MercurySpider
 
                 //获取响应内容  
                 string html = "";
-                using (StreamReader reader = new StreamReader(stream, Encoding.GetEncoding(encode)))
+                if (url.Contains("www.jszb.com"))
                 {
-                    html = reader.ReadToEnd();
+                    GZipStream gzip = new GZipStream(stream, CompressionMode.Decompress);
+                    using (StreamReader reader = new StreamReader(gzip, Encoding.GetEncoding(encode)))
+                    {
+                        html = reader.ReadToEnd();
+                    }
+                }
+                else
+                {
+                    using (StreamReader reader = new StreamReader(stream, Encoding.GetEncoding(encode)))
+                    {
+                        html = reader.ReadToEnd();
+                    }
                 }
                 html = html.Replace("\r", string.Empty);
                 html = html.Replace("\n", string.Empty);
