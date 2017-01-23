@@ -303,6 +303,14 @@ namespace MercurySpider
                             requestCookies.Add(new HttpCookie("_gscu_1258514303", "83721715eccpwb17|pv:7"));
                             requestCookies.Add(new HttpCookie("_gscbrs_1258514303", "1"));
                         }
+                        if (spider.SpiderName == "常州市建设工程交易网")
+                        {
+                            requestCookies.Add(new HttpCookie("ASP.NET_SessionId", "4yzmoi454v5abjqq5rd1zxv1"));
+                            requestCookies.Add(new HttpCookie("_gscu_607014103", "85007631sqo42a54"));
+                            requestCookies.Add(new HttpCookie("_gscs_607014103", "85007631zb14rs54|pv:12"));
+                            requestCookies.Add(new HttpCookie("_gscbrs_607014103", "1"));
+                        }
+
 
                         html = GetHtmlByPost(spider.SpiderUrl, spider.EncodeType, page, spider.PageParameter, requestCookies);
                     }
@@ -603,6 +611,11 @@ namespace MercurySpider
                                 {
                                     string copytime = _bidPubTime;
                                     _bidPubTime = copytime.Substring(0, 4) + "-" + copytime.Substring(4, 2) + "-" + copytime.Substring(6, 2);
+                                }
+                                if (spider.SpiderName == "沧州市政府采购网")
+                                {
+                                    string copytime = _bidPubTime;
+                                    _bidPubTime = "1" + _bidPubTime;
                                 }
 
                                 string listExpression = g.Value.Replace("&amp;", "&");
