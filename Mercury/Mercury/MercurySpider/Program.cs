@@ -11,6 +11,7 @@ using Mercury.Model;
 using System.Data;
 using System.Globalization;
 using System.IO.Compression;
+using Mercury.BLL;
 
 namespace MercurySpider
 {
@@ -411,7 +412,7 @@ namespace MercurySpider
                 }
                 catch (Exception err)
                 {
-                    Mercury.Model.SpiderLogs log = new SpiderLogs();
+                    Mercury.Model.SpiderLogs log = new Mercury.Model.SpiderLogs();
                     log.IsSuccess = false;
                     log.Message = "列表页访问失败" + DateTime.Now.ToString();
                     log.SpiderName = spider.SpiderName;
@@ -666,7 +667,7 @@ namespace MercurySpider
 
         public void BeatHeart()
         {
-            Mercury.Model.Hearts heart = new Hearts();
+            Mercury.Model.Hearts heart = new Mercury.Model.Hearts();
             heart.HeartId = 1;
             heart.HeartName = "爬虫心跳";
             heart.HeartTime = DateTime.Now;
@@ -752,7 +753,7 @@ namespace MercurySpider
                 string v = null;
                 string[] values = null;
                 MatchCollection matchs = null;
-                Mercury.Model.Bids bid = new Bids();
+                Mercury.Model.Bids bid = new Mercury.Model.Bids();
 
                 //title
                 List<string> titleexpressions = spider.TitleExpression.Split(',').ToList();
@@ -800,7 +801,7 @@ namespace MercurySpider
 
                 if (string.IsNullOrEmpty(bid.BidTitle))
                 {
-                    Mercury.Model.SpiderLogs log = new SpiderLogs();
+                    Mercury.Model.SpiderLogs log = new Mercury.Model.SpiderLogs();
                     log.IsSuccess = false;
                     log.Message = "抓取信息不全" + bid.BidSourceURL;
                     log.SpiderName = url;
@@ -828,6 +829,7 @@ namespace MercurySpider
                 string pub = "";
                 if (!string.IsNullOrEmpty(bidTime))
                 {
+                    bidTime = CommonUtility.ReplaceHtmlTag(bidTime);
                     if (bidTime.Length < 6)
                     {
                         if (bidTime.Contains("/"))
@@ -955,7 +957,7 @@ namespace MercurySpider
                 bid.BidContent = RemoveScriptTag(bid.BidContent);
                 if (string.IsNullOrEmpty(bid.BidContent))
                 {
-                    Mercury.Model.SpiderLogs log = new SpiderLogs();
+                    Mercury.Model.SpiderLogs log = new Mercury.Model.SpiderLogs();
                     log.IsSuccess = false;
                     log.Message = "抓取信息不全" + bid.BidSourceURL;
                     log.SpiderName = url;
@@ -967,6 +969,7 @@ namespace MercurySpider
 
                 //带链接的地址全部转为目标站点绝对地址
                 bid.BidContent = ChangeVirtualAddress(bid.BidContent, spider.SpiderUrl);
+                bid.BidContent = CommonUtility.RemoveStyle(bid.BidContent);
 
                 //content - attachment
                 bid.BidFileName = GetAttachElement("<a href=\"(?<v>.*?)\">(?<x>.*?)</a>", bid.BidContent, bid);
@@ -1036,7 +1039,7 @@ namespace MercurySpider
                     }
                     else
                     {
-                        company = new CatchCompany();
+                        company = new Mercury.Model.CatchCompany();
                     }
 
                     company.VendorName = bid.BidCompanyName;
@@ -1074,7 +1077,7 @@ namespace MercurySpider
 
                 if (string.IsNullOrEmpty(bid.BidContent) || string.IsNullOrEmpty(bid.BidTitle))
                 {
-                    Mercury.Model.SpiderLogs log = new SpiderLogs();
+                    Mercury.Model.SpiderLogs log = new Mercury.Model.SpiderLogs();
                     log.IsSuccess = false;
                     log.Message = "抓取信息不全" + bid.BidSourceURL;
                     log.SpiderName = url;
@@ -1091,7 +1094,7 @@ namespace MercurySpider
             }
             catch (Exception err)
             {
-                Mercury.Model.SpiderLogs log = new SpiderLogs();
+                Mercury.Model.SpiderLogs log = new Mercury.Model.SpiderLogs();
                 log.IsSuccess = false;
                 log.Message = DateTime.Now.ToString() + err.Message;
                 log.SpiderName = url;
@@ -1133,7 +1136,7 @@ namespace MercurySpider
 
         public void ParseIndustryId(Mercury.Model.Bids bid)
         {
-            foreach (SmartCategorys smart in smarts)
+            foreach (Mercury.Model.SmartCategorys smart in smarts)
             {
                 List<string> keywords = smart.Keywords.Split(' ').ToList();
                 foreach (var keyword in keywords)
