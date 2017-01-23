@@ -61,6 +61,8 @@ namespace GoBidingJob
                         where += " and ProvinceId in (" + tracker.TrackerCityIds.Substring(0, tracker.TrackerCityIds.Length - 1) + ")";
                     }
 
+                    where += "";
+
                     bidList = bidService.GetModelList(5, where, " BidPublishTime desc");
 
                     var provinceList = provinceService.GetModelList(" ProvinceID in (" + tracker.TrackerCityIds.Substring(0, tracker.TrackerCityIds.Length - 1) + ")");

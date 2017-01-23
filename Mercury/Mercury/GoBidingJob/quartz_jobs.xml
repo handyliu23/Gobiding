@@ -11,17 +11,17 @@
   <schedule>
 
     <!--TestJob测试 任务配置-->
-    <!--<job>
-      <name>TestJob</name>
+    <job>
+      <name>EmailNoticeJob</name>
       <group>Test</group>
-      <description>TestJob测试</description>
+      <description>邮件推送Job</description>
       <job-type>GoBidingJob.SendSubscribeBidsJob,GoBidingJob</job-type>
       <durable>true</durable>
       <recover>false</recover>
-      <cron-expression>0 0/30 * * * ?</cron-expression>:每隔30分钟 
-<cron-expression>0 0/15 * * * ?</cron-expression>每隔15分钟 
-<cron-expression>0 0 0/1 * * ?</cron-expression>每隔1个小时 
-    </job>-->
+      <!--<cron-expression>0 0/30 * * * ?</cron-expression>:每隔30分钟
+      <cron-expression>0 0/15 * * * ?</cron-expression>每隔15分钟-->
+      <!--<cron-expression>0 0 0/1 * * ?</cron-expression>-->
+    </job>
     <job>
       <name>SpiderJob</name>
       <group>Spider</group>
@@ -32,6 +32,16 @@
     </job>
     <trigger>
       <cron>
+        <name>EmailNoticeJobTrigger</name>
+        <group>Test</group>
+        <job-name>EmailNoticeJob</job-name>
+        <job-group>Test</job-group>
+        <start-time>2017-01-01T00:00:00+08:00</start-time>
+        <cron-expression>0 0/5 * * * ?</cron-expression>
+      </cron>
+    </trigger>
+    <trigger>
+      <cron>
         <name>SpiderJobTrigger</name>
         <group>Spider</group>
         <job-name>SpiderJob</job-name>
@@ -40,6 +50,5 @@
         <cron-expression>0 0/5 * * * ?</cron-expression>
       </cron>
     </trigger>
-
   </schedule>
 </job-scheduling-data>
