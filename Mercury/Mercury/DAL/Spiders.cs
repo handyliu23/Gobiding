@@ -38,9 +38,9 @@ namespace Mercury.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into Spiders(");
-			strSql.Append("SpiderName,SpiderUrl,CreateTime,EncodeType,ListExpression,DetailExpression,SpiderUrlPrefix,DistrictId,CityId,ProvinceId,TitleExpression,PublishExpression,ContentExpression,SourceExpression,FilenameExpressoin,BidType,Status,HttpMethod,PageParameter,IsActive,SpiderType,PageCount,LastRunTime,CountPerPage)");
+			strSql.Append("SpiderName,SpiderUrl,CreateTime,EncodeType,ListExpression,DetailExpression,SpiderUrlPrefix,DistrictId,CityId,ProvinceId,TitleExpression,PublishExpression,ContentExpression,SourceExpression,FilenameExpressoin,BidType,Status,HttpMethod,PageParameter,IsActive,SpiderType,PageCount,LastRunTime,CountPerPage,Cookies)");
 			strSql.Append(" values (");
-			strSql.Append("@SpiderName,@SpiderUrl,@CreateTime,@EncodeType,@ListExpression,@DetailExpression,@SpiderUrlPrefix,@DistrictId,@CityId,@ProvinceId,@TitleExpression,@PublishExpression,@ContentExpression,@SourceExpression,@FilenameExpressoin,@BidType,@Status,@HttpMethod,@PageParameter,@IsActive,@SpiderType,@PageCount,@LastRunTime,@CountPerPage)");
+			strSql.Append("@SpiderName,@SpiderUrl,@CreateTime,@EncodeType,@ListExpression,@DetailExpression,@SpiderUrlPrefix,@DistrictId,@CityId,@ProvinceId,@TitleExpression,@PublishExpression,@ContentExpression,@SourceExpression,@FilenameExpressoin,@BidType,@Status,@HttpMethod,@PageParameter,@IsActive,@SpiderType,@PageCount,@LastRunTime,@CountPerPage,@Cookies)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@SpiderName", SqlDbType.VarChar,100),
@@ -66,7 +66,8 @@ namespace Mercury.DAL
 					new SqlParameter("@SpiderType", SqlDbType.Int,4),
 					new SqlParameter("@PageCount", SqlDbType.Int,4),
 					new SqlParameter("@LastRunTime", SqlDbType.DateTime),
-					new SqlParameter("@CountPerPage", SqlDbType.Int,4)};
+					new SqlParameter("@CountPerPage", SqlDbType.Int,4),
+					new SqlParameter("@Cookies", SqlDbType.VarChar,500)};
 			parameters[0].Value = model.SpiderName;
 			parameters[1].Value = model.SpiderUrl;
 			parameters[2].Value = model.CreateTime;
@@ -91,6 +92,7 @@ namespace Mercury.DAL
 			parameters[21].Value = model.PageCount;
 			parameters[22].Value = model.LastRunTime;
 			parameters[23].Value = model.CountPerPage;
+			parameters[24].Value = model.Cookies;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -132,7 +134,8 @@ namespace Mercury.DAL
 			strSql.Append("SpiderType=@SpiderType,");
 			strSql.Append("PageCount=@PageCount,");
 			strSql.Append("LastRunTime=@LastRunTime,");
-			strSql.Append("CountPerPage=@CountPerPage");
+			strSql.Append("CountPerPage=@CountPerPage,");
+			strSql.Append("Cookies=@Cookies");
 			strSql.Append(" where SpiderId=@SpiderId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@SpiderName", SqlDbType.VarChar,100),
@@ -159,6 +162,7 @@ namespace Mercury.DAL
 					new SqlParameter("@PageCount", SqlDbType.Int,4),
 					new SqlParameter("@LastRunTime", SqlDbType.DateTime),
 					new SqlParameter("@CountPerPage", SqlDbType.Int,4),
+					new SqlParameter("@Cookies", SqlDbType.VarChar,500),
 					new SqlParameter("@SpiderId", SqlDbType.BigInt,8)};
 			parameters[0].Value = model.SpiderName;
 			parameters[1].Value = model.SpiderUrl;
@@ -184,7 +188,8 @@ namespace Mercury.DAL
 			parameters[21].Value = model.PageCount;
 			parameters[22].Value = model.LastRunTime;
 			parameters[23].Value = model.CountPerPage;
-			parameters[24].Value = model.SpiderId;
+			parameters[24].Value = model.Cookies;
+			parameters[25].Value = model.SpiderId;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -248,7 +253,7 @@ namespace Mercury.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 SpiderId,SpiderName,SpiderUrl,CreateTime,EncodeType,ListExpression,DetailExpression,SpiderUrlPrefix,DistrictId,CityId,ProvinceId,TitleExpression,PublishExpression,ContentExpression,SourceExpression,FilenameExpressoin,BidType,Status,HttpMethod,PageParameter,IsActive,SpiderType,PageCount,LastRunTime,CountPerPage from Spiders ");
+			strSql.Append("select  top 1 SpiderId,SpiderName,SpiderUrl,CreateTime,EncodeType,ListExpression,DetailExpression,SpiderUrlPrefix,DistrictId,CityId,ProvinceId,TitleExpression,PublishExpression,ContentExpression,SourceExpression,FilenameExpressoin,BidType,Status,HttpMethod,PageParameter,IsActive,SpiderType,PageCount,LastRunTime,CountPerPage,Cookies from Spiders ");
 			strSql.Append(" where SpiderId=@SpiderId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@SpiderId", SqlDbType.BigInt)
@@ -383,6 +388,10 @@ namespace Mercury.DAL
 				{
 					model.CountPerPage=int.Parse(row["CountPerPage"].ToString());
 				}
+				if(row["Cookies"]!=null)
+				{
+					model.Cookies=row["Cookies"].ToString();
+				}
 			}
 			return model;
 		}
@@ -393,7 +402,7 @@ namespace Mercury.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select SpiderId,SpiderName,SpiderUrl,CreateTime,EncodeType,ListExpression,DetailExpression,SpiderUrlPrefix,DistrictId,CityId,ProvinceId,TitleExpression,PublishExpression,ContentExpression,SourceExpression,FilenameExpressoin,BidType,Status,HttpMethod,PageParameter,IsActive,SpiderType,PageCount,LastRunTime,CountPerPage ");
+			strSql.Append("select SpiderId,SpiderName,SpiderUrl,CreateTime,EncodeType,ListExpression,DetailExpression,SpiderUrlPrefix,DistrictId,CityId,ProvinceId,TitleExpression,PublishExpression,ContentExpression,SourceExpression,FilenameExpressoin,BidType,Status,HttpMethod,PageParameter,IsActive,SpiderType,PageCount,LastRunTime,CountPerPage,Cookies ");
 			strSql.Append(" FROM Spiders ");
 			if(strWhere.Trim()!="")
 			{
@@ -413,7 +422,7 @@ namespace Mercury.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" SpiderId,SpiderName,SpiderUrl,CreateTime,EncodeType,ListExpression,DetailExpression,SpiderUrlPrefix,DistrictId,CityId,ProvinceId,TitleExpression,PublishExpression,ContentExpression,SourceExpression,FilenameExpressoin,BidType,Status,HttpMethod,PageParameter,IsActive,SpiderType,PageCount,LastRunTime,CountPerPage ");
+			strSql.Append(" SpiderId,SpiderName,SpiderUrl,CreateTime,EncodeType,ListExpression,DetailExpression,SpiderUrlPrefix,DistrictId,CityId,ProvinceId,TitleExpression,PublishExpression,ContentExpression,SourceExpression,FilenameExpressoin,BidType,Status,HttpMethod,PageParameter,IsActive,SpiderType,PageCount,LastRunTime,CountPerPage,Cookies ");
 			strSql.Append(" FROM Spiders ");
 			if(strWhere.Trim()!="")
 			{

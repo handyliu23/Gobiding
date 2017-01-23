@@ -57,6 +57,7 @@ namespace Mercury.Web
             spider.PageCount = string.IsNullOrEmpty(txtPageCount.Text) ? 10 : int.Parse(txtPageCount.Text);
             spider.PublishExpression = txtPublishExpression.Text.Trim();
             spider.CountPerPage = int.Parse(txtCountPerPage.Text.Trim());
+            spider.Cookies = txtCookies.Text.Trim();
             spider.IsActive = true;
 
             new BLL.Spiders().Add(spider);
@@ -105,6 +106,7 @@ namespace Mercury.Web
             ddlSpiderType.SelectedValue = spider.SpiderType.ToString();
             txtPageCount.Text = spider.PageCount.ToString();
             txtCountPerPage.Text = spider.CountPerPage.ToString();
+            txtCookies.Text = spider.Cookies.ToString();
 
             initProvince(spider.ProvinceId ?? 0);
             initCity(spider.ProvinceId ?? 0, spider.CityId ?? 0);
@@ -137,6 +139,7 @@ namespace Mercury.Web
             spider.SpiderType = int.Parse(ddlSpiderType.SelectedValue);
             spider.PageCount = string.IsNullOrEmpty(txtPageCount.Text) ? 10 : int.Parse(txtPageCount.Text);
             spider.CountPerPage = int.Parse(txtCountPerPage.Text);
+            spider.Cookies = txtCookies.Text;
 
             new BLL.Spiders().Update(spider);
 

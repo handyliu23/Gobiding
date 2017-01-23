@@ -35,6 +35,7 @@ namespace Mercury.Model
 		private int? _pagecount;
 		private DateTime? _lastruntime;
 		private int? _countperpage;
+		private string _cookies;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -234,6 +235,14 @@ namespace Mercury.Model
 		{
 			set{ _countperpage=value;}
 			get{return _countperpage;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string Cookies
+		{
+			set{ _cookies=value;}
+			get{return _cookies;}
 		}
 		#endregion Model
 

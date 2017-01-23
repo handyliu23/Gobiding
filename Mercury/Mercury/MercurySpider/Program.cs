@@ -10,6 +10,8 @@ using System.Web;
 using Mercury.Model;
 using System.Data;
 using System.Globalization;
+using System.IO.Compression;
+using Mercury.BLL;
 
 namespace MercurySpider
 {
@@ -64,7 +66,7 @@ namespace MercurySpider
 
                 request.Method = "Get";
                 if (!url.Contains("www.jzggzy.cn") && !url.Contains("222.178.87.199") && !url.Contains("www.wzzbtb.com") && !url.Contains("www.zjggzy.gov.cn")
-                    && !url.Contains("www.zjbid.cn") && !url.Contains("www.gzggzy.cn"))
+                    && !url.Contains("www.zjbid.cn") && !url.Contains("www.gzggzy.cn") && !url.Contains("www.jszb.com"))
                 {
                     request.ContentType = "text/html; charset=utf-8";
                 }
@@ -104,6 +106,7 @@ namespace MercurySpider
                 {
                     request.Referer = "http://www.hljcg.gov.cn/xwzs!index.action";
                 }
+
                 var response = (HttpWebResponse)request.GetResponse();
                 StreamReader streamReader = new StreamReader(response.GetResponseStream(), Encoding.GetEncoding(encode));
                 Thread.Sleep(100);
@@ -199,6 +202,11 @@ namespace MercurySpider
             {
                 Console.WriteLine("ExceuteList Page>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" + spider.SpiderId + spider.SpiderName + ":" + page);
                 string html = "";
+
+                if (spider.SpiderUrl.Contains("chinabidding"))
+                {
+                    Thread.Sleep(3000);
+                }
 
                 try
                 {
@@ -312,6 +320,19 @@ namespace MercurySpider
                         }
 
 
+                        if (!string.IsNullOrEmpty(spider.Cookies))
+                        {
+                            List<string> cookiestr = spider.Cookies.Split(';').ToList();
+                            foreach (string cookie in cookiestr)
+                            {
+                                List<string> itemcookistr = cookie.Split('=').ToList();
+                                if (itemcookistr.Count > 1)
+                                {
+                                    requestCookies.Add(new HttpCookie(itemcookistr.ElementAt(0).Trim(), itemcookistr.ElementAt(1).Trim()));
+                                }
+                            }
+                        }
+
                         html = GetHtmlByPost(spider.SpiderUrl, spider.EncodeType, page, spider.PageParameter, requestCookies);
                     }
                     else
@@ -399,7 +420,7 @@ namespace MercurySpider
                 }
                 catch (Exception err)
                 {
-                    Mercury.Model.SpiderLogs log = new SpiderLogs();
+                    Mercury.Model.SpiderLogs log = new Mercury.Model.SpiderLogs();
                     log.IsSuccess = false;
                     log.Message = "列表页访问失败" + DateTime.Now.ToString();
                     log.SpiderName = spider.SpiderName;
@@ -659,7 +680,7 @@ namespace MercurySpider
 
         public void BeatHeart()
         {
-            Mercury.Model.Hearts heart = new Hearts();
+            Mercury.Model.Hearts heart = new Mercury.Model.Hearts();
             heart.HeartId = 1;
             heart.HeartName = "爬虫心跳";
             heart.HeartTime = DateTime.Now;
@@ -745,7 +766,7 @@ namespace MercurySpider
                 string v = null;
                 string[] values = null;
                 MatchCollection matchs = null;
-                Mercury.Model.Bids bid = new Bids();
+                Mercury.Model.Bids bid = new Mercury.Model.Bids();
 
                 //title
                 List<string> titleexpressions = spider.TitleExpression.Split(',').ToList();
@@ -793,7 +814,7 @@ namespace MercurySpider
 
                 if (string.IsNullOrEmpty(bid.BidTitle))
                 {
-                    Mercury.Model.SpiderLogs log = new SpiderLogs();
+                    Mercury.Model.SpiderLogs log = new Mercury.Model.SpiderLogs();
                     log.IsSuccess = false;
                     log.Message = "抓取信息不全" + bid.BidSourceURL;
                     log.SpiderName = url;
@@ -821,6 +842,7 @@ namespace MercurySpider
                 string pub = "";
                 if (!string.IsNullOrEmpty(bidTime))
                 {
+                    bidTime = CommonUtility.ReplaceHtmlTag(bidTime);
                     if (bidTime.Length < 6)
                     {
                         if (bidTime.Contains("/"))
@@ -948,7 +970,7 @@ namespace MercurySpider
                 bid.BidContent = RemoveScriptTag(bid.BidContent);
                 if (string.IsNullOrEmpty(bid.BidContent))
                 {
-                    Mercury.Model.SpiderLogs log = new SpiderLogs();
+                    Mercury.Model.SpiderLogs log = new Mercury.Model.SpiderLogs();
                     log.IsSuccess = false;
                     log.Message = "抓取信息不全" + bid.BidSourceURL;
                     log.SpiderName = url;
@@ -957,6 +979,10 @@ namespace MercurySpider
                     loger.Add(log);
                     return;
                 }
+
+                //带链接的地址全部转为目标站点绝对地址
+                bid.BidContent = ChangeVirtualAddress(bid.BidContent, spider.SpiderUrl);
+                bid.BidContent = CommonUtility.RemoveStyle(bid.BidContent);
 
                 //content - attachment
                 bid.BidFileName = GetAttachElement("<a href=\"(?<v>.*?)\">(?<x>.*?)</a>", bid.BidContent, bid);
@@ -1026,7 +1052,7 @@ namespace MercurySpider
                     }
                     else
                     {
-                        company = new CatchCompany();
+                        company = new Mercury.Model.CatchCompany();
                     }
 
                     company.VendorName = bid.BidCompanyName;
@@ -1064,7 +1090,7 @@ namespace MercurySpider
 
                 if (string.IsNullOrEmpty(bid.BidContent) || string.IsNullOrEmpty(bid.BidTitle))
                 {
-                    Mercury.Model.SpiderLogs log = new SpiderLogs();
+                    Mercury.Model.SpiderLogs log = new Mercury.Model.SpiderLogs();
                     log.IsSuccess = false;
                     log.Message = "抓取信息不全" + bid.BidSourceURL;
                     log.SpiderName = url;
@@ -1081,7 +1107,7 @@ namespace MercurySpider
             }
             catch (Exception err)
             {
-                Mercury.Model.SpiderLogs log = new SpiderLogs();
+                Mercury.Model.SpiderLogs log = new Mercury.Model.SpiderLogs();
                 log.IsSuccess = false;
                 log.Message = DateTime.Now.ToString() + err.Message;
                 log.SpiderName = url;
@@ -1090,6 +1116,28 @@ namespace MercurySpider
                 loger.Add(log);
                 return;
             }
+        }
+
+        public string ChangeVirtualAddress(string html, string url)
+        {
+            Regex regex = new Regex("href=\"(?<v>.*?)\"", RegexOptions.None);
+            Group g = null;
+            string host = GetDomainName(url);
+
+            var matchs = regex.Matches(html);
+            if (matchs.Count > 0)
+            {
+                for (int i = 0; i < matchs.Count; i++)
+                {
+                    g = matchs[i].Groups["v"];
+                    if (!g.Value.Contains("http://") && !g.Value.Contains("mailto"))   //虚拟地址 -〉绝对地址
+                    {
+                        html = html.Replace(g.Value, url.Substring(0, url.IndexOf(":")) + "://" + host + "/" + g.Value);
+                    }
+                }
+            }
+
+            return html;
         }
 
         private DateTime GetTime(string timeStamp)
@@ -1101,7 +1149,7 @@ namespace MercurySpider
 
         public void ParseIndustryId(Mercury.Model.Bids bid)
         {
-            foreach (SmartCategorys smart in smarts)
+            foreach (Mercury.Model.SmartCategorys smart in smarts)
             {
                 List<string> keywords = smart.Keywords.Split(' ').ToList();
                 foreach (var keyword in keywords)
@@ -1436,7 +1484,8 @@ namespace MercurySpider
                 }
 
                 request.Method = "POST";
-                request.ContentType = "application/x-www-form-urlencoded";
+                if (!url.Contains("www.jszb.com"))
+                    request.ContentType = "application/x-www-form-urlencoded";
                 request.CookieContainer = cc;
                 request.KeepAlive = true;
                 request.UserAgent =
@@ -1446,11 +1495,8 @@ namespace MercurySpider
                 request.Referer = url;
                 request.Accept = "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";
                 request.Timeout = 10000;
+                request.ContentType = "application/json;charset=UTF-8";
 
-                if (url.Contains("www.qzzb.gov.cn"))
-                {
-                    request.ContentType = "application/json;charset=UTF-8";
-                }
                 if (url.Contains("ynggzy.com"))
                 {
                     request.Headers.Add("useajaxprep", "true");
@@ -1459,6 +1505,31 @@ namespace MercurySpider
                 if (url.Contains("hljcg.gov.cn"))
                 {
                     request.Headers.Add("Origin", "http://www.hljcg.gov.cn");
+                    request.Headers.Add("Accept-Encoding", "gzip, deflate");
+                    request.Headers.Add("Accept-Language", "zh-CN,zh;q=0.8");
+                    request.Headers.Add("Upgrade-Insecure-Requests", "1");
+                }
+                if (url.Contains("www.jszb.com"))
+                {
+                    request.ContentType = "application/x-www-form-urlencoded";
+                    request.Headers.Add("Origin", "http://www.jszb.com.cn");
+                    request.Headers.Add("Accept-Encoding", "gzip, deflate");
+                    request.Headers.Add("Accept-Language", "zh-CN,zh;q=0.8");
+                    request.Headers.Add("Upgrade-Insecure-Requests", "1");
+                }
+
+                if (url.Contains("www.ynggzyxx.gov"))
+                {
+                    request.ContentType = "application/x-www-form-urlencoded";
+                    request.Headers.Add("Origin", "http://www.ynggzyxx.gov.cn");
+                    request.Headers.Add("Accept-Encoding", "gzip, deflate");
+                    request.Headers.Add("Accept-Language", "zh-CN,zh;q=0.8");
+                    request.Headers.Add("Upgrade-Insecure-Requests", "1");
+                }
+                if (url.Contains("www.chinabidding.com"))
+                {
+                    request.ContentType = "application/x-www-form-urlencoded";
+                    request.Headers.Add("Origin", "http://www.chinabidding.com");
                     request.Headers.Add("Accept-Encoding", "gzip, deflate");
                     request.Headers.Add("Accept-Language", "zh-CN,zh;q=0.8");
                     request.Headers.Add("Upgrade-Insecure-Requests", "1");
@@ -1488,9 +1559,20 @@ namespace MercurySpider
 
                 //获取响应内容  
                 string html = "";
-                using (StreamReader reader = new StreamReader(stream, Encoding.GetEncoding(encode)))
+                if (url.Contains("www.jszb.com") || url.Contains("www.chinabidding.com"))
                 {
-                    html = reader.ReadToEnd();
+                    GZipStream gzip = new GZipStream(stream, CompressionMode.Decompress);
+                    using (StreamReader reader = new StreamReader(gzip, Encoding.GetEncoding(encode)))
+                    {
+                        html = reader.ReadToEnd();
+                    }
+                }
+                else
+                {
+                    using (StreamReader reader = new StreamReader(stream, Encoding.GetEncoding(encode)))
+                    {
+                        html = reader.ReadToEnd();
+                    }
                 }
                 html = html.Replace("\r", string.Empty);
                 html = html.Replace("\n", string.Empty);
