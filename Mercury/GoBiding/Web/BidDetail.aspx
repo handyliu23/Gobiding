@@ -87,6 +87,7 @@
                                         </a><a class="bds_baidu" data-cmd="baidu"></a><a class="bds_renren" data-cmd="renren">
                                         </a><a class="bds_tqq" data-cmd="tqq"></a><a class="bds_weixin" data-cmd="weixin">
                                         </a>
+                                        </a>
                                     </div>
                                 </td>
                                 <td style="border: 0px; text-align: right; padding-right: 10px;">
@@ -380,6 +381,10 @@
             <div style="float: left; padding-left: 15px; width: 50px; height: 50px;">
                 <a id="A2" href="/ThirdLogin/wx" class="qq">
                     <img src="/imgs/system/3rdlogin/WX.png" width="40" height="40" /></a>
+            </div>
+             <div style="float: left; padding-left: 15px; width: 50px; height: 50px;">
+                <a id="A1" href="/ThirdLogin/xl" class="qq">
+                    <img src="/imgs/system/3rdlogin/xl.png" width="40" height="40" /></a>
             </div>
         </div>
     </div>

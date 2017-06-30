@@ -167,6 +167,10 @@
                                     <a id="linkwx" href="/ThirdLogin/wx" class="wx" style="width: 40px; height: 40px;">
                                         <img src="/imgs/system/3rdlogin/WX.png" width="40" height="40" /></a>
                                 </div>
+                                <div style="float: left; padding-left: 15px; width: 50px; height: 50px;">
+                                    <a id="linkxl" href="/ThirdLogin/xl" class="xl">
+                                        <img src="/imgs/system/3rdlogin/xl.png" width="40" height="40" /></a>
+                                </div>
                                 <%-- <div style="float: left; padding-left: 15px; width: 50px; height: 50px;">
                                     <a id="A1" href="https://graph.qq.com/oauth2.0/authorize?client_id=101405089&response_type=token&scope=all&redirect_uri=http%3A%2F%2Fwww.gobiding.com"
                                         class="qq">
@@ -519,27 +523,26 @@
                             </GroupTemplate>
                             <ItemTemplate>
                                 <td style="width: 230px; font-family: '微软雅黑'; line-height: 25px; height: 200px; vertical-align: top;">
-                                    
-                                        <div style="border: 1px solid #ececec; width: 220px; height: 180px; padding: 10px;
-                                            font-size: 12px;">
-                                            <a target="_blank" href='/PurchaseOrderDetail/<%#Eval("Id")%>.html' style="font-size: 12px;
-                                        text-decoration: none; color: #000; font-weight: bold;">
-                                        <div style="height: 48px;">
-                                                <%#Eval("Title") %></div></a>
-                                            发布时间：<font style="font-size: 12px; color: #000"><%#Eval("PublishTime", "{0:D}")%></font>
-                                            <br />
-                                            <font style="font-size: 12px; color: #000">
-                                             采购方：<%#Eval("CompanyName")%></font>
-                                            <br />
-                                            求购地区：<font style="font-size: 12px; color: #000"><%#Eval("ProvinceName")%>
-                                                <%#Eval("CityName")%></font>
-                                            <br />
-                                             <a target="_blank" href='/PurchaseOrderDetail/<%#Eval("Id")%>.html' style="font-size: 12px;
-                                        text-decoration: none; "><div style="margin-top: 5px; font-size:12px; border-radus: 2px; text-align: center; border: 1px solid #dcdcdc;
-                                                width: 80px; padding: 0px;">
-                                                查看详细</div></a>
-                                        </div>
-                                    
+                                    <div style="border: 1px solid #ececec; width: 220px; height: 180px; padding: 10px;
+                                        font-size: 12px;">
+                                        <a target="_blank" href='/PurchaseOrderDetail/<%#Eval("Id")%>.html' style="font-size: 12px;
+                                            text-decoration: none; color: #000; font-weight: bold;">
+                                            <div style="height: 48px;">
+                                                <%#Eval("Title") %></div>
+                                        </a>发布时间：<font style="font-size: 12px; color: #000"><%#Eval("PublishTime", "{0:D}")%></font>
+                                        <br />
+                                        <font style="font-size: 12px; color: #000">采购方：<%#Eval("CompanyName")%></font>
+                                        <br />
+                                        求购地区：<font style="font-size: 12px; color: #000"><%#Eval("ProvinceName")%>
+                                            <%#Eval("CityName")%></font>
+                                        <br />
+                                        <a target="_blank" href='/PurchaseOrderDetail/<%#Eval("Id")%>.html' style="font-size: 12px;
+                                            text-decoration: none;">
+                                            <div style="margin-top: 5px; font-size: 12px; border-radus: 2px; text-align: center;
+                                                border: 1px solid #dcdcdc; width: 80px; padding: 0px;">
+                                                查看详细</div>
+                                        </a>
+                                    </div>
                                 </td>
                             </ItemTemplate>
                         </asp:ListView>

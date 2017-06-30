@@ -1664,6 +1664,13 @@
     <Compile Include="BidNewsDetail.aspx.designer.cs">
       <DependentUpon>BidNewsDetail.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Style.css" />
@@ -1783,6 +1790,7 @@
     <Content Include="UserCenter\UserCenterPage\CreateWinBid.ashx" />
     <Content Include="UserCenter\UserCenterPage\CreateAbortive.ashx" />
     <Content Include="UserCenter\UserCenterPage\CreatePurchaseOrder.ashx" />
+    <Content Include="WebForm1.aspx" />
     <Content Include="WebSpec.config" />
     <Content Include="wap\WeixinInterface.ashx" />
     <Content Include="wap\handlers\waplogin.ashx" />

@@ -7,3 +7,8 @@ C:\GoBiding\GoBiding\Model\bin\Debug\GoBiding.Model.pdb
 C:\GoBiding\GoBiding\Model\obj\Debug\ResolveAssemblyReference.cache
 C:\GoBiding\GoBiding\Model\obj\Debug\GoBiding.Model.dll
 C:\GoBiding\GoBiding\Model\obj\Debug\GoBiding.Model.pdb
+D:\GoBiding\GoBiding\Mercury\GoBiding\Model\bin\Debug\GoBiding.Model.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\Model\bin\Debug\GoBiding.Model.pdb
+D:\GoBiding\GoBiding\Mercury\GoBiding\Model\obj\Debug\ResolveAssemblyReference.cache
+D:\GoBiding\GoBiding\Mercury\GoBiding\Model\obj\Debug\GoBiding.Model.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\Model\obj\Debug\GoBiding.Model.pdb

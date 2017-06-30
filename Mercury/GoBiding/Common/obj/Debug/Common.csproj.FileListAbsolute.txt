@@ -16,3 +16,12 @@ C:\GoBiding\GoBiding\Common\bin\Debug\OWC10Chart.dll
 C:\GoBiding\GoBiding\Common\obj\Debug\ResolveAssemblyReference.cache
 C:\GoBiding\GoBiding\Common\obj\Debug\GoBiding.Common.dll
 C:\GoBiding\GoBiding\Common\obj\Debug\GoBiding.Common.pdb
+D:\GoBiding\GoBiding\Mercury\GoBiding\Common\bin\Debug\GoBiding.Common.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\Common\bin\Debug\GoBiding.Common.pdb
+D:\GoBiding\GoBiding\Mercury\GoBiding\Common\bin\Debug\COM.Excel.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\Common\bin\Debug\Excel.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\Common\bin\Debug\OpenSmtp.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\Common\bin\Debug\OWC10Chart.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\Common\obj\Debug\ResolveAssemblyReference.cache
+D:\GoBiding\GoBiding\Mercury\GoBiding\Common\obj\Debug\GoBiding.Common.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\Common\obj\Debug\GoBiding.Common.pdb

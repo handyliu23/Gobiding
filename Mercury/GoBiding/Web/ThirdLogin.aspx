@@ -10,6 +10,8 @@
         data-appid="101405089" data-redirecturi="http://www.gobiding.com" charset="utf-8"></script>
     <script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js"
         charset="utf-8" data-callback="true"></script>
+
+    <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=1366921169" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
         function GetQueryString(name) {
             var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
@@ -119,6 +121,21 @@
             if (document.location.href.indexOf("qq") > 0) {
                 window.location.href = "https://graph.qq.com/oauth2.0/authorize?client_id=101405089&response_type=token&scope=all&redirect_uri=http%3A%2F%2Fwww.gobiding.com/ThirdLogin.aspx";
             }
+        });
+
+        WB2.anyWhere(function (W) {
+            W.widget.connectButton({
+                id: "wb_connect_btn",
+                type: "3,2",
+                callback: {
+                    login: function (o) {	//登录后的回调函数
+                        alert('123');
+                    },
+                    logout: function () {	//退出后的回调函数
+                        alert('123');
+                    }
+                }
+            });
         });
     </script>
     <script>

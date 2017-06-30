@@ -16,3 +16,12 @@ C:\GoBiding\GoBiding\DBUtility\bin\Debug\System.Data.SQLite.DLL
 C:\GoBiding\GoBiding\DBUtility\obj\Debug\ResolveAssemblyReference.cache
 C:\GoBiding\GoBiding\DBUtility\obj\Debug\GoBiding.DBUtility.dll
 C:\GoBiding\GoBiding\DBUtility\obj\Debug\GoBiding.DBUtility.pdb
+D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\bin\Debug\GoBiding.DBUtility.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\bin\Debug\GoBiding.DBUtility.pdb
+D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\bin\Debug\IBatisNet.Common.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\bin\Debug\IBatisNet.DataMapper.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\bin\Debug\MySql.Data.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\bin\Debug\System.Data.SQLite.DLL
+D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\obj\Debug\ResolveAssemblyReference.cache
+D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\obj\Debug\GoBiding.DBUtility.dll
+D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\obj\Debug\GoBiding.DBUtility.pdb
