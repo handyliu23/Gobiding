@@ -72,7 +72,7 @@
     <Compile Include="ServiceRunner.cs" />
     <Compile Include="TestJob.cs" />
     <Compile Include="SendSubscribeBidsJob.cs" />
-    <Compile Include="GoBidingJob.cs" />
+    <Compile Include="SpiderJob.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -84,6 +84,7 @@
     <None Include="quartz.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Compile Include="FillBidCityIdJob.cs" />
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -99,6 +100,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0988C62E-247F-471F-A183-DB509C7A3839}</Project>
+      <Name>DBUtility</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
