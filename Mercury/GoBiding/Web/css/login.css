@@ -1,0 +1,130 @@
+﻿body
+{
+    font-family: '微软雅黑';
+}
+a, li, div, span
+{
+    font-family: '微软雅黑';
+}
+.bidlabel
+{
+    border: 1px solid green;
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+.dropdown_menu_item
+{
+    padding: 5px;
+}
+.dropdown_menu_div
+{
+    padding: 10px;
+}
+.bidcontenttable td
+{
+    line-height: 30px;
+    vertical-align: middle;
+    height: 70px;
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px dashed #dcdcdc;
+    font-size: 12px;
+}
+.bidcontenttable tr:hover
+{
+    background-color: #eee;
+}
+.bidcontenttable td span
+{
+    font-size: 11px;
+    font-weight: normal;
+}
+.dropdown_content_areas
+{
+    width: 100%;
+}
+.dropdown_content_areas th
+{
+    padding-left: 10px;
+    font-size: 11px;
+    width: 70px;
+    line-height: 30px;
+}
+.dropdown_content_areas td
+{
+    font-size: 11px;
+    min-width: 50px;
+    color: #666;
+}
+.dropdown_content_areas td:hover
+{
+    cursor: pointer;
+}
+.dropdown_menu_areas
+{
+    width: 100px;
+}
+.ul_dropdown_industry li, .ul_dropdown_bidtype li, .ul_dropdown_usertype li
+{
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+}
+.ul_dropdown_industry li:hover, .ul_dropdown_bidtype li:hover, .ul_dropdown_usertype li:hover
+{
+    background-color: #FAFAFA;
+    cursor: pointer;
+}
+.ul_dropdown_industry a, .ul_dropdown_bidtype a, .ul_dropdown_usertype a
+{
+    color: #666;
+    font-size: 11px;
+}
+.HeadImgTitle
+{
+    font-family: '微软雅黑';
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 80px;
+}
+.HeadImgContent
+{
+    font-family: '微软雅黑';
+    font-size: 18px;
+    line-height: 50px;
+    font-weight: 500;
+}
+.box-body input
+{
+    font-size: 14px;
+}
+.protocoltitle
+{
+    padding: 2px;
+    font-weight: bold;
+    color: dodgerblue;
+}
+.provincesite th, .provincesite td
+{
+    width: 60px;
+    height: 30px;
+    font-size: 12px;
+    color: #666;
+}
+.provincesite th
+{
+    width: 80px;
+    text-align: center;
+}
+.categorysite td
+{
+    height: 30px;
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+}
+.blur
+{
+    background-image: url('/imgs/system/loginbg.jpg');
+
+}

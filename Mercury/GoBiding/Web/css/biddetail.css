@@ -1,0 +1,107 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+    font-family: "微软雅黑";
+    font-size: 14px;
+    line-height: 2em;
+    color: #333;
+}
+table
+{
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0px;
+    border-collapse: collapse;
+}
+th
+{
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap;
+    height: 36px;
+    padding: 0 5px;
+    line-height: 2em;
+}
+td
+{
+    list-style: none;
+    margin: 0;
+    height: 36px;
+    padding: 0 5px;
+    line-height: 2em;
+}
+p
+{
+    margin: 0px;
+    clear: both;
+    text-align: left;
+}
+.title1
+{
+    font-weight: bolder;
+}
+
+li
+{
+    line-height: 2em;
+}
+h1, h2, h3, h4, h5, h6, span, div, strong, .divbiddetailcontent li
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: 2em;
+}
+ol
+{
+    padding-left: 1em;
+}
+span
+{
+    font-family: "微软雅黑";
+    line-height: 2em;
+}
+.detaillabeltable
+{
+    margin-top: 20px;
+}
+.detaillabeltable, .detaillabeltable th, .detaillabeltable td
+{
+    border: 0px;
+    background-color: #FCFCFC;
+}
+.detaillabeltable th
+{
+    width: 160px;
+    text-align: center;
+    background-color: #FAFAFA;
+    border: 1px dotted #FFF;
+}
+.detaillabeltable td
+{
+    width: 370px;
+    text-align: center;
+}
+.breadcrumb a
+{
+    color: #fff;
+}
+.breadcrumb li.active
+{
+    color: #fff;
+}
+.breadcrumb a:hover
+{
+    color: #fff;
+    text-decoration: none;
+}
+.divbiddetailcontent table th, td
+{
+    border: 1px solid #dcdcdc;
+}
+
+.tblGaoxiaoBidList a:hover
+{
+    text-decoration: none;
+}
