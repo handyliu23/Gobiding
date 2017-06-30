@@ -25,3 +25,12 @@ D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\bin\Debug\System.Data.SQLite.DLL
 D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\obj\Debug\ResolveAssemblyReference.cache
 D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\obj\Debug\GoBiding.DBUtility.dll
 D:\GoBiding\GoBiding\Mercury\GoBiding\DBUtility\obj\Debug\GoBiding.DBUtility.pdb
+C:\Git\Gobiding\Mercury\GoBiding\DBUtility\bin\Debug\GoBiding.DBUtility.dll
+C:\Git\Gobiding\Mercury\GoBiding\DBUtility\bin\Debug\GoBiding.DBUtility.pdb
+C:\Git\Gobiding\Mercury\GoBiding\DBUtility\bin\Debug\IBatisNet.Common.dll
+C:\Git\Gobiding\Mercury\GoBiding\DBUtility\bin\Debug\IBatisNet.DataMapper.dll
+C:\Git\Gobiding\Mercury\GoBiding\DBUtility\bin\Debug\MySql.Data.dll
+C:\Git\Gobiding\Mercury\GoBiding\DBUtility\bin\Debug\System.Data.SQLite.DLL
+C:\Git\Gobiding\Mercury\GoBiding\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+C:\Git\Gobiding\Mercury\GoBiding\DBUtility\obj\Debug\GoBiding.DBUtility.dll
+C:\Git\Gobiding\Mercury\GoBiding\DBUtility\obj\Debug\GoBiding.DBUtility.pdb

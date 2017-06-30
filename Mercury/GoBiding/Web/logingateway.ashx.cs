@@ -62,6 +62,11 @@ namespace GoBiding.Web
                     {
                         user.Gender = int.Parse(Gender);
                     }
+                    else if (ThirdLoginPartyName == "XinLang")
+                    {
+                        user.Gender = int.Parse(Gender);
+                    }
+
                     user.LoginIp = context.Request.UserHostAddress;
                     user.LastLoginIp = context.Request.UserHostAddress;
                     user.LastLoginTime = DateTime.Now;

@@ -97,6 +97,10 @@ namespace GoBiding
                         {
                             imgProfile.ImageUrl = user.UserProfile;
                         }
+                        else if (user.UserProfile.Contains("sinaimg"))
+                        {
+                            imgProfile.ImageUrl = user.UserProfile;
+                        }
                         else
                         {
                             imgProfile.ImageUrl = "~/imgs/users/" + user.UserProfile;
