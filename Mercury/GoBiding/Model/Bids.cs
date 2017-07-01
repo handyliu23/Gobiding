@@ -44,6 +44,8 @@ namespace GoBiding.Model
 		private decimal? _totalamount;
 		private string _winbidcompanyname;
 		private int? _isemergency;
+        private int? _subBidCategoryId;
+
 		/// <summary>
 		/// 
 		/// </summary>
@@ -316,8 +318,15 @@ namespace GoBiding.Model
 			set{ _isemergency=value;}
 			get{return _isemergency;}
 		}
+        /// <summary>
+		/// 
+		/// </summary>
+		public int? SubBidCategoryId
+		{
+			set{ _subBidCategoryId=value;}
+			get{return _subBidCategoryId;}
+		}
 		#endregion Model
-
 	}
 }
 

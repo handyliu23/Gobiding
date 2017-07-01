@@ -212,6 +212,8 @@
                               <i class="fa fa-edit"></i> <span>系统管理</span><i class="fa fa-angle-left pull-right"></i>
                           </a>
                           <ul class="treeview-menu">
+                                <li><a href="/UserCenter/UserCenterPage/SystemInfo/SpiderList.aspx"><i class="fa fa-angle-double-right"></i> MercurySpiders</a></li>
+                                <li><a href="/UserCenter/UserCenterPage/SystemInfo/SmartCategoryList.aspx"><i class="fa fa-angle-double-right"></i> 招标分类匹配</a></li>
                                 <li><a href="/UserCenter/UserCenterPage/SystemInfo/SechduleList.aspx"><i class="fa fa-angle-double-right"></i> 任务调度</a></li>
                                 <li><a href="/UserCenter/UserCenterPage/SystemInfo/LogList.aspx"><i class="fa fa-angle-double-right"></i> 日志列表</a></li>
                               </ul>

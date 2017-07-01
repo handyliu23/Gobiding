@@ -272,10 +272,10 @@ namespace GoBiding.Web
                 emptyDiv.Visible = true;
             }
 
-            string sql2 =@"
+            string sql2 = @"
 select top 10 Sys_UserId, CompanyId,OnCreate, DistrictId, CompanyName, c.CityName from Sys_Users u
 left join Citys c on u.DistrictId = c.CityID
-where CompanyName <> '' order by u.OnCreate desc
+where CompanyName <> '' and CompanyName like '%公司' order by u.OnCreate desc
 ";
 
             var ds = DbHelperSQL.Query(sql2);
@@ -286,7 +286,7 @@ where CompanyName <> '' order by u.OnCreate desc
                 rptEmergencyPurchaseOrderList.DataBind();
             }
 
-            sql2 = "select top 8 count(BidCompanyName) as count,max(BidCompanyId) as BidCompanyId,BidCompanyName from Bids where BidCompanyName <> '' and bidcompanyname <> '详情见公告' and  bidcompanyname <> '无详细信息' group by BidCompanyName order by 1 desc";
+            sql2 = "select top 8 count(BidCompanyName) as count,max(BidCompanyId) as BidCompanyId,BidCompanyName from Bids where BidCompanyName <> '' and CompanyName like '%公司' and bidcompanyname <> '详情见公告' and  bidcompanyname <> '无详细信息' group by BidCompanyName order by 1 desc";
             var ds2 = DbHelperSQL.Query(sql2);
          
             rptHotCompanyList.DataSource = ds2;

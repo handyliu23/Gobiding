@@ -334,7 +334,7 @@
         padding-top: 0px; color: #000; height: 380px; width: 360px; position: absolute;
         top: 30%; left: 40%; border-radius: 4px;">
         <div class="row">
-            <div class="col-lg-12" style="line-height: 32px; height: 32px; font-size: 14px;">
+            <div class="col-lg-12" style="line-height: 32px; height: 32px; font-size: 16px;">
                 帐号登录
             </div>
         </div>
@@ -365,10 +365,10 @@
             </div>
             <div class="col-xs-12" style="font-size: 10px; margin-top: 20px; padding: 5px; border-top: 1px solid #dcdcdc;">
                 <div class="col-xs-9">
-                    <a href="/Default.html" id="lnkregist">还没有账号，先注册</a>
+                    <a href="/Default.html" style="font-size:14px;" id="lnkregist">注册账号</a>,免费查看招标采购信息
                 </div>
                 <div class="col-xs-3">
-                    <a href="/ForgetPassword.html" id="lnkforget" target="_blank">忘记密码</a>
+                    <a href="/ForgetPassword.html" id="lnkforget" style="font-size:14px;" target="_blank">忘记密码</a>
                 </div>
             </div>
         </div>

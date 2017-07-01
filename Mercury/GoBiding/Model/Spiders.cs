@@ -34,6 +34,8 @@ namespace GoBiding.Model
 		private int? _spidertype;
 		private int? _pagecount;
 		private DateTime? _lastruntime;
+		private int? _countperpage;
+		private string _cookies;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -225,6 +227,22 @@ namespace GoBiding.Model
 		{
 			set{ _lastruntime=value;}
 			get{return _lastruntime;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public int? CountPerPage
+		{
+			set{ _countperpage=value;}
+			get{return _countperpage;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public string Cookies
+		{
+			set{ _cookies=value;}
+			get{return _cookies;}
 		}
 		#endregion Model
 
