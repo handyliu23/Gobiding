@@ -16,7 +16,7 @@ namespace SmartCategoryRobot
             try
             {
                 var bizBid = new Mercury.BLL.Bids();
-                List<Mercury.Model.SmartCategorys> smarts = new Mercury.BLL.SmartCategorys().GetModelList("");
+                List<Mercury.Model.SmartCategorys> smarts = new Mercury.BLL.SmartCategorys().GetModelList(" ParentCategoryId <> 0");
                 int pageCount = 100;
                 int pageNumber = 1;
 
@@ -33,19 +33,25 @@ namespace SmartCategoryRobot
 
                             Console.WriteLine(title);
 
+                            bool ismatch = false;
                             //更新行业分类
                             foreach (Mercury.Model.SmartCategorys smart in smarts)
                             {
-                                List<string> keywords = smart.Keywords.Split(' ').ToList();
-                                foreach (var keyword in keywords)
+                                if (!ismatch)
                                 {
-                                    if (title.Contains(keyword))
+                                    List<string> keywords = smart.Keywords.Split(' ').ToList();
+                                    foreach (var keyword in keywords)
                                     {
-                                        var model = bizBid.GetModel(bidId);
-                                        model.BidCategoryId = smart.BidCategoryId;
-                                        bizBid.Update(model);
-                                        break;
-                                        //model.BidCategoryName = smart.BidCategoryId;
+                                        if (title.Contains(keyword))
+                                        {
+                                            var model = bizBid.GetModel(bidId);
+                                            model.BidCategoryId = smart.ParentCategoryId;
+                                            model.SubBidCategoryId = smart.BidCategoryId;
+                                                bizBid.Update(model);
+                                            ismatch = true;
+                                            break;
+                                            //model.BidCategoryName = smart.BidCategoryId;
+                                        }
                                     }
                                 }
                             }
@@ -152,7 +158,7 @@ namespace SmartCategoryRobot
                     }
                     else
                     {
-                        break;
+                        pageNumber = 1;
                     }
 
                     Thread.Sleep(100);

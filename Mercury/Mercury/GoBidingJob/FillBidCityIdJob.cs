@@ -100,6 +100,9 @@ namespace GoBidingJob
                                 }
                             }
                         }
+
+                        Thread.Sleep(100);
+
                     }
 
                     //Console.WriteLine(referCount);

@@ -7,3 +7,4 @@ C:\Git\Gobiding\Mercury\Mercury\Common\bin\Debug\OpenSmtp.dll
 C:\Git\Gobiding\Mercury\Mercury\Common\bin\Debug\OWC10Chart.dll
 C:\Git\Gobiding\Mercury\Mercury\Common\obj\Debug\Mercury.Common.dll
 C:\Git\Gobiding\Mercury\Mercury\Common\obj\Debug\Mercury.Common.pdb
+C:\Git\Gobiding\Mercury\Mercury\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

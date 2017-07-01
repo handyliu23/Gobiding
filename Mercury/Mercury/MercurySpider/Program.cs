@@ -1018,7 +1018,7 @@ namespace MercurySpider
                 bid.LastChangeTime = DateTime.Now;
 
                 bid.BidCompanyName = bidCompanyName;
-                bid.ProvinceId = spider.ProvinceId;
+                bid.ProvinceId = spider.ProvinceId??0;
                 bid.CityId = spider.CityId;
                 if (spider.SpiderName == "中国电力招标采购网" || spider.SpiderName == "中国移动采招网" || spider.SpiderName == "中煤招标与采购网")
                 {

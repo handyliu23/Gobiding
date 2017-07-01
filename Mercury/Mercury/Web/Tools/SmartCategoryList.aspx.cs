@@ -20,9 +20,18 @@ namespace Mercury.Web.Tools
 
         public void Bind()
         {
-            DataSet ds = new Mercury.BLL.SmartCategorys().GetAllList();
-            lstSmartCategorys.DataSource = ds;
-            lstSmartCategorys.DataBind();
+            if (Request.QueryString["CId"] == null)
+            {
+                DataSet ds = new Mercury.BLL.SmartCategorys().GetList(" ParentCategoryId = 0");
+                lstSmartCategorys.DataSource = ds;
+                lstSmartCategorys.DataBind();
+            }
+            else {
+                int cId = int.Parse(Request.QueryString["CId"].ToString());
+                DataSet ds = new Mercury.BLL.SmartCategorys().GetList(" ParentCategoryId = " + cId + " or BidCategoryId = " + cId);
+                lstSmartCategorys.DataSource = ds;
+                lstSmartCategorys.DataBind();
+            }
         }
 
         protected void lstSmartCategorys_ItemCommand(object sender, ListViewCommandEventArgs e)

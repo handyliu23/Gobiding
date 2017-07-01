@@ -15,7 +15,7 @@ namespace Mercury.Model
 		private DateTime _bidpublishtime;
 		private string _bidcontent;
 		private int? _cityid;
-		private int? _provinceid;
+		private int _provinceid;
 		private string _bidnumber;
 		private DateTime? _bidexpiretime;
 		private string _bidfilename;
@@ -39,11 +39,12 @@ namespace Mercury.Model
 		private string _bidcompanyname;
 		private DateTime? _bidopentime;
 		private string _bidplatfrom;
-		private int _sysuserid;
+		private int? _sysuserid;
 		private int? _bidcategorytype;
 		private decimal? _totalamount;
 		private string _winbidcompanyname;
 		private int? _isemergency;
+		private int? _subbidcategoryid;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -87,7 +88,7 @@ namespace Mercury.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? ProvinceId
+		public int ProvinceId
 		{
 			set{ _provinceid=value;}
 			get{return _provinceid;}
@@ -279,7 +280,7 @@ namespace Mercury.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int SysUserId
+		public int? SysUserId
 		{
 			set{ _sysuserid=value;}
 			get{return _sysuserid;}
@@ -315,6 +316,14 @@ namespace Mercury.Model
 		{
 			set{ _isemergency=value;}
 			get{return _isemergency;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public int? SubBidCategoryId
+		{
+			set{ _subbidcategoryid=value;}
+			get{return _subbidcategoryid;}
 		}
 		#endregion Model
 

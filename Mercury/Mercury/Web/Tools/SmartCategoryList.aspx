@@ -19,7 +19,8 @@
             <ItemTemplate>
                 <tr>
                     <td style="width: 120px;">
-                        <asp:Label ID="lblBidCategoryName" runat="server" Text='<%# Eval("BidCategoryName") %>' />
+                    <a href="/Tools/SmartCategoryList.aspx?cId=<%#Eval("BidCategoryId") %>">
+                        <asp:Label ID="lblBidCategoryName" runat="server" Text='<%# Eval("BidCategoryName") %>' /></a>
                     </td>
                     <td style="width: 600px;">
                         <asp:TextBox runat="server" TextMode="MultiLine" Text='<%# Eval("Keywords") %>' Width="1000" Height="100" ID="txtKeywords"></asp:TextBox>
