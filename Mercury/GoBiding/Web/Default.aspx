@@ -662,54 +662,54 @@
                                 华东
                             </th>
                             <td>
-                                <a href='/Province/index/c/9' style="text-decoration: none; color: #666;">上海<span
+                                <a href='/Province/index/p/9' style="text-decoration: none; color: #666;">上海<span
                                     style="display: none;">9</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/10' style="text-decoration: none; color: #666;">江苏<span
+                                <a href='/Province/index/p/10' style="text-decoration: none; color: #666;">江苏<span
                                     style="display: none;">10</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/1' style="text-decoration: none; color: #666;">浙江<span
+                                <a href='/Province/index/p/1' style="text-decoration: none; color: #666;">浙江<span
                                     style="display: none;">11</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/12' style="text-decoration: none; color: #666;">安徽<span
+                                <a href='/Province/index/p/12' style="text-decoration: none; color: #666;">安徽<span
                                     style="display: none;">12</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/13' style="text-decoration: none; color: #666;">福建<span
+                                <a href='/Province/index/p/13' style="text-decoration: none; color: #666;">福建<span
                                     style="display: none;">13</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/14' style="text-decoration: none; color: #666;">江西<span
+                                <a href='/Province/index/p/14' style="text-decoration: none; color: #666;">江西<span
                                     style="display: none;">14</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/15' style="text-decoration: none; color: #666;">山东<span
+                                <a href='/Province/index/p/15' style="text-decoration: none; color: #666;">山东<span
                                     style="display: none;">15</span></a>
                             </td>
                             <th>
                                 华北
                             </th>
                             <td>
-                                <a href='/Province/index/c/1' style="text-decoration: none; color: #666;">北京<span
+                                <a href='/Province/index/p/1' style="text-decoration: none; color: #666;">北京<span
                                     style="display: none;">1</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/2' style="text-decoration: none; color: #666;">天津<span
+                                <a href='/Province/index/p/2' style="text-decoration: none; color: #666;">天津<span
                                     style="display: none;">2</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/3' style="text-decoration: none; color: #666;">河北<span
+                                <a href='/Province/index/p/3' style="text-decoration: none; color: #666;">河北<span
                                     style="display: none;">3</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/4' style="text-decoration: none; color: #666;">山西<span
+                                <a href='/Province/index/p/4' style="text-decoration: none; color: #666;">山西<span
                                     style="display: none;">4</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/5' style="text-decoration: none; color: #666;">内蒙<span
+                                <a href='/Province/index/p/5' style="text-decoration: none; color: #666;">内蒙<span
                                     style="display: none;">5</span></a>
                             </td>
                         </tr>
@@ -718,15 +718,15 @@
                                 东北
                             </th>
                             <td>
-                                <a href='/Province/index/c/8' style="text-decoration: none; color: #666;">黑龙江<span
+                                <a href='/Province/index/p/8' style="text-decoration: none; color: #666;">黑龙江<span
                                     style="display: none;">8</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/7' style="text-decoration: none; color: #666;">吉林<span
+                                <a href='/Province/index/p/7' style="text-decoration: none; color: #666;">吉林<span
                                     style="display: none;">7</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/6' style="text-decoration: none; color: #666;">辽宁<span
+                                <a href='/Province/index/p/6' style="text-decoration: none; color: #666;">辽宁<span
                                     style="display: none;">6</span></a>
                             </td>
                             <td>
@@ -741,15 +741,15 @@
                                 华南
                             </th>
                             <td>
-                                <a href='/Province/index/c/19' style="text-decoration: none; color: #666;">广东<span
+                                <a href='/Province/index/p/19' style="text-decoration: none; color: #666;">广东<span
                                     style="display: none;">19</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/20' style="text-decoration: none; color: #666;">广西<span
+                                <a href='/Province/index/p/20' style="text-decoration: none; color: #666;">广西<span
                                     style="display: none;">20</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/21' style="text-decoration: none; color: #666;">海南<span
+                                <a href='/Province/index/p/21' style="text-decoration: none; color: #666;">海南<span
                                     style="display: none;">21</span></a>
                             </td>
                             <td>
@@ -762,23 +762,23 @@
                                 西北
                             </th>
                             <td>
-                                <a href='/Province/index/c/27' style="text-decoration: none; color: #666;">陕西<span
+                                <a href='/Province/index/p/27' style="text-decoration: none; color: #666;">陕西<span
                                     style="display: none;">27</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/28' style="text-decoration: none; color: #666;">甘肃<span
+                                <a href='/Province/index/p/28' style="text-decoration: none; color: #666;">甘肃<span
                                     style="display: none;">28</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/29' style="text-decoration: none; color: #666;">青海<span
+                                <a href='/Province/index/p/29' style="text-decoration: none; color: #666;">青海<span
                                     style="display: none;">29</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/30' style="text-decoration: none; color: #666;">宁夏<span
+                                <a href='/Province/index/p/30' style="text-decoration: none; color: #666;">宁夏<span
                                     style="display: none;">30</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/31' style="text-decoration: none; color: #666;">新疆<span
+                                <a href='/Province/index/p/31' style="text-decoration: none; color: #666;">新疆<span
                                     style="display: none;">31</span></a>
                             </td>
                             <td>
@@ -789,23 +789,23 @@
                                 西南
                             </th>
                             <td>
-                                <a href='/Province/index/c/22' style="text-decoration: none; color: #666;">重庆<span
+                                <a href='/Province/index/p/22' style="text-decoration: none; color: #666;">重庆<span
                                     style="display: none;">22</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/23' style="text-decoration: none; color: #666;">四川<span
+                                <a href='/Province/index/p/23' style="text-decoration: none; color: #666;">四川<span
                                     style="display: none;">23</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/24' style="text-decoration: none; color: #666;">贵州<span
+                                <a href='/Province/index/p/24' style="text-decoration: none; color: #666;">贵州<span
                                     style="display: none;">24</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/25' style="text-decoration: none; color: #666;">云南<span
+                                <a href='/Province/index/p/25' style="text-decoration: none; color: #666;">云南<span
                                     style="display: none;">25</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/26' style="text-decoration: none; color: #666;">西藏<span
+                                <a href='/Province/index/p/26' style="text-decoration: none; color: #666;">西藏<span
                                     style="display: none;">26</span></a>
                             </td>
                         </tr>
@@ -814,15 +814,15 @@
                                 华中
                             </th>
                             <td>
-                                <a href='/Province/index/c/16' style="text-decoration: none; color: #666;">河南<span
+                                <a href='/Province/index/p/16' style="text-decoration: none; color: #666;">河南<span
                                     style="display: none;">16</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/17' style="text-decoration: none; color: #666;">湖北<span
+                                <a href='/Province/index/p/17' style="text-decoration: none; color: #666;">湖北<span
                                     style="display: none;">17</span></a>
                             </td>
                             <td>
-                                <a href='/Province/index/c/18' style="text-decoration: none; color: #666;">湖南<span
+                                <a href='/Province/index/p/18' style="text-decoration: none; color: #666;">湖南<span
                                     style="display: none;">18</span></a>
                             </td>
                             <td>
@@ -1174,7 +1174,7 @@
     <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=1366921169" type="text/javascript"
         charset="utf-8"></script>
     <script type="text/javascript" src="/js/index/raphael.js"></script>
-    <script type="text/javascript" src="/js/index/chinamapPath.js"></script>
+    <script type="text/javascript" src="/js/index/phinamapPath.js"></script>
     <script type="text/javascript">
         function initLoginPanel() {
             if ($("#hdnislogin").val() == "True") {
@@ -1272,7 +1272,7 @@
 
                     st[0].onclick = function () {
                         var province = encodeURI(encodeURI(china[state]['id']));
-                        window.location = "/Province/index/c/" + province;
+                        window.location = "/Province/index/p/" + province;
                     };
 
                 })(china[state]['path'], state);

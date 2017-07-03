@@ -1,14 +1,20 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SmartCategoryList.aspx.cs" Inherits="GoBiding.Web.UserCenter.UserCenterPage.SystemInfo.SmartCategoryList" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/UserCenter/UserCenterHeader.master" AutoEventWireup="true" CodeBehind="SmartCategoryList.aspx.cs" Inherits="GoBiding.Web.UserCenter.UserCenterPage.SystemInfo.SmartCategoryList" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <aside class="right-side">                
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+            <h1>
+                MercurySpiders
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+                <li><a href="#">系统信息</a></li>
+                <li class="active">分类匹配</li>
+            </ol>
+        </section>
+        <section class="content">
+    <div　 runat="server" id="mainContent">
            <asp:ListView runat="server" ID="lstSmartCategorys" 
                onitemcommand="lstSmartCategorys_ItemCommand">
             <LayoutTemplate>
@@ -19,11 +25,11 @@
             <ItemTemplate>
                 <tr>
                     <td style="width: 120px;">
-                    <a href="/Tools/SmartCategoryList.aspx?cId=<%#Eval("BidCategoryId") %>">
+                    <a href="/UserCenter/UserCenterPage/SystemInfo/SmartCategoryList.aspx?cId=<%#Eval("BidCategoryId") %>">
                         <asp:Label ID="lblBidCategoryName" runat="server" Text='<%# Eval("BidCategoryName") %>' /></a>
                     </td>
                     <td style="width: 600px;">
-                        <asp:TextBox runat="server" TextMode="MultiLine" Text='<%# Eval("Keywords") %>' Width="1000" Height="100" ID="txtKeywords"></asp:TextBox>
+                        <asp:TextBox runat="server" TextMode="MultiLine" Text='<%# Eval("Keywords") %>' Width="1000" Height="160" ID="txtKeywords"></asp:TextBox>
                     </td>
                     <td>
                         <asp:HiddenField runat="server" ID="hdfKeyId" Value='<%# Eval("SmartCategoryId") %>' />
@@ -34,6 +40,8 @@
         </asp:ListView>
         
     </div>
-    </form>
-</body>
-</html>
+
+       </section>
+
+        </aside>
+</asp:Content>

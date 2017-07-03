@@ -350,7 +350,7 @@
                             Sorry, 没有搜到您想要的信息，请换个词再搜索吧！
                         </div>
                         <div class="pull-right">
-                            <webdiyer:AspNetPager ID="AspNetPager1" runat="server" Width="100%" UrlPaging="true"
+                            <webdiyer:AspNetPager ID="AspNetPager1" runat="server" Width="100%" UrlPaging="true" NumericButtonCount="15" ForeColor="Black"
                                 FirstPageText="第一页" LastPageText="尾页" ShowPageIndexBox="Never" ShowNavigationToolTip="False"
                                 ShowCustomInfoSection="Never" PrevPageText="上一页" NextPageText="下一页" CssClass="pagination"
                                 LayoutType="Ul" PagingButtonLayoutType="UnorderedList" PagingButtonSpacing="0"

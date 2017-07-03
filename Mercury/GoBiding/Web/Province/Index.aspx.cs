@@ -6,11 +6,14 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using GoBiding.BLL;
 using System.Web.UI.HtmlControls;
+using Maticsoft.DBUtility;
 
 namespace GoBiding.Web.Province
 {
     public partial class Index : System.Web.UI.Page
     {
+        private List<GoBiding.Model.BidCategorys> categorys;
+
         public string provincename = "";
         public string CategoryName = "";
         public string CategoryEnglishName = "";
@@ -21,12 +24,22 @@ namespace GoBiding.Web.Province
         string strSeoKey;
         string strSeoDescription;
 
+        public string GetCityName(string cityId)
+        {
+            var model = new BLL.Citys().GetModel(int.Parse(cityId));
+            if (model != null)
+                return model.CityName;
+
+            return "";
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
-
             if (!IsPostBack)
             {
+                categorys = new BLL.BidCategorys().GetModelList("");
+
                 Id = Request.QueryString["id"];
                 string type = Request.QueryString["type"];
 
@@ -44,6 +57,8 @@ namespace GoBiding.Web.Province
         public void InitForProvinceId()
         {
             provincename = CommonUtility.GetProvinceName(Id);
+            ltrProvinceName.Text = provincename;
+            ltrProvinceName2.Text = provincename;
 
             if (string.IsNullOrEmpty(provincename))
                 return;
@@ -65,29 +80,59 @@ namespace GoBiding.Web.Province
             Page.Header.Controls.Add(keywords);
             #endregion
 
-            var ds = new BLL.Bids().GetList(10, " ProvinceId = " + Id + " and bidtype = 1", "BidPublishTime desc");
+            int pageindex = 1;
+            if (Request.QueryString["page"] != null)
+            {
+                pageindex = int.Parse(Request.QueryString["page"]);
+            }
+
+            string where = " and provinceId = " + Id;
+            string sql = string.Format(@"
+SELECT TOP {0} BidId,BidTitle,BidPublishTime,BidCompanyName,ProvinceId,BidCategoryId,BidType,CityId
+FROM 
+(
+SELECT ROW_NUMBER() OVER (ORDER BY BidPublishTime desc) AS RowNumber,BidId,BidTitle,BidPublishTime,BidCompanyName,ProvinceId,BidCategoryId,BidType,CityId
+FROM Bids Where 1=1 {2}
+) A
+WHERE RowNumber > {0}*({1} - 1)
+", AspNetPager1.PageSize, pageindex, where);
+
+            string sqlCount = "SELECT count(*) FROM Bids Where 1=1 " + where;
+
+            var ds = DbHelperSQL.Query(sql);
             rptBidList.DataSource = ds;
             rptBidList.DataBind();
 
-            ds = new BLL.Bids().GetList(10, " ProvinceId = " + Id + " and bidtype = 3", "BidPublishTime desc");
-            rptBidResultList.DataSource = ds;
-            rptBidResultList.DataBind();
+            var dsCount = DbHelperSQL.Query(sqlCount);
+            AspNetPager1.RecordCount = int.Parse(dsCount.Tables[0].Rows[0][0].ToString());
+            
 
-            ds = new BLL.Bids().GetList(10, " ProvinceId = " + Id + " and bidtype = 2", "BidPublishTime desc");
-            rptBidChangeList.DataSource = ds;
-            rptBidChangeList.DataBind();
+            ds = new BLL.Citys().GetList(20, " ProvinceId = " + Id, " CityID");
 
-            ds = new BLL.Bids().GetList(10, " ProvinceId = " + Id + " and bidtype = 5", "BidPublishTime desc");
-            rptBidCancelList.DataSource = ds;
-            rptBidCancelList.DataBind();
+            ddlCitys.DataTextField = "CityName";
+            ddlCitys.DataValueField = "CityID";
+            ddlCitys.DataSource = ds;
+            ddlCitys.DataBind();
 
-            ds = new BLL.Bids().GetList(10, " ProvinceId = " + Id + " and bidtype = 6", "BidPublishTime desc");
             rptBidInviteList.DataSource = ds;
             rptBidInviteList.DataBind();
 
-            ds = new BLL.Bids().GetList(10, " ProvinceId = " + Id + " and bidtype = 8", "BidPublishTime desc");
-            rptBidSingleList.DataSource = ds;
-            rptBidSingleList.DataBind();
+        }
+
+        public string GetBidCategoryNameValue(string categoryId)
+        {
+            if (!string.IsNullOrEmpty(categoryId))
+            {
+                var c = categorys.Where(o => o.BidCategoryId == int.Parse(categoryId)).FirstOrDefault();
+                if (c == null)
+                    return "其他";
+
+                return c.BidCategoryName;
+            }
+            else
+            {
+                return "其他";
+            }
 
         }
 
@@ -102,25 +147,9 @@ namespace GoBiding.Web.Province
             rptBidList.DataSource = ds;
             rptBidList.DataBind();
 
-            ds = new BLL.Bids().GetList(10, " CityId = " + Id + " and bidtype = 3", "BidPublishTime desc");
-            rptBidResultList.DataSource = ds;
-            rptBidResultList.DataBind();
-
-            ds = new BLL.Bids().GetList(10, " CityId = " + Id + " and bidtype = 2", "BidPublishTime desc");
-            rptBidChangeList.DataSource = ds;
-            rptBidChangeList.DataBind();
-
-            ds = new BLL.Bids().GetList(10, " CityId = " + Id + " and bidtype = 5", "BidPublishTime desc");
-            rptBidCancelList.DataSource = ds;
-            rptBidCancelList.DataBind();
-
             ds = new BLL.Bids().GetList(10, " CityId = " + Id + " and bidtype = 6", "BidPublishTime desc");
             rptBidInviteList.DataSource = ds;
             rptBidInviteList.DataBind();
-
-            ds = new BLL.Bids().GetList(10, " CityId = " + Id + " and bidtype = 8", "BidPublishTime desc");
-            rptBidSingleList.DataSource = ds;
-            rptBidSingleList.DataBind();
 
         }
     }
