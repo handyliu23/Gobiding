@@ -22,7 +22,7 @@ namespace SmartCategoryRobot
 
                 while (true)
                 {
-                    var bids = new Mercury.BLL.Bids().GetListByPage("BidCategoryId is null", "BidId desc", 1 + (pageNumber - 1) * pageCount, pageNumber * pageCount);
+                    var bids = new Mercury.BLL.Bids().GetListByPage("SubBidCategoryId is null", "BidId desc", 1 + (pageNumber - 1) * pageCount, pageNumber * pageCount);
                     pageNumber++;
                     if (bids != null && bids.Tables[0].Rows.Count > 0)
                     {

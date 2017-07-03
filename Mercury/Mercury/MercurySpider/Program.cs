@@ -12,6 +12,8 @@ using System.Data;
 using System.Globalization;
 using System.IO.Compression;
 using Mercury.BLL;
+using Maticsoft.Common;
+using System.Net.Configuration;
 
 namespace MercurySpider
 {
@@ -765,11 +767,36 @@ namespace MercurySpider
             return "";
         }
 
+        public void SendEmail(string email, string content)
+        {
+            if (!CommonUtility.IsEmail(email))
+            {
+                return;
+            }
+
+            sendMail(new List<string>() { email }, "全国免费招标信息订阅提醒,去投标网（http://www.gobiding.com)", content);
+        }
+
+        private void sendMail(List<string> receiveEmail, string title, string content)
+        {
+            try
+            {
+                SmtpSection cfg = GoBidingEmailSender.getSmtpSection();
+                GoBidingEmailSender.Send(null, cfg, true, receiveEmail, title, content, true, Encoding.UTF8, true, null);
+            }
+            catch (Exception err)
+            {
+                Logger.Warn(err.Message, err.StackTrace, "GoBidingJob");
+            }
+        }
+
         public void ParseDetail(string url, Mercury.Model.Spiders spider, string html, string bidCompanyName, string bidTitle, string bidTime)
         {
             if (string.IsNullOrEmpty(html))
             {
                 Console.WriteLine("html 为空" + url);
+                SendEmail("715794512@qq.com", "html 为空：" + spider.SpiderId + ":" + spider.SpiderName);
+                
                 return;
             }
             try
