@@ -532,16 +532,22 @@
                                 <td style="width: 230px; font-family: '微软雅黑'; line-height: 25px; height: 200px; vertical-align: top;">
                                     <div style="border: 1px solid #ececec; width: 220px; height: 180px; padding: 10px;
                                         font-size: 12px;">
-                                        <a target="_blank" href='/PurchaseOrderDetail/<%#Eval("Id")%>.html' style="font-size: 12px;
+                                        <table cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                                <td rowspan="2" valign="top">
+                                                    <img src='<%#Eval("UserProfile").ToString() %>' style="width:50px; height:50px;" alt=""/>
+                                                </td>
+                                                <td style="padding-left:4px;"><a target="_blank" href='/PurchaseOrderDetail/<%#Eval("Id")%>.html' style="font-size: 12px;
                                             text-decoration: none; color: #000; font-weight: bold;">
                                             <div style="height: 48px;">
                                                 <%#Eval("Title") %></div>
-                                        </a>发布时间：<font style="font-size: 12px; color: #000"><%#Eval("PublishTime", "{0:D}")%></font>
-                                        <br />
+                                        </a></td> </tr>
+                                        </table>
+                                        发布时间：<font style="font-size: 12px; color: #000"><%#Eval("PublishTime", "{0:D}")%></font><br />
                                         <font style="font-size: 12px; color: #000">采购方：<%#Eval("CompanyName")%></font>
                                         <br />
                                         求购地区：<font style="font-size: 12px; color: #000"><%#Eval("ProvinceName")%>
-                                            <%#Eval("CityName")%></font>
+                                            <%# Eval("CityName").ToString().Length > 3 ? Eval("CityName").ToString().Substring(0, 3) : Eval("CityName").ToString()%></font>
                                         <br />
                                         <a target="_blank" href='/PurchaseOrderDetail/<%#Eval("Id")%>.html' style="font-size: 12px;
                                             text-decoration: none;">
@@ -897,10 +903,10 @@
                         <a href="http://www.makename.cn">起名</a>
                     </td>
                     <td style="width: 110px;">
-                        <a href="http://www.pdsxr.com">走私车</a>
+                     <a href="http://www.fxinlu.com">生物质蒸汽发生器</a>
                     </td>
                     <td style="width: 110px;">
-                        <a href="http://jtswjd.com">伟哥</a>
+                     <a href="http://www.g448.com">世界之最</a>
                     </td>
                     <td style="width: 90px;">
                         <a href="http://www.8899588.com">吸粪车价格</a>
@@ -938,10 +944,10 @@
                             <a href="http://www.0634fc.com">莱芜房探网</a>
                         </td>
                         <td style="width: 90px;">
-                            <a href="http://www.g448.com">世界之最</a>
+                           
                         </td>
                         <td style="width: 90px;">
-                            <a href="http://www.fxinlu.com">生物质蒸汽发生器</a>
+                           
                         </td>
                         <td style="width: 90px;">
                         </td>

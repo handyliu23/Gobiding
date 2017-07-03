@@ -108,5 +108,10 @@ namespace GoBiding.Web.UserCenter.UserCenterPage.Admin
 
             Init("按ProvinceId倒序");
         }
+
+        protected void btnNewCompany_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/UserCenter/UserCenterPage/Admin/NewCompany.aspx");
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace SmartCategoryRobot
 
                 while (true)
                 {
-                    var bids = new Mercury.BLL.Bids().GetListByPage("BidCategoryId is null", "BidId desc", 1 + (pageNumber - 1) * pageCount, pageNumber * pageCount);
+                    var bids = new Mercury.BLL.Bids().GetListByPage(" (BidCategoryId is null or bidcategoryid =0) ", "BidId desc", 1 + (pageNumber - 1) * pageCount, pageNumber * pageCount);
                     pageNumber++;
                     if (bids != null && bids.Tables[0].Rows.Count > 0)
                     {
@@ -42,17 +42,20 @@ namespace SmartCategoryRobot
                                     List<string> keywords = smart.Keywords.Split(' ').ToList();
                                     foreach (var keyword in keywords)
                                     {
-                                        if (title.Contains(keyword))
+                                        if (!string.IsNullOrEmpty(keyword) && title.Contains(keyword))
                                         {
                                             var model = bizBid.GetModel(bidId);
                                             model.BidCategoryId = smart.ParentCategoryId;
                                             model.SubBidCategoryId = smart.BidCategoryId;
-                                                bizBid.Update(model);
+                                            bizBid.Update(model);
                                             ismatch = true;
                                             break;
                                             //model.BidCategoryName = smart.BidCategoryId;
                                         }
                                     }
+                                }
+                                else {
+                                    break;
                                 }
                             }
 

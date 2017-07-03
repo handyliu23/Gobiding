@@ -65,6 +65,8 @@ namespace GoBiding.Web
                 if (companyexists == null || companyexists.Count == 0)
                 {
                     company = CreateCompany(companyName);
+                    BLL.Logger.Info("CreateCompany,Id:" + company.Id.ToString(), "");
+
                 }
                 else {
                     company = companyexists.FirstOrDefault();
@@ -79,6 +81,8 @@ namespace GoBiding.Web
                         user.Email = Email;
                         user.CompanyName = companyName;
                         user.CompanyId = company.Id;
+                        BLL.Logger.Info("Update User,CompanyId:" + user.CompanyId.ToString(), "");
+
                         userBLL.Update(user);
 
                         context.Session["UserSessionId"] = user.Sys_UserId;

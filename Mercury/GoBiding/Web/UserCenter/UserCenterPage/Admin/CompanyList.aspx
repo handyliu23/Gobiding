@@ -20,13 +20,15 @@
            <div class="row">
                  <div class="col-xs-12" style="padding-bottom:10px;">
                  <asp:Button runat="server" ID="btnDefault" Text="默认排序" 
-                         onclick="btnDefault_Click"  />
+                         onclick="btnDefault_Click" Height="22px"  />
                     &nbsp;&nbsp;
                     <asp:Button runat="server" ID="btnSortByLastLoginTime" Text="按OnCreated倒序" 
                          onclick="btnSortByLastLoginTime_Click" />
                     &nbsp;&nbsp;
                     <asp:Button runat="server" ID="btnLoginTimes" Text="按ProvinceId倒序" 
-                         onclick="btnLoginTimes_Click"  />
+                         onclick="btnLoginTimes_Click"  /> &nbsp;&nbsp; &nbsp;&nbsp;
+                            <asp:Button runat="server" ID="btnNewCompany" Text="快速添加新公司" 
+                         onclick="btnNewCompany_Click" />
                  </div>
            </div>
             <div class="row">
@@ -62,10 +64,7 @@
                                 <%#Eval("ContacterPosition")%><br />
                                 </td>
                              <td style="width: 100px;">
-                                Email:<%#Eval("Email")%><br />
-                                QQ:<%#Eval("QQ")%><br />
-                                Add:<%#Eval("Address")%>
-                                </td>
+                                Email:<%#Eval("Email")%><br />QQ:<%#Eval("QQ")%><br />Add:<%#Eval("Address")%></td>
                             <td style="width: 70px;">
                                 <%#Eval("ProvinceId")%> <%#Eval("CityId")%>
                             </td>

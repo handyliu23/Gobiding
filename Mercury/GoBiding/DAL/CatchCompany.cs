@@ -23,9 +23,9 @@ namespace GoBiding.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into CatchCompany(");
-			strSql.Append("VendorName,Address,LegalRepresentative,CompanyType,CompanyTelephone,ContacterName,ContacterPosition,ContacterTelephone,ContacterTelephone2,MobilePhone,MobilePhone2,Email,QQ,Fax,DistrictId,CityId,AnnualSalesVolume,MajorBusinesses,MajorProduct,RegisteredFund,CreatedDate,PostCode,WebSite,Gender,BussinessTypeId,BussinessType,Notes,OnCreated,Resv,Industry,ProvinceId)");
+			strSql.Append("VendorName,Address,LegalRepresentative,CompanyType,CompanyTelephone,ContacterName,ContacterPosition,ContacterTelephone,ContacterTelephone2,MobilePhone,MobilePhone2,Email,QQ,Fax,DistrictId,CityId,AnnualSalesVolume,MajorBusinesses,MajorProduct,RegisteredFund,CreatedDate,PostCode,WebSite,Gender,BussinessTypeId,BussinessType,Notes,OnCreated,Resv,Industry,ProvinceId,IsBidAgent)");
 			strSql.Append(" values (");
-			strSql.Append("@VendorName,@Address,@LegalRepresentative,@CompanyType,@CompanyTelephone,@ContacterName,@ContacterPosition,@ContacterTelephone,@ContacterTelephone2,@MobilePhone,@MobilePhone2,@Email,@QQ,@Fax,@DistrictId,@CityId,@AnnualSalesVolume,@MajorBusinesses,@MajorProduct,@RegisteredFund,@CreatedDate,@PostCode,@WebSite,@Gender,@BussinessTypeId,@BussinessType,@Notes,@OnCreated,@Resv,@Industry,@ProvinceId)");
+			strSql.Append("@VendorName,@Address,@LegalRepresentative,@CompanyType,@CompanyTelephone,@ContacterName,@ContacterPosition,@ContacterTelephone,@ContacterTelephone2,@MobilePhone,@MobilePhone2,@Email,@QQ,@Fax,@DistrictId,@CityId,@AnnualSalesVolume,@MajorBusinesses,@MajorProduct,@RegisteredFund,@CreatedDate,@PostCode,@WebSite,@Gender,@BussinessTypeId,@BussinessType,@Notes,@OnCreated,@Resv,@Industry,@ProvinceId,@IsBidAgent)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@VendorName", SqlDbType.NVarChar,500),
@@ -58,7 +58,8 @@ namespace GoBiding.DAL
 					new SqlParameter("@OnCreated", SqlDbType.DateTime),
 					new SqlParameter("@Resv", SqlDbType.VarChar,1),
 					new SqlParameter("@Industry", SqlDbType.Int,4),
-					new SqlParameter("@ProvinceId", SqlDbType.Int,4)};
+					new SqlParameter("@ProvinceId", SqlDbType.Int,4),
+					new SqlParameter("@IsBidAgent", SqlDbType.Int,4)};
 			parameters[0].Value = model.VendorName;
 			parameters[1].Value = model.Address;
 			parameters[2].Value = model.LegalRepresentative;
@@ -90,6 +91,7 @@ namespace GoBiding.DAL
 			parameters[28].Value = model.Resv;
 			parameters[29].Value = model.Industry;
 			parameters[30].Value = model.ProvinceId;
+			parameters[31].Value = model.IsBidAgent;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -138,7 +140,8 @@ namespace GoBiding.DAL
 			strSql.Append("OnCreated=@OnCreated,");
 			strSql.Append("Resv=@Resv,");
 			strSql.Append("Industry=@Industry,");
-			strSql.Append("ProvinceId=@ProvinceId");
+			strSql.Append("ProvinceId=@ProvinceId,");
+			strSql.Append("IsBidAgent=@IsBidAgent");
 			strSql.Append(" where Id=@Id");
 			SqlParameter[] parameters = {
 					new SqlParameter("@VendorName", SqlDbType.NVarChar,500),
@@ -172,6 +175,7 @@ namespace GoBiding.DAL
 					new SqlParameter("@Resv", SqlDbType.VarChar,1),
 					new SqlParameter("@Industry", SqlDbType.Int,4),
 					new SqlParameter("@ProvinceId", SqlDbType.Int,4),
+					new SqlParameter("@IsBidAgent", SqlDbType.Int,4),
 					new SqlParameter("@Id", SqlDbType.Int,4)};
 			parameters[0].Value = model.VendorName;
 			parameters[1].Value = model.Address;
@@ -204,7 +208,8 @@ namespace GoBiding.DAL
 			parameters[28].Value = model.Resv;
 			parameters[29].Value = model.Industry;
 			parameters[30].Value = model.ProvinceId;
-			parameters[31].Value = model.Id;
+			parameters[31].Value = model.IsBidAgent;
+			parameters[32].Value = model.Id;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -268,7 +273,7 @@ namespace GoBiding.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 Id,VendorName,Address,LegalRepresentative,CompanyType,CompanyTelephone,ContacterName,ContacterPosition,ContacterTelephone,ContacterTelephone2,MobilePhone,MobilePhone2,Email,QQ,Fax,DistrictId,CityId,AnnualSalesVolume,MajorBusinesses,MajorProduct,RegisteredFund,CreatedDate,PostCode,WebSite,Gender,BussinessTypeId,BussinessType,Notes,OnCreated,Resv,Industry,ProvinceId from CatchCompany ");
+			strSql.Append("select  top 1 Id,VendorName,Address,LegalRepresentative,CompanyType,CompanyTelephone,ContacterName,ContacterPosition,ContacterTelephone,ContacterTelephone2,MobilePhone,MobilePhone2,Email,QQ,Fax,DistrictId,CityId,AnnualSalesVolume,MajorBusinesses,MajorProduct,RegisteredFund,CreatedDate,PostCode,WebSite,Gender,BussinessTypeId,BussinessType,Notes,OnCreated,Resv,Industry,ProvinceId,IsBidAgent from CatchCompany ");
 			strSql.Append(" where Id=@Id");
 			SqlParameter[] parameters = {
 					new SqlParameter("@Id", SqlDbType.Int,4)
@@ -424,6 +429,10 @@ namespace GoBiding.DAL
 				{
 					model.ProvinceId=int.Parse(row["ProvinceId"].ToString());
 				}
+				if(row["IsBidAgent"]!=null && row["IsBidAgent"].ToString()!="")
+				{
+					model.IsBidAgent=int.Parse(row["IsBidAgent"].ToString());
+				}
 			}
 			return model;
 		}
@@ -434,7 +443,7 @@ namespace GoBiding.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select Id,VendorName,Address,LegalRepresentative,CompanyType,CompanyTelephone,ContacterName,ContacterPosition,ContacterTelephone,ContacterTelephone2,MobilePhone,MobilePhone2,Email,QQ,Fax,DistrictId,CityId,AnnualSalesVolume,MajorBusinesses,MajorProduct,RegisteredFund,CreatedDate,PostCode,WebSite,Gender,BussinessTypeId,BussinessType,Notes,OnCreated,Resv,Industry,ProvinceId ");
+			strSql.Append("select Id,VendorName,Address,LegalRepresentative,CompanyType,CompanyTelephone,ContacterName,ContacterPosition,ContacterTelephone,ContacterTelephone2,MobilePhone,MobilePhone2,Email,QQ,Fax,DistrictId,CityId,AnnualSalesVolume,MajorBusinesses,MajorProduct,RegisteredFund,CreatedDate,PostCode,WebSite,Gender,BussinessTypeId,BussinessType,Notes,OnCreated,Resv,Industry,ProvinceId,IsBidAgent ");
 			strSql.Append(" FROM CatchCompany ");
 			if(strWhere.Trim()!="")
 			{
@@ -454,7 +463,7 @@ namespace GoBiding.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" Id,VendorName,Address,LegalRepresentative,CompanyType,CompanyTelephone,ContacterName,ContacterPosition,ContacterTelephone,ContacterTelephone2,MobilePhone,MobilePhone2,Email,QQ,Fax,DistrictId,CityId,AnnualSalesVolume,MajorBusinesses,MajorProduct,RegisteredFund,CreatedDate,PostCode,WebSite,Gender,BussinessTypeId,BussinessType,Notes,OnCreated,Resv,Industry,ProvinceId ");
+			strSql.Append(" Id,VendorName,Address,LegalRepresentative,CompanyType,CompanyTelephone,ContacterName,ContacterPosition,ContacterTelephone,ContacterTelephone2,MobilePhone,MobilePhone2,Email,QQ,Fax,DistrictId,CityId,AnnualSalesVolume,MajorBusinesses,MajorProduct,RegisteredFund,CreatedDate,PostCode,WebSite,Gender,BussinessTypeId,BussinessType,Notes,OnCreated,Resv,Industry,ProvinceId,IsBidAgent ");
 			strSql.Append(" FROM CatchCompany ");
 			if(strWhere.Trim()!="")
 			{

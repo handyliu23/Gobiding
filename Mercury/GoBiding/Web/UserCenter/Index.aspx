@@ -140,7 +140,7 @@
                                                 普通会员 (免费)
                                             </div>
                                             <div style="padding-top: 10px; line-height: 30px; color: #000; height: 300px; font-weight: normal; background-color: #fafafa;">
-                                                招标信息（部分）<br/>
+                                                招标信息<br/>
                                                 企业采购<br/>
                                                 招标代理查询<br/>
                                                 去投标追踪宝<br/>
