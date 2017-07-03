@@ -54,7 +54,7 @@ namespace GoBiding.Web.UserCenter.UserCenterPage.Admin
                 rptBidList.DataSource = DbHelperSQL.RunProcedure("GetSysUserList", _params.ToArray());
                 rptBidList.DataBind();
 
-                int totalUserCount = (int)DbHelperSQL.GetSingle("SELECT COUNT(*) FROM Sys_Users WHERE Deleted <> 1");
+                int totalUserCount = (int)DbHelperSQL.GetSingle("SELECT COUNT(*) FROM Sys_Users WHERE Deleted <> 1 and CreateByPlatform<>1");
 
                 ltrTotalUserCount.Text = totalUserCount.ToString();
                 AspNetPager1.RecordCount = totalUserCount;
@@ -124,6 +124,21 @@ namespace GoBiding.Web.UserCenter.UserCenterPage.Admin
         {
             this.AspNetPager1.CurrentPageIndex = 1;
             Response.Redirect("/UserCenter/UserCenterPage/Admin/UserList.aspx?Sort=LoginTimes");
+        }
+
+
+        public void GetRegistUserCountByDate()
+        {
+            string usercountsql = @"
+select top 30 COUNT(*),convert(varchar(10),OnCreate,120)  from Sys_Users 
+where CreateByPlatform <> 1
+and Deleted <> 1
+group by convert(varchar(10),OnCreate,120)
+order by convert(varchar(10),OnCreate,120)  desc ";
+
+            DbHelperSQL.Query(usercountsql);
+
+        
         }
     }
 }

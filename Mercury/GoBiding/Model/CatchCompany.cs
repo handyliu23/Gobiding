@@ -42,6 +42,7 @@ namespace GoBiding.Model
 		private string _resv;
 		private int? _industry;
 		private int? _provinceid;
+		private int? _isbidagent;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -297,6 +298,14 @@ namespace GoBiding.Model
 		{
 			set{ _provinceid=value;}
 			get{return _provinceid;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public int? IsBidAgent
+		{
+			set{ _isbidagent=value;}
+			get{return _isbidagent;}
 		}
 		#endregion Model
 

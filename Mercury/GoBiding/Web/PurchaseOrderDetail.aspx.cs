@@ -80,11 +80,18 @@ namespace GoBiding.Web
                     ltrCompanyName.Text = bid.CompanyName;
                     companyId = publishUser.CompanyId;
                     ltrYears.Text = ((DateTime.Now - publishUser.OnCreate.Value).Days / 365 + 1).ToString();
-                    qqstring = publishUser.QQ;
+                    if (string.IsNullOrEmpty(publishUser.QQ))
+                    {
+                        qqstring = "715794512";
+                    }else
+                        qqstring = publishUser.QQ;
 
                     var company = new BLL.CatchCompany().GetModel(publishUser.CompanyId);
-                    ltrDomain.Text = company.MajorBusinesses;
-                    ltrMajor.Text = company.MajorProduct;
+                    if (company != null)
+                    {
+                        ltrDomain.Text = company.MajorBusinesses;
+                        ltrMajor.Text = company.MajorProduct;
+                    }
 
                     var publishPurchaseOrderCount = new BLL.PurchaseOrder().GetRecordCount(" SysUserId = " + publishUser.Sys_UserId);
                     ltrPubCount.Text = publishPurchaseOrderCount.ToString();

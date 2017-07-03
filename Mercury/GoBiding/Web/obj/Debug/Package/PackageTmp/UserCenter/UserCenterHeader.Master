@@ -1,0 +1,253 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserCenterHeader.master.cs"
+    Inherits="GoBiding.UserCenter.UserCenterHeader" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>去投标网_中国最专业的招投标服务平台_企业用户后台_首页</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
+        name='viewport'>
+    <!-- bootstrap 3.0.2 -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- font Awesome -->
+    <link href="/UserCenter/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="/UserCenter/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <!-- jvectormap -->
+    <%--    <link href="/UserCenter/css/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet"
+        type="text/css" />--%>
+    <!-- Daterange picker -->
+    <%--    <link href="/UserCenter/css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet"
+        type="text/css" />--%>
+    <!-- Theme style -->
+    <link href="/UserCenter/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+    <script src="/UserCenter/js/jquery.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    <style>
+        body
+        {
+            font: 12px/1.5 "\5FAE\8F6F\96C5\9ED1" , "Microsoft Yahei" , "Hiragino Sans GB" ,tahoma,arial, "\5B8B\4F53";
+        }
+    </style>
+</head>
+<body class="skin-blue">
+    <!-- header logo: style can be found in header.less -->
+    <header class="header">
+            <a href="/default.aspx" class="logo">
+                <!-- Add the class icon to your logo image or logo icon to add the margining -->
+                GoBiding.com<br/>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <li class="dropdown messages-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope"></i>
+                                <span class="label label-success"><asp:Literal runat="server" ID="ltrUnreadMessageCount2"></asp:Literal></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">您有 <asp:Literal runat="server" ID="ltrUnreadMessageCount3"></asp:Literal> 条未读消息</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <asp:Repeater runat="server" ID="rptUnreadMessage">
+                                            <ItemTemplate>
+                                                <li><!-- start message -->
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="/imgs/system/admin.png" class="img-circle" alt="User Image"/>
+                                                </div>
+                                                <p>
+                                                    <%#Eval("Title").ToString().Length > 14 ? Eval("Title").ToString().Substring(0, 14) : Eval("Title").ToString()%>
+                                                </p>
+                                                <div style="font-size: 11px; color: #000;">
+                                                    <%#Eval("Content").ToString().Length > 14 ? Eval("Content").ToString().Substring(0, 14) : Eval("Title").ToString()%>
+                                                </div>
+                                            </a>
+                                        </li><!-- end message -->
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="/UserCenter/UserCenterPage/MessageCenter.aspx">See All Messages</a></li>
+                            </ul>
+                        </li>
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="glyphicon glyphicon-user"></i>
+                                <span><asp:Literal runat="server" ID="ltrUserName"></asp:Literal> <i class="caret"></i></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header bg-light-blue">
+                                    <asp:Image runat="server" ID="imgProfile" class="img-circle"  />
+                                    <p>
+                                        <asp:Literal runat="server" ID="ltrUserName3" /> - 去投标网
+                                        <small><asp:Literal runat="server" ID="ltrCompanyName" /></small>
+                                    </p>
+                                </li>
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-left">
+                                        <a href="/UserCenter/UserCenterPage/Profile.aspx" class="btn btn-default btn-flat">设置</a>
+                                    </div>
+                                    <div class="pull-right">
+                                        <a href="/UserCenter/UserCenterPage/LogOut.aspx" class="btn btn-default btn-flat">登出</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    <div class="wrapper row-offcanvas row-offcanvas-left">
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="left-side sidebar-offcanvas">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
+                    <!-- Sidebar user panel -->
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <asp:Image runat="server" ID="imgProfile2" class="img-circle"   alt=""/>
+                        </div>
+                        <div class="pull-left info">
+                            <p>Hello, <asp:Literal ID="ltrUserName2" runat="server"></asp:Literal></p>
+
+                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                        </div>
+                    </div>
+                    <!-- /.search form -->
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="sidebar-menu">
+                        <li class="active">
+                            <a href="/UserCenter/index.aspx">
+                                <i class="fa fa-dashboard"></i> <span>主控面板</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/UserCenter/UserCenterPage/BidTracker.aspx">
+                                <i class="fa fa-th"></i> <span>定制追踪宝</span> <small class="badge pull-right bg-green">new</small>
+                            </a>
+                        </li>
+                        <li class="treeview active">
+                            <a href="#">
+                                <i class="fa fa-bar-chart-o"></i>
+                                <span>招标信息</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="/UserCenter/UserCenterPage/PublishBid.aspx"><i class="fa fa-angle-double-right"></i> 发布招标信息</a></li>
+                                <li><a href="/UserCenter/UserCenterPage/PublishWinBid.aspx"><i class="fa fa-angle-double-right"></i> 发布中标信息</a></li>
+                                <li><a href="/UserCenter/UserCenterPage/PublishAbortive.aspx"><i class="fa fa-angle-double-right"></i> 发布中止流标信息</a></li>
+                                <li><a href="/UserCenter/UserCenterPage/PublishedBids.aspx"><i class="fa fa-angle-double-right"></i> 已发布的招标信息</a></li>
+                                <li><a href="/UserCenter/UserCenterPage/FavouriteBids.aspx"><i class="fa fa-angle-double-right"></i> 收藏的招标信息</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview active">
+                            <a href="#">
+                                <i class="fa fa-laptop"></i>
+                                <span>采购信息</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                             <ul class="treeview-menu">
+                                <li><a href="/UserCenter/UserCenterPage/PublishPurchaseOrder.aspx"><i class="fa fa-angle-double-right"></i> 发布采购信息</a></li>
+                                <li><a href="/UserCenter/UserCenterPage/PurchaseOrderList.aspx"><i class="fa fa-angle-double-right"></i> 管理采购信息</a></li>
+                            </ul>
+                        </li>
+                      
+                        <li>
+                            <a href="/UserCenter/UserCenterPage/BrowseHistoryBids.aspx">
+                                <i class="fa fa-calendar"></i> <span>访问历史记录</span>
+                                <small class="badge pull-right bg-red"><asp:Literal runat="server" ID="ltrHistory"></asp:Literal></small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/UserCenter/UserCenterPage/MessageCenter.aspx">
+                                <i class="fa fa-envelope"></i> <span>消息中心</span>
+                                <small class="badge pull-right bg-yellow"><asp:Literal runat="server" ID="ltrUnreadMessageCount"></asp:Literal></small>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-folder"></i> <span>政府采购中心查询</span>
+                            </a>
+                        </li>
+                        <li class="treeview active">
+                          <a href="/UserCenter/UserCenterPage/Profile.aspx">
+                              <i class="fa fa-edit"></i> <span>用户设置</span><i class="fa fa-angle-left pull-right"></i>
+                          </a>
+                          <ul class="treeview-menu">
+                                <li><a href="/UserCenter/UserCenterPage/Profile.aspx"><i class="fa fa-angle-double-right"></i> 个人设置</a></li>
+                                <li><a href="/UserCenter/UserCenterPage/CompanyProfile.aspx"><i class="fa fa-angle-double-right"></i> 企业设置</a></li>
+                              </ul>
+                        </li>
+                         <li class="treeview active" runat="server" id="moduleUserManager">
+                          <a>
+                              <i class="fa fa-edit"></i> <span>用户管理</span><i class="fa fa-angle-left pull-right"></i>
+                          </a>
+                          <ul class="treeview-menu">
+                                <li><a href="/UserCenter/UserCenterPage/Admin/UserList.aspx"><i class="fa fa-angle-double-right"></i> 用户列表</a></li>
+                                <li><a href="/UserCenter/UserCenterPage/Admin/CompanyList.aspx"><i class="fa fa-angle-double-right"></i> 企业列表</a></li>
+                              </ul>
+                        </li>
+                         <li class="treeview active" runat="server" id="moduleSystemManager">
+                          <a>
+                              <i class="fa fa-edit"></i> <span>系统管理</span><i class="fa fa-angle-left pull-right"></i>
+                          </a>
+                          <ul class="treeview-menu">
+                                <li><a href="/UserCenter/UserCenterPage/SystemInfo/SpiderList.aspx"><i class="fa fa-angle-double-right"></i> MercurySpiders</a></li>
+                                <li><a href="/UserCenter/UserCenterPage/SystemInfo/SmartCategoryList.aspx"><i class="fa fa-angle-double-right"></i> 招标分类匹配</a></li>
+                                <li><a href="/UserCenter/UserCenterPage/SystemInfo/SechduleList.aspx"><i class="fa fa-angle-double-right"></i> 任务调度</a></li>
+                                <li><a href="/UserCenter/UserCenterPage/SystemInfo/LogList.aspx"><i class="fa fa-angle-double-right"></i> 日志列表</a></li>
+                              </ul>
+                        </li>
+                        <li class="treeview active" runat="server" id="moduleNewsManager">
+                          <a>
+                              <i class="fa fa-edit"></i> <span>资讯管理</span><i class="fa fa-angle-left pull-right"></i>
+                          </a>
+                          <ul class="treeview-menu">
+                                <li><a href="/UserCenter/UserCenterPage/Admin/NewsList.aspx"><i class="fa fa-angle-double-right"></i> 资讯列表</a></li>
+                              </ul>
+                        </li>
+                    </ul>
+                </section>
+                <!-- /.sidebar -->
+            </aside>
+        <div>
+            <form id="form1" runat="server">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </form>
+        </div>
+    </div>
+    <!-- ./wrapper -->
+    <!-- jQuery 2.0.2 -->
+    <!-- jQuery UI 1.10.3 -->
+    <script src="/UserCenter/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
+    <!-- Bootstrap -->
+    <script src="/UserCenter/js/bootstrap.min.js" type="text/javascript"></script>
+    <!-- daterangepicker -->
+    <%--<script src="/UserCenter/js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>--%>
+    <!-- AdminLTE App -->
+    <script src="/UserCenter/js/AdminLTE/app.js" type="text/javascript"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <%--<script src="/UserCenter/js/AdminLTE/dashboard.js" type="text/javascript"></script>--%>
+</body>
+</html>

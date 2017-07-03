@@ -483,6 +483,9 @@
     <Content Include="robots.txt" />
     <Content Include="ServiceList.aspx" />
     <Content Include="js\thirdplugin.js" />
+    <Content Include="sitemap.html" />
+    <Content Include="sitemap.txt" />
+    <Content Include="sitemap.xml" />
     <Content Include="ThirdLogin.aspx" />
     <Content Include="UserCenter\css\AdminLTE.css" />
     <Content Include="UserCenter\css\bootstrap-datetimepicker.min.css" />
@@ -1047,6 +1050,7 @@
     <Content Include="UserCenter\pages\UI\timeline.html" />
     <Content Include="UserCenter\pages\widgets.html" />
     <Content Include="UserCenter\UserCenterPage\Admin\CompanyList.aspx" />
+    <Content Include="UserCenter\UserCenterPage\Admin\NewCompany.aspx" />
     <Content Include="UserCenter\UserCenterPage\Admin\NewsEdit.aspx" />
     <Content Include="UserCenter\UserCenterPage\Admin\NewsList.aspx" />
     <Content Include="UserCenter\UserCenterPage\Admin\UserList.aspx" />
@@ -1382,6 +1386,13 @@
     </Compile>
     <Compile Include="UserCenter\UserCenterPage\Admin\CompanyList.aspx.designer.cs">
       <DependentUpon>CompanyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\UserCenterPage\Admin\NewCompany.aspx.cs">
+      <DependentUpon>NewCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\UserCenterPage\Admin\NewCompany.aspx.designer.cs">
+      <DependentUpon>NewCompany.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserCenter\UserCenterPage\Admin\NewsEdit.aspx.cs">
       <DependentUpon>NewsEdit.aspx</DependentUpon>

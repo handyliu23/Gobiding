@@ -135,13 +135,43 @@ namespace GoBiding
                 ltrTotalCount.Text = new BLL.Bids().GetRecordCount(" BidPublishTime > '" + starttime.ToShortDateString() + "'").ToString();
 
                 string sql = @"
-select top 20 Id,Title,PublishTime,ExpireTime,Status,PurchaseType,IsEmergency,IsSetTop,CompanyName,p.ProvinceName, c.CityName
+select top 20 Id,Title,PublishTime,ExpireTime,Status,PurchaseType,IsEmergency,IsSetTop,po.CompanyName,p.ProvinceName, c.CityName,su.UserProfile,su.CreateByPlatform
 from PurchaseOrder po left join Provinces p on po.RecvProvinceId = p.ProvinceID 
 left join Citys c on c.CityID = po.RecvCityId
+left join Sys_Users su on su.Sys_UserId = po.SysUserId
 order by 1 desc
                 ";
 
                 DataSet ds = DbHelperSQL.Query(sql);
+
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+                    if (ds.Tables[0].Rows[i]["CreateByPlatform"].ToString().Equals("1"))
+                    {
+                        if (ds.Tables[0].Rows[i]["UserProfile"] == null || string.IsNullOrEmpty(ds.Tables[0].Rows[i]["UserProfile"].ToString()))
+                        {
+                            ds.Tables[0].Rows[i]["UserProfile"] = "/imgs/system/zwtp.png";
+                        }
+                    }
+                    else {
+                        if (ds.Tables[0].Rows[i]["UserProfile"].ToString().Contains("qzapp"))
+                        {
+                            imgProfile.ImageUrl = ds.Tables[0].Rows[i]["UserProfile"].ToString() + "/30";
+                        }
+                        else if (ds.Tables[0].Rows[i]["UserProfile"].ToString().Contains("wx.qlogo"))
+                        {
+                            imgProfile.ImageUrl = ds.Tables[0].Rows[i]["UserProfile"].ToString();
+                        }
+                        else if (ds.Tables[0].Rows[i]["UserProfile"].ToString().Contains("sinaimg"))
+                        {
+                            imgProfile.ImageUrl = ds.Tables[0].Rows[i]["UserProfile"].ToString();
+                        }
+                        else
+                        {
+                            imgProfile.ImageUrl = "~/imgs/users/" + ds.Tables[0].Rows[i]["UserProfile"].ToString();
+                        }
+                    }
+                }
 
                 if (ds != null && ds.Tables[0].Rows.Count > 0)
                 {

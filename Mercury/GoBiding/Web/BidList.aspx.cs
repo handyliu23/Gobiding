@@ -96,7 +96,7 @@ namespace GoBiding.Web
             {
                 if (!string.IsNullOrEmpty(subindustry) && subindustry != "0")
                 {
-                    _params.Add(new SqlParameter("@SubBidCategoryId", subindustry));
+                    _params.Add(new SqlParameter("@SubBidCategoryId", subindustry));//指定了二级类
                 }
                 _params.Add(new SqlParameter("@BidCategoryId", industry));
             }
@@ -286,7 +286,7 @@ where CompanyName <> '' and CompanyName like '%公司' order by u.OnCreate desc
                 rptEmergencyPurchaseOrderList.DataBind();
             }
 
-            sql2 = "select top 8 count(BidCompanyName) as count,max(BidCompanyId) as BidCompanyId,BidCompanyName from Bids where BidCompanyName <> '' and CompanyName like '%公司' and bidcompanyname <> '详情见公告' and  bidcompanyname <> '无详细信息' group by BidCompanyName order by 1 desc";
+            sql2 = "select top 8 count(BidCompanyName) as count,max(BidCompanyId) as BidCompanyId,BidCompanyName from Bids where BidCompanyName <> '' and BidCompanyName like '%公司' and bidcompanyname <> '详情见公告' and  bidcompanyname <> '无详细信息' group by BidCompanyName order by 1 desc";
             var ds2 = DbHelperSQL.Query(sql2);
          
             rptHotCompanyList.DataSource = ds2;
