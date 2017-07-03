@@ -23,6 +23,9 @@
                 color:#FFF;
                 }
             .btn 
+            {
+                color:
+                }
         </style>
 </head>
 <body>
