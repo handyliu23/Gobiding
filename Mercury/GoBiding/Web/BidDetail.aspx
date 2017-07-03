@@ -243,7 +243,7 @@
                         <ItemTemplate>
                             <td style="border: 0px; width: 120px; line-height: 26px; height: 26px; padding-top: 10px;
                                 padding-left: 10px; padding-bottom: 5px;">
-                                <a href='/Province/index/c/<%# Eval("CityID")%>' style="text-decoration: none;
+                                <a href='/Province/index/c/<%# Eval("CityID")%>.html' style="text-decoration: none;
                                     color: #333; font-size: 12px;">
                                     <%# Eval("CityName")%>ÕÐ±êÍø</a>
                             </td>

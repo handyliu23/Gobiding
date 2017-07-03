@@ -19,6 +19,7 @@ namespace GoBiding.Web.Province
         public string CategoryEnglishName = "";
         public int CategoryId = 0;
         private string Id = "";
+        
 
         string strTitle;
         string strSeoKey;
@@ -35,30 +36,63 @@ namespace GoBiding.Web.Province
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            categorys = new BLL.BidCategorys().GetModelList("");
+            
+            Id = Request.QueryString["id"];
 
             if (!IsPostBack)
             {
-                categorys = new BLL.BidCategorys().GetModelList("");
+                InitDDL();
 
-                Id = Request.QueryString["id"];
                 string type = Request.QueryString["type"];
+
+                AspNetPager1.UrlRewritePattern = "/Province/index/p/" + Id + ".html?page={0}";
 
                 if (string.IsNullOrEmpty(type) || type == "p")
                 {
-                    InitForProvinceId();
+                    InitForProvinceId("");
                 }
                 if (type == "c")
                 {
                     InitForCityId();
                 }
+
+                InitForAgentCompany();
             }
         }
 
-        public void InitForProvinceId()
+        public void InitForAgentCompany()
+        {
+            string sql = string.Format(@"
+select top 10 * from CatchCompany where IsBidAgent = 1 and ProvinceId = {0}
+", Id);
+
+            rptCompanyAgentList.DataSource = DbHelperSQL.Query(sql);
+            rptCompanyAgentList.DataBind();
+        }
+
+        public void InitDDL()
+        {
+            var ds = new BLL.Citys().GetList(20, " ProvinceId = " + Id, " CityID");
+
+            ddlCitys.DataTextField = "CityName";
+            ddlCitys.DataValueField = "CityID";
+            ddlCitys.DataSource = ds;
+            ddlCitys.DataBind();
+            ListItem item = new ListItem("全部", "0");
+            ddlCitys.Items.Insert(0, item);
+
+            rptBidInviteList.DataSource = ds;
+            rptBidInviteList.DataBind();
+        }
+
+        public void InitForProvinceId(string where)
         {
             provincename = CommonUtility.GetProvinceName(Id);
             ltrProvinceName.Text = provincename;
             ltrProvinceName2.Text = provincename;
+            ltrProvinceName3.Text = provincename;
+            ltrProvinceName4.Text = provincename;
 
             if (string.IsNullOrEmpty(provincename))
                 return;
@@ -86,7 +120,7 @@ namespace GoBiding.Web.Province
                 pageindex = int.Parse(Request.QueryString["page"]);
             }
 
-            string where = " and provinceId = " + Id;
+            where += " and provinceId = " + Id;
             string sql = string.Format(@"
 SELECT TOP {0} BidId,BidTitle,BidPublishTime,BidCompanyName,ProvinceId,BidCategoryId,BidType,CityId
 FROM 
@@ -105,17 +139,7 @@ WHERE RowNumber > {0}*({1} - 1)
 
             var dsCount = DbHelperSQL.Query(sqlCount);
             AspNetPager1.RecordCount = int.Parse(dsCount.Tables[0].Rows[0][0].ToString());
-            
 
-            ds = new BLL.Citys().GetList(20, " ProvinceId = " + Id, " CityID");
-
-            ddlCitys.DataTextField = "CityName";
-            ddlCitys.DataValueField = "CityID";
-            ddlCitys.DataSource = ds;
-            ddlCitys.DataBind();
-
-            rptBidInviteList.DataSource = ds;
-            rptBidInviteList.DataBind();
 
         }
 
@@ -151,6 +175,88 @@ WHERE RowNumber > {0}*({1} - 1)
             rptBidInviteList.DataSource = ds;
             rptBidInviteList.DataBind();
 
+        }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            string typeId = ddlSelectBidType.SelectedValue;
+            string cityId = ddlCitys.SelectedValue;
+            string keywords = txtKeywords.Text;
+            string where = "";
+
+            if (!string.IsNullOrEmpty(typeId) && typeId !="0")
+            {
+                where += " and bidtype = " + typeId;
+            }
+
+            if (!string.IsNullOrEmpty(cityId) && cityId != "0")
+            {
+                where += " and cityId = " + cityId;
+            }
+            if (!string.IsNullOrEmpty(keywords))
+            {
+                where += String.Format(" and (contains(BidTitle,'{0}') or contains(BidContent,'{0}' )) ", keywords);
+            }
+
+            Id = Request.QueryString["id"];
+            string type = Request.QueryString["type"];
+
+            if (string.IsNullOrEmpty(type) || type == "p")
+            {
+                InitForProvinceId(where);
+            }
+            if (type == "c")
+            {
+                InitForCityId();
+            }
+        }
+
+        protected void lnkType1_Click(object sender, EventArgs e)
+        {
+            ddlSelectBidType.SelectedIndex = 1;
+            btnSearch_Click(null, null);
+        }
+
+        protected void lnkType2_Click(object sender, EventArgs e)
+        {
+            ddlSelectBidType.SelectedIndex = 2;
+            btnSearch_Click(null, null);
+        }
+
+        protected void lnkType3_Click(object sender, EventArgs e)
+        {
+            ddlSelectBidType.SelectedIndex = 3;
+            btnSearch_Click(null, null);
+        }
+
+        protected void lnkType4_Click(object sender, EventArgs e)
+        {
+            ddlSelectBidType.SelectedIndex = 4;
+            btnSearch_Click(null, null);
+        }
+
+        protected void lnkType5_Click(object sender, EventArgs e)
+        {
+            ddlSelectBidType.SelectedIndex = 5;
+            btnSearch_Click(null, null);
+        }
+
+        protected void lnkType6_Click(object sender, EventArgs e)
+        {
+            ddlSelectBidType.SelectedIndex = 6;
+            btnSearch_Click(null, null);
+        }
+
+        protected void lnkType7_Click(object sender, EventArgs e)
+        {
+            ddlSelectBidType.SelectedIndex = 7;
+            btnSearch_Click(null, null);
+        }
+
+        protected void lnkType8_Click(object sender, EventArgs e)
+        {
+            ddlSelectBidType.SelectedIndex = 8;
+            btnSearch_Click(null, null);
         }
     }
 }

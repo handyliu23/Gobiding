@@ -48,7 +48,8 @@
                                 招标类型
                             </td>
                             <td style="width: 120px;">
-                                <asp:DropDownList runat="server" ID="ddlSelect">
+                                <asp:DropDownList runat="server" ID="ddlSelectBidType">
+                                    <asp:ListItem Text="全部" Value="0"></asp:ListItem>
                                     <asp:ListItem Text="招标公告" Value="1"></asp:ListItem>
                                     <asp:ListItem Text="变更公告" Value="2"></asp:ListItem>
                                     <asp:ListItem Text="中标公告" Value="3"></asp:ListItem>
@@ -73,7 +74,8 @@
                                 <asp:TextBox runat="server" ID="txtKeywords" Height="24" Width="120"></asp:TextBox>
                             </td>
                             <td style="">
-                                <asp:Button runat="server" ID="btnSearch" Text="搜索" Height="24" Width="60"></asp:Button>
+                                <asp:Button runat="server" ID="btnSearch" ClientIDMode="Static" Text="搜索" 
+                                    Height="24" Width="60" onclick="btnSearch_Click"></asp:Button>
                             </td>
                         </tr>
                     </table>
@@ -81,38 +83,46 @@
                 <div class="col-lg-9" style="padding-left: 0px;">
                     <div style="width: 100%; padding: 0px; float: left;">
                         <div class="col-lg-12" id="tabletitle" style="background-color: #fcfcfc; font-family: '微软雅黑';
-                            color: #428bca; font-weight: bold; padding-left: 20px; border: 1px solid #ececec;
+                            color: #000; font-weight: bold; padding-left: 10px; border: 1px solid #ececec;
                             font-size: 14px; border-bottom: 0px; height: 48px; line-height: 48px;">
-                            <asp:Literal runat="server" ID="ltrProvinceName2"></asp:Literal>招标信息网
+                            <img src="/imgs/system/resizeApi.png" alt=""/>&nbsp;<asp:Literal runat="server" ID="ltrProvinceName2"></asp:Literal>招标信息网
                         </div>
                         <div class="col-lg-12" id="divmaintype" style="font-family: '微软雅黑'; font-weight: bold;
-                            padding-left: 20px; border: 1px solid #ececec; border-bottom: 0px; height: 48px;
+                            padding-left: 20px; border: 1px solid #ececec; border-bottom: 0px; height: 48px; color:#428bca;
                             line-height: 48px;">
                             <table cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td style="width: 100px;">
-                                        招标公告
+                                        <asp:LinkButton id="lnkType1" Text="招标公告" runat="server" 
+                                            onclick="lnkType1_Click"></asp:LinkButton>
                                     </td>
                                     <td style="width: 100px;">
-                                        变更公告
+                                        <asp:LinkButton id="lnkType2" Text="变更公告" runat="server" 
+                                            onclick="lnkType2_Click"></asp:LinkButton>
                                     </td>
                                     <td style="width: 100px;">
-                                        中标公告
+                                        <asp:LinkButton id="lnkType3" Text="中标公告" runat="server" 
+                                            onclick="lnkType3_Click"></asp:LinkButton>
                                     </td>
                                     <td style="width: 100px;">
-                                        招标预告
+                                        <asp:LinkButton id="lnkType4" Text="招标预告" runat="server" 
+                                            onclick="lnkType4_Click"></asp:LinkButton>
                                     </td>
                                     <td style="width: 100px;">
-                                        废标公告
+                                        <asp:LinkButton id="lnkType5" Text="废标公告" runat="server" 
+                                            onclick="lnkType5_Click"></asp:LinkButton>
                                     </td>
                                     <td style="width: 100px;">
-                                        邀请招标
+                                        <asp:LinkButton id="lnkType6" Text="邀请招标" runat="server" 
+                                            onclick="lnkType6_Click"></asp:LinkButton>
                                     </td>
                                     <td style="width: 100px;">
-                                        竞争性谈判
+                                        <asp:LinkButton id="lnkType7" Text="竞争性谈判" runat="server" 
+                                            onclick="lnkType7_Click"></asp:LinkButton>
                                     </td>
                                     <td style="width: 100px;">
-                                        单一源公告
+                                        <asp:LinkButton id="lnkType8" Text="单一源公告" runat="server" 
+                                            onclick="lnkType8_Click"></asp:LinkButton>
                                     </td>
                                 </tr>
                             </table>
@@ -126,7 +136,7 @@
                                                 line-height: 24px; height: 24px; font-size: 14px; vertical-align: top;">
                                                 <table cellpadding="0" cellspacing="0">
                                                     <tr>
-                                                        <td style="width: 80px;">
+                                                        <td style="width: 110px;">
                                                             <%# GoBiding.BLL.CommonUtility.GetBidTypeValue(Eval("BidType").ToString())%>
                                                         </td>
                                                         <td style="width: 550px; padding-right: 20px;">
@@ -151,7 +161,7 @@
                                 </asp:Repeater>
                                 <tr>
                                     <td>
-                                        <webdiyer:aspnetpager id="AspNetPager1" runat="server" width="100%" urlpaging="true"
+                                        <webdiyer:aspnetpager id="AspNetPager1" runat="server" width="100%" UrlPaging="true" EnableUrlRewriting="true"
                                             numericbuttoncount="15" forecolor="Black" firstpagetext="第一页" lastpagetext="尾页"
                                             showpageindexbox="Never" shownavigationtooltip="False" showcustominfosection="Never"
                                             prevpagetext="上一页" nextpagetext="下一页" cssclass="pagination" layouttype="Ul" pagingbuttonlayouttype="UnorderedList"
@@ -164,9 +174,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3" style="padding-left: 0px; padding-right: 0px;">
-                    <div style="width: 100%; height: 48px; line-height: 48px; font-family: '微软雅黑'; padding-left: 20px; background-color: #fcfcfc; 
+                    <div style="width: 100%; height: 48px; line-height: 48px; font-family: '微软雅黑'; padding-left: 10px; background-color: #fcfcfc; 
                         border: 1px solid #ececec; border-bottom: 0px; font-weight: bold;">
-                        地区招标网
+                        <img src="/imgs/system/resizeApi%20_city.png" alt="" />&nbsp;<asp:Literal runat="server" ID="ltrProvinceName3"></asp:Literal>地区招标网
                     </div>
                     <div style="border: 1px solid #ececec; padding: 10px; line-height: 32px;">
                         <table>
@@ -175,8 +185,28 @@
                                     <tr>
                                         <td style="width: 100%; font-family: '微软雅黑'; font-size: 14px; vertical-align: top;
                                             padding-left: 30px;">
-                                            <a href="<%#Eval("CityID")%>">
+                                            <a href="/Province/index/c/<%#Eval("CityID")%>">
                                                 <%# GetCityName(Eval("CityID").ToString())%>招标信息网</a>
+                                        </td>
+                                    </tr>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                        </table>
+                    </div>
+
+                    <div style="width: 100%; height: 48px; line-height: 48px; font-family: '微软雅黑'; padding-left: 10px; background-color: #fcfcfc; 
+                        border: 1px solid #ececec; border-bottom: 0px; margin-top:20px; font-weight: bold;">
+                        <img src="/imgs/system/resizeApi%20_city.png" alt="" />&nbsp;<asp:Literal runat="server" ID="ltrProvinceName4"></asp:Literal>地区招标代理公司
+                    </div>
+                    <div style="border: 1px solid #ececec; padding: 10px; line-height: 32px;">
+                        <table>
+                            <asp:Repeater runat="server" ID="rptCompanyAgentList">
+                                <ItemTemplate>
+                                    <tr>
+                                        <td style="width: 100%; font-family: '微软雅黑'; font-size: 14px; vertical-align: top;
+                                            padding-left: 30px;">
+                                            <a href="/CompanyBidList/<%#Eval("Id")%>.html">
+                                                <%# Eval("VendorName").ToString()%></a>
                                         </td>
                                     </tr>
                                 </ItemTemplate>

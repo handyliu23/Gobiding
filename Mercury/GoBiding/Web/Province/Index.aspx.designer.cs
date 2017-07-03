@@ -40,13 +40,13 @@ namespace GoBiding.Web.Province {
         protected global::System.Web.UI.WebControls.Literal ltrProvinceName;
         
         /// <summary>
-        /// ddlSelect 控件。
+        /// ddlSelectBidType 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlSelect;
+        protected global::System.Web.UI.WebControls.DropDownList ddlSelectBidType;
         
         /// <summary>
         /// ddlCitys 控件。
@@ -85,6 +85,78 @@ namespace GoBiding.Web.Province {
         protected global::System.Web.UI.WebControls.Literal ltrProvinceName2;
         
         /// <summary>
+        /// lnkType1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkType1;
+        
+        /// <summary>
+        /// lnkType2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkType2;
+        
+        /// <summary>
+        /// lnkType3 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkType3;
+        
+        /// <summary>
+        /// lnkType4 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkType4;
+        
+        /// <summary>
+        /// lnkType5 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkType5;
+        
+        /// <summary>
+        /// lnkType6 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkType6;
+        
+        /// <summary>
+        /// lnkType7 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkType7;
+        
+        /// <summary>
+        /// lnkType8 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkType8;
+        
+        /// <summary>
         /// rptBidList 控件。
         /// </summary>
         /// <remarks>
@@ -103,6 +175,15 @@ namespace GoBiding.Web.Province {
         protected global::Wuqi.Webdiyer.AspNetPager AspNetPager1;
         
         /// <summary>
+        /// ltrProvinceName3 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrProvinceName3;
+        
+        /// <summary>
         /// rptBidInviteList 控件。
         /// </summary>
         /// <remarks>
@@ -110,5 +191,23 @@ namespace GoBiding.Web.Province {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater rptBidInviteList;
+        
+        /// <summary>
+        /// ltrProvinceName4 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrProvinceName4;
+        
+        /// <summary>
+        /// rptCompanyAgentList 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptCompanyAgentList;
     }
 }
