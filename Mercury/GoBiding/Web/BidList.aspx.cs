@@ -96,7 +96,7 @@ namespace GoBiding.Web
             {
                 if (!string.IsNullOrEmpty(subindustry) && subindustry != "0")
                 {
-                    industry = subindustry; //指定了二级类
+                    _params.Add(new SqlParameter("@SubBidCategoryId", subindustry));//指定了二级类
                 }
                 _params.Add(new SqlParameter("@BidCategoryId", industry));
             }
