@@ -46,17 +46,19 @@ namespace Mercury.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into SmartCategorys(");
-			strSql.Append("Keywords,BidCategoryId,BidCategoryName)");
+			strSql.Append("Keywords,BidCategoryId,BidCategoryName,ParentCategoryId)");
 			strSql.Append(" values (");
-			strSql.Append("@Keywords,@BidCategoryId,@BidCategoryName)");
+			strSql.Append("@Keywords,@BidCategoryId,@BidCategoryName,@ParentCategoryId)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@Keywords", SqlDbType.Text),
 					new SqlParameter("@BidCategoryId", SqlDbType.Int,4),
-					new SqlParameter("@BidCategoryName", SqlDbType.VarChar,100)};
+					new SqlParameter("@BidCategoryName", SqlDbType.VarChar,100),
+					new SqlParameter("@ParentCategoryId", SqlDbType.Int,4)};
 			parameters[0].Value = model.Keywords;
 			parameters[1].Value = model.BidCategoryId;
 			parameters[2].Value = model.BidCategoryName;
+			parameters[3].Value = model.ParentCategoryId;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -77,17 +79,20 @@ namespace Mercury.DAL
 			strSql.Append("update SmartCategorys set ");
 			strSql.Append("Keywords=@Keywords,");
 			strSql.Append("BidCategoryId=@BidCategoryId,");
-			strSql.Append("BidCategoryName=@BidCategoryName");
+			strSql.Append("BidCategoryName=@BidCategoryName,");
+			strSql.Append("ParentCategoryId=@ParentCategoryId");
 			strSql.Append(" where SmartCategoryId=@SmartCategoryId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@Keywords", SqlDbType.Text),
 					new SqlParameter("@BidCategoryId", SqlDbType.Int,4),
 					new SqlParameter("@BidCategoryName", SqlDbType.VarChar,100),
+					new SqlParameter("@ParentCategoryId", SqlDbType.Int,4),
 					new SqlParameter("@SmartCategoryId", SqlDbType.Int,4)};
 			parameters[0].Value = model.Keywords;
 			parameters[1].Value = model.BidCategoryId;
 			parameters[2].Value = model.BidCategoryName;
-			parameters[3].Value = model.SmartCategoryId;
+			parameters[3].Value = model.ParentCategoryId;
+			parameters[4].Value = model.SmartCategoryId;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -151,7 +156,7 @@ namespace Mercury.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 SmartCategoryId,Keywords,BidCategoryId,BidCategoryName from SmartCategorys ");
+			strSql.Append("select  top 1 SmartCategoryId,Keywords,BidCategoryId,BidCategoryName,ParentCategoryId from SmartCategorys ");
 			strSql.Append(" where SmartCategoryId=@SmartCategoryId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@SmartCategoryId", SqlDbType.Int,4)
@@ -195,6 +200,10 @@ namespace Mercury.DAL
 				{
 					model.BidCategoryName=row["BidCategoryName"].ToString();
 				}
+				if(row["ParentCategoryId"]!=null && row["ParentCategoryId"].ToString()!="")
+				{
+					model.ParentCategoryId=int.Parse(row["ParentCategoryId"].ToString());
+				}
 			}
 			return model;
 		}
@@ -205,7 +214,7 @@ namespace Mercury.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select SmartCategoryId,Keywords,BidCategoryId,BidCategoryName ");
+			strSql.Append("select SmartCategoryId,Keywords,BidCategoryId,BidCategoryName,ParentCategoryId ");
 			strSql.Append(" FROM SmartCategorys ");
 			if(strWhere.Trim()!="")
 			{
@@ -225,7 +234,7 @@ namespace Mercury.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" SmartCategoryId,Keywords,BidCategoryId,BidCategoryName ");
+			strSql.Append(" SmartCategoryId,Keywords,BidCategoryId,BidCategoryName,ParentCategoryId ");
 			strSql.Append(" FROM SmartCategorys ");
 			if(strWhere.Trim()!="")
 			{

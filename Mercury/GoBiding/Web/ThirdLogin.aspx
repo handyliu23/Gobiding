@@ -184,6 +184,46 @@
                     }
                 });
             }
+
+            if (document.location.href.indexOf("xl") > 0) {
+                $.ajax({
+                    type: "post",
+                    url: "/logingateway.ashx",
+                    data: {
+                        UserNickName: $("#hdnUserNickName").val(),
+                        Profile: $("#hdnProfile").val(),
+                        Gender: $("#hdnGender").val(),
+                        AccessToken: $("#hdnAccessToken").val(),
+                        OpenId: $("#hdnOpenId").val(),
+                        ThirdLoginPartyName: "XinLang"
+                    },
+                    success: function (data) {
+                        if (data == "OK") {
+                            //已第三方登录且有绑定过邮箱
+                            if (document.location.href.indexOf("urlredirect") > 0 && GetQueryString("urlredirect") != '') {
+                                self.location = "http://www.gobiding.com/BidDetail/" + GetQueryString("urlredirect") + ".html";
+                            }
+                            else {
+                                setTimeout("pause()", 1000);
+                                self.location = "http://www.gobiding.com/"
+                            }
+                        }
+                        else if (data == "Bind") {
+                            var urlredirect = "";
+                            if (document.location.href.indexOf("urlredirect") > 0 && GetQueryString("urlredirect") != '') {
+                                urlredirect = "?bId=" + +GetQueryString("urlredirect");
+                            }
+                            self.location = "http://www.gobiding.com/BindAccount.html" + urlredirect;
+                        }
+                        else {
+                            alert(data);
+                        }
+                    },
+                    error: function (msg) {
+                        setTimeout("pause()", 1000);
+                    }
+                });
+            }
         });
     
     </script>

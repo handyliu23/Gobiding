@@ -86,6 +86,10 @@
                                     <a id="linkwx" href="/ThirdLogin/wx" class="wx" style="width: 40px; height: 40px;">
                                         <img src="/imgs/system/3rdlogin/WX.png" width="40" height="40" /></a>
                                 </div>
+                                   <div style="float: left; padding-left: 15px; width: 50px; height: 50px;">
+                                    <a id="A1" href="/ThirdLogin/xl" class="xl" style="width: 40px; height: 40px;">
+                                        <img src="/imgs/system/3rdlogin/xl.png" width="40" height="40" /></a>
+                                </div>
                             <%--  <div style="padding-left: 10px;">
                                 <a href="#" onclick='toLogin()'>
                                     <img src="/imgs/system/Connect_logo_1.png" alt=""></a>

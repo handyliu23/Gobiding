@@ -19,23 +19,23 @@ namespace Mercury.DAL
 		/// </summary>
 		public int GetMaxId()
 		{
-		return DbHelperSQL.GetMaxID("SysUserId", "Bids"); 
+		return DbHelperSQL.GetMaxID("ProvinceId", "Bids"); 
 		}
 
 		/// <summary>
 		/// 是否存在该记录
 		/// </summary>
-		public bool Exists(DateTime BidPublishTime,int SysUserId,long BidId)
+		public bool Exists(DateTime BidPublishTime,int ProvinceId,long BidId)
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("select count(1) from Bids");
-			strSql.Append(" where BidPublishTime=@BidPublishTime and SysUserId=@SysUserId and BidId=@BidId ");
+			strSql.Append(" where BidPublishTime=@BidPublishTime and ProvinceId=@ProvinceId and BidId=@BidId ");
 			SqlParameter[] parameters = {
 					new SqlParameter("@BidPublishTime", SqlDbType.DateTime),
-					new SqlParameter("@SysUserId", SqlDbType.Int,4),
+					new SqlParameter("@ProvinceId", SqlDbType.Int,4),
 					new SqlParameter("@BidId", SqlDbType.BigInt,8)			};
 			parameters[0].Value = BidPublishTime;
-			parameters[1].Value = SysUserId;
+			parameters[1].Value = ProvinceId;
 			parameters[2].Value = BidId;
 
 			return DbHelperSQL.Exists(strSql.ToString(),parameters);
@@ -49,9 +49,9 @@ namespace Mercury.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into Bids(");
-			strSql.Append("BidTitle,BidPublishTime,BidContent,CityId,ProvinceId,BidNumber,BidExpireTime,BidFileName,BidProjectName,BidAgent,BidKeywords,BidContacter,BidContacterMobile,BidContacterTel,BidContacterAddress,BidContacterURL,BidSourceURL,BidSourceName,CreateTime,LastChangeTime,BidType,BidFileNameURI,BidSpiderName,BidCategoryId,BidCompanyId,BidCompanyName,BidOpenTime,BidPlatFrom,SysUserId,BidCategoryType,TotalAmount,WinBidCompanyName,IsEmergency)");
+			strSql.Append("BidTitle,BidPublishTime,BidContent,CityId,ProvinceId,BidNumber,BidExpireTime,BidFileName,BidProjectName,BidAgent,BidKeywords,BidContacter,BidContacterMobile,BidContacterTel,BidContacterAddress,BidContacterURL,BidSourceURL,BidSourceName,CreateTime,LastChangeTime,BidType,BidFileNameURI,BidSpiderName,BidCategoryId,BidCompanyId,BidCompanyName,BidOpenTime,BidPlatFrom,SysUserId,BidCategoryType,TotalAmount,WinBidCompanyName,IsEmergency,SubBidCategoryId)");
 			strSql.Append(" values (");
-			strSql.Append("@BidTitle,@BidPublishTime,@BidContent,@CityId,@ProvinceId,@BidNumber,@BidExpireTime,@BidFileName,@BidProjectName,@BidAgent,@BidKeywords,@BidContacter,@BidContacterMobile,@BidContacterTel,@BidContacterAddress,@BidContacterURL,@BidSourceURL,@BidSourceName,@CreateTime,@LastChangeTime,@BidType,@BidFileNameURI,@BidSpiderName,@BidCategoryId,@BidCompanyId,@BidCompanyName,@BidOpenTime,@BidPlatFrom,@SysUserId,@BidCategoryType,@TotalAmount,@WinBidCompanyName,@IsEmergency)");
+			strSql.Append("@BidTitle,@BidPublishTime,@BidContent,@CityId,@ProvinceId,@BidNumber,@BidExpireTime,@BidFileName,@BidProjectName,@BidAgent,@BidKeywords,@BidContacter,@BidContacterMobile,@BidContacterTel,@BidContacterAddress,@BidContacterURL,@BidSourceURL,@BidSourceName,@CreateTime,@LastChangeTime,@BidType,@BidFileNameURI,@BidSpiderName,@BidCategoryId,@BidCompanyId,@BidCompanyName,@BidOpenTime,@BidPlatFrom,@SysUserId,@BidCategoryType,@TotalAmount,@WinBidCompanyName,@IsEmergency,@SubBidCategoryId)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@BidTitle", SqlDbType.NVarChar,300),
@@ -86,7 +86,8 @@ namespace Mercury.DAL
 					new SqlParameter("@BidCategoryType", SqlDbType.Int,4),
 					new SqlParameter("@TotalAmount", SqlDbType.Decimal,9),
 					new SqlParameter("@WinBidCompanyName", SqlDbType.VarChar,200),
-					new SqlParameter("@IsEmergency", SqlDbType.Int,4)};
+					new SqlParameter("@IsEmergency", SqlDbType.Int,4),
+					new SqlParameter("@SubBidCategoryId", SqlDbType.Int,4)};
 			parameters[0].Value = model.BidTitle;
 			parameters[1].Value = model.BidPublishTime;
 			parameters[2].Value = model.BidContent;
@@ -120,6 +121,7 @@ namespace Mercury.DAL
 			parameters[30].Value = model.TotalAmount;
 			parameters[31].Value = model.WinBidCompanyName;
 			parameters[32].Value = model.IsEmergency;
+			parameters[33].Value = model.SubBidCategoryId;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)
@@ -141,7 +143,6 @@ namespace Mercury.DAL
 			strSql.Append("BidTitle=@BidTitle,");
 			strSql.Append("BidContent=@BidContent,");
 			strSql.Append("CityId=@CityId,");
-			strSql.Append("ProvinceId=@ProvinceId,");
 			strSql.Append("BidNumber=@BidNumber,");
 			strSql.Append("BidExpireTime=@BidExpireTime,");
 			strSql.Append("BidFileName=@BidFileName,");
@@ -165,16 +166,17 @@ namespace Mercury.DAL
 			strSql.Append("BidCompanyName=@BidCompanyName,");
 			strSql.Append("BidOpenTime=@BidOpenTime,");
 			strSql.Append("BidPlatFrom=@BidPlatFrom,");
+			strSql.Append("SysUserId=@SysUserId,");
 			strSql.Append("BidCategoryType=@BidCategoryType,");
 			strSql.Append("TotalAmount=@TotalAmount,");
 			strSql.Append("WinBidCompanyName=@WinBidCompanyName,");
-			strSql.Append("IsEmergency=@IsEmergency");
+			strSql.Append("IsEmergency=@IsEmergency,");
+			strSql.Append("SubBidCategoryId=@SubBidCategoryId");
 			strSql.Append(" where BidId=@BidId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@BidTitle", SqlDbType.NVarChar,300),
 					new SqlParameter("@BidContent", SqlDbType.Text),
 					new SqlParameter("@CityId", SqlDbType.Int,4),
-					new SqlParameter("@ProvinceId", SqlDbType.Int,4),
 					new SqlParameter("@BidNumber", SqlDbType.VarChar,50),
 					new SqlParameter("@BidExpireTime", SqlDbType.DateTime),
 					new SqlParameter("@BidFileName", SqlDbType.VarChar,200),
@@ -198,47 +200,50 @@ namespace Mercury.DAL
 					new SqlParameter("@BidCompanyName", SqlDbType.VarChar,200),
 					new SqlParameter("@BidOpenTime", SqlDbType.DateTime),
 					new SqlParameter("@BidPlatFrom", SqlDbType.VarChar,20),
+					new SqlParameter("@SysUserId", SqlDbType.Int,4),
 					new SqlParameter("@BidCategoryType", SqlDbType.Int,4),
 					new SqlParameter("@TotalAmount", SqlDbType.Decimal,9),
 					new SqlParameter("@WinBidCompanyName", SqlDbType.VarChar,200),
 					new SqlParameter("@IsEmergency", SqlDbType.Int,4),
+					new SqlParameter("@SubBidCategoryId", SqlDbType.Int,4),
 					new SqlParameter("@BidId", SqlDbType.BigInt,8),
 					new SqlParameter("@BidPublishTime", SqlDbType.DateTime),
-					new SqlParameter("@SysUserId", SqlDbType.Int,4)};
+					new SqlParameter("@ProvinceId", SqlDbType.Int,4)};
 			parameters[0].Value = model.BidTitle;
 			parameters[1].Value = model.BidContent;
 			parameters[2].Value = model.CityId;
-			parameters[3].Value = model.ProvinceId;
-			parameters[4].Value = model.BidNumber;
-			parameters[5].Value = model.BidExpireTime;
-			parameters[6].Value = model.BidFileName;
-			parameters[7].Value = model.BidProjectName;
-			parameters[8].Value = model.BidAgent;
-			parameters[9].Value = model.BidKeywords;
-			parameters[10].Value = model.BidContacter;
-			parameters[11].Value = model.BidContacterMobile;
-			parameters[12].Value = model.BidContacterTel;
-			parameters[13].Value = model.BidContacterAddress;
-			parameters[14].Value = model.BidContacterURL;
-			parameters[15].Value = model.BidSourceURL;
-			parameters[16].Value = model.BidSourceName;
-			parameters[17].Value = model.CreateTime;
-			parameters[18].Value = model.LastChangeTime;
-			parameters[19].Value = model.BidType;
-			parameters[20].Value = model.BidFileNameURI;
-			parameters[21].Value = model.BidSpiderName;
-			parameters[22].Value = model.BidCategoryId;
-			parameters[23].Value = model.BidCompanyId;
-			parameters[24].Value = model.BidCompanyName;
-			parameters[25].Value = model.BidOpenTime;
-			parameters[26].Value = model.BidPlatFrom;
+			parameters[3].Value = model.BidNumber;
+			parameters[4].Value = model.BidExpireTime;
+			parameters[5].Value = model.BidFileName;
+			parameters[6].Value = model.BidProjectName;
+			parameters[7].Value = model.BidAgent;
+			parameters[8].Value = model.BidKeywords;
+			parameters[9].Value = model.BidContacter;
+			parameters[10].Value = model.BidContacterMobile;
+			parameters[11].Value = model.BidContacterTel;
+			parameters[12].Value = model.BidContacterAddress;
+			parameters[13].Value = model.BidContacterURL;
+			parameters[14].Value = model.BidSourceURL;
+			parameters[15].Value = model.BidSourceName;
+			parameters[16].Value = model.CreateTime;
+			parameters[17].Value = model.LastChangeTime;
+			parameters[18].Value = model.BidType;
+			parameters[19].Value = model.BidFileNameURI;
+			parameters[20].Value = model.BidSpiderName;
+			parameters[21].Value = model.BidCategoryId;
+			parameters[22].Value = model.BidCompanyId;
+			parameters[23].Value = model.BidCompanyName;
+			parameters[24].Value = model.BidOpenTime;
+			parameters[25].Value = model.BidPlatFrom;
+			parameters[26].Value = model.SysUserId;
 			parameters[27].Value = model.BidCategoryType;
 			parameters[28].Value = model.TotalAmount;
 			parameters[29].Value = model.WinBidCompanyName;
 			parameters[30].Value = model.IsEmergency;
-			parameters[31].Value = model.BidId;
-			parameters[32].Value = model.BidPublishTime;
-			parameters[33].Value = model.SysUserId;
+			parameters[31].Value = model.SubBidCategoryId;
+			parameters[32].Value = model.BidId;
+			parameters[33].Value = model.BidPublishTime;
+			parameters[34].Value = model.ProvinceId;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
 			if (rows > 0)
@@ -278,18 +283,18 @@ namespace Mercury.DAL
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool Delete(DateTime BidPublishTime,int SysUserId,long BidId)
+		public bool Delete(DateTime BidPublishTime,int ProvinceId,long BidId)
 		{
 			
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("delete from Bids ");
-			strSql.Append(" where BidPublishTime=@BidPublishTime and SysUserId=@SysUserId and BidId=@BidId ");
+			strSql.Append(" where BidPublishTime=@BidPublishTime and ProvinceId=@ProvinceId and BidId=@BidId ");
 			SqlParameter[] parameters = {
 					new SqlParameter("@BidPublishTime", SqlDbType.DateTime),
-					new SqlParameter("@SysUserId", SqlDbType.Int,4),
+					new SqlParameter("@ProvinceId", SqlDbType.Int,4),
 					new SqlParameter("@BidId", SqlDbType.BigInt,8)			};
 			parameters[0].Value = BidPublishTime;
-			parameters[1].Value = SysUserId;
+			parameters[1].Value = ProvinceId;
 			parameters[2].Value = BidId;
 
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString(),parameters);
@@ -329,7 +334,7 @@ namespace Mercury.DAL
 		{
 			
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select  top 1 BidId,BidTitle,BidPublishTime,BidContent,CityId,ProvinceId,BidNumber,BidExpireTime,BidFileName,BidProjectName,BidAgent,BidKeywords,BidContacter,BidContacterMobile,BidContacterTel,BidContacterAddress,BidContacterURL,BidSourceURL,BidSourceName,CreateTime,LastChangeTime,BidType,BidFileNameURI,BidSpiderName,BidCategoryId,BidCompanyId,BidCompanyName,BidOpenTime,BidPlatFrom,SysUserId,BidCategoryType,TotalAmount,WinBidCompanyName,IsEmergency from Bids ");
+			strSql.Append("select  top 1 BidId,BidTitle,BidPublishTime,BidContent,CityId,ProvinceId,BidNumber,BidExpireTime,BidFileName,BidProjectName,BidAgent,BidKeywords,BidContacter,BidContacterMobile,BidContacterTel,BidContacterAddress,BidContacterURL,BidSourceURL,BidSourceName,CreateTime,LastChangeTime,BidType,BidFileNameURI,BidSpiderName,BidCategoryId,BidCompanyId,BidCompanyName,BidOpenTime,BidPlatFrom,SysUserId,BidCategoryType,TotalAmount,WinBidCompanyName,IsEmergency,SubBidCategoryId from Bids ");
 			strSql.Append(" where BidId=@BidId");
 			SqlParameter[] parameters = {
 					new SqlParameter("@BidId", SqlDbType.BigInt)
@@ -493,6 +498,10 @@ namespace Mercury.DAL
 				{
 					model.IsEmergency=int.Parse(row["IsEmergency"].ToString());
 				}
+				if(row["SubBidCategoryId"]!=null && row["SubBidCategoryId"].ToString()!="")
+				{
+					model.SubBidCategoryId=int.Parse(row["SubBidCategoryId"].ToString());
+				}
 			}
 			return model;
 		}
@@ -503,7 +512,7 @@ namespace Mercury.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select BidId,BidTitle,BidPublishTime,BidContent,CityId,ProvinceId,BidNumber,BidExpireTime,BidFileName,BidProjectName,BidAgent,BidKeywords,BidContacter,BidContacterMobile,BidContacterTel,BidContacterAddress,BidContacterURL,BidSourceURL,BidSourceName,CreateTime,LastChangeTime,BidType,BidFileNameURI,BidSpiderName,BidCategoryId,BidCompanyId,BidCompanyName,BidOpenTime,BidPlatFrom,SysUserId,BidCategoryType,TotalAmount,WinBidCompanyName,IsEmergency ");
+			strSql.Append("select BidId,BidTitle,BidPublishTime,BidContent,CityId,ProvinceId,BidNumber,BidExpireTime,BidFileName,BidProjectName,BidAgent,BidKeywords,BidContacter,BidContacterMobile,BidContacterTel,BidContacterAddress,BidContacterURL,BidSourceURL,BidSourceName,CreateTime,LastChangeTime,BidType,BidFileNameURI,BidSpiderName,BidCategoryId,BidCompanyId,BidCompanyName,BidOpenTime,BidPlatFrom,SysUserId,BidCategoryType,TotalAmount,WinBidCompanyName,IsEmergency,SubBidCategoryId ");
 			strSql.Append(" FROM Bids ");
 			if(strWhere.Trim()!="")
 			{
@@ -523,7 +532,7 @@ namespace Mercury.DAL
 			{
 				strSql.Append(" top "+Top.ToString());
 			}
-			strSql.Append(" BidId,BidTitle,BidPublishTime,BidContent,CityId,ProvinceId,BidNumber,BidExpireTime,BidFileName,BidProjectName,BidAgent,BidKeywords,BidContacter,BidContacterMobile,BidContacterTel,BidContacterAddress,BidContacterURL,BidSourceURL,BidSourceName,CreateTime,LastChangeTime,BidType,BidFileNameURI,BidSpiderName,BidCategoryId,BidCompanyId,BidCompanyName,BidOpenTime,BidPlatFrom,SysUserId,BidCategoryType,TotalAmount,WinBidCompanyName,IsEmergency ");
+			strSql.Append(" BidId,BidTitle,BidPublishTime,BidContent,CityId,ProvinceId,BidNumber,BidExpireTime,BidFileName,BidProjectName,BidAgent,BidKeywords,BidContacter,BidContacterMobile,BidContacterTel,BidContacterAddress,BidContacterURL,BidSourceURL,BidSourceName,CreateTime,LastChangeTime,BidType,BidFileNameURI,BidSpiderName,BidCategoryId,BidCompanyId,BidCompanyName,BidOpenTime,BidPlatFrom,SysUserId,BidCategoryType,TotalAmount,WinBidCompanyName,IsEmergency,SubBidCategoryId ");
 			strSql.Append(" FROM Bids ");
 			if(strWhere.Trim()!="")
 			{

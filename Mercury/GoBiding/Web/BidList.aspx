@@ -184,7 +184,7 @@
                             <li value="5">中止公告</li>
                             <li value="6">邀请招标</li>
                             <li value="7">竞争性谈判</li>
-                            <li value="7">单一源公告</li>
+                            <li value="8">单一源公告</li>
                         </ul>
                     </div>
                 </div>

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using Mercury.Model;
+using Mercury.BLL;
+using System.Threading;
 
 namespace SmartCategoryRobot
 {
@@ -11,44 +13,52 @@ namespace SmartCategoryRobot
     {
         static void Main(string[] args)
         {
-            var bizBid = new Mercury.BLL.Bids();
-            List<Mercury.Model.SmartCategorys> smarts = new Mercury.BLL.SmartCategorys().GetModelList("");
-            int pageCount = 100;
-            int pageNumber = 1;
-
-            while (true)
+            try
             {
-                var bids = new Mercury.BLL.Bids().GetListByPage("BidCategoryId is null", "BidId desc", 1 + (pageNumber - 1) * pageCount, pageNumber * pageCount);
-                pageNumber++;
-                if (bids != null && bids.Tables[0].Rows.Count > 0)
+                var bizBid = new Mercury.BLL.Bids();
+                List<Mercury.Model.SmartCategorys> smarts = new Mercury.BLL.SmartCategorys().GetModelList(" ParentCategoryId <> 0");
+                int pageCount = 100;
+                int pageNumber = 1;
+
+                while (true)
                 {
-                    for (int i = 0; i < bids.Tables[0].Rows.Count; i++)
+                    var bids = new Mercury.BLL.Bids().GetListByPage("BidCategoryId is null", "BidId desc", 1 + (pageNumber - 1) * pageCount, pageNumber * pageCount);
+                    pageNumber++;
+                    if (bids != null && bids.Tables[0].Rows.Count > 0)
                     {
-                        string title = bids.Tables[0].Rows[i]["BidTitle"].ToString();
-                        int bidId = int.Parse(bids.Tables[0].Rows[i]["BidId"].ToString());
-
-                        Console.WriteLine(title);
-
-                        //更新行业分类
-                        foreach (SmartCategorys smart in smarts)
+                        for (int i = 0; i < bids.Tables[0].Rows.Count; i++)
                         {
-                            List<string> keywords = smart.Keywords.Split(' ').ToList();
-                            foreach (var keyword in keywords)
+                            string title = bids.Tables[0].Rows[i]["BidTitle"].ToString();
+                            int bidId = int.Parse(bids.Tables[0].Rows[i]["BidId"].ToString());
+
+                            Console.WriteLine(title);
+
+                            bool ismatch = false;
+                            //更新行业分类
+                            foreach (Mercury.Model.SmartCategorys smart in smarts)
                             {
-                                if (title.Contains(keyword))
+                                if (!ismatch)
                                 {
-                                    var model = bizBid.GetModel(bidId);
-                                    model.BidCategoryId = smart.BidCategoryId;
-                                    bizBid.Update(model);
-                                    break;
-                                    //model.BidCategoryName = smart.BidCategoryId;
+                                    List<string> keywords = smart.Keywords.Split(' ').ToList();
+                                    foreach (var keyword in keywords)
+                                    {
+                                        if (title.Contains(keyword))
+                                        {
+                                            var model = bizBid.GetModel(bidId);
+                                            model.BidCategoryId = smart.ParentCategoryId;
+                                            model.SubBidCategoryId = smart.BidCategoryId;
+                                                bizBid.Update(model);
+                                            ismatch = true;
+                                            break;
+                                            //model.BidCategoryName = smart.BidCategoryId;
+                                        }
+                                    }
                                 }
                             }
-                        }
 
-                        //更新招标编号
-                        //if (bidId == 17724)
-                        //{
+                            //更新招标编号
+                            //if (bidId == 17724)
+                            //{
                             string BidContent = bids.Tables[0].Rows[i]["BidContent"].ToString();
 
 
@@ -94,63 +104,69 @@ namespace SmartCategoryRobot
                                 if (BidNumber == "")
                                     bidModel.BidNumber = "见正文";
                             }
-                        //}
+                            //}
 
-                        //更新截止时间
-                        string BidExpireTime = FindSpecialSegmentByContent("截止时间：", BidContent);
-                        if (BidExpireTime.Trim() == "")
-                        {
-                            BidExpireTime = FindSpecialSegmentByContent("截止日期：", BidContent);
-                        }
-                        if (BidExpireTime.Trim() == "")
-                        {
-                            BidExpireTime = FindSpecialSegmentByContent("截止时间", BidContent);
-                        }
-                        if (!string.IsNullOrEmpty(BidExpireTime))
-                        {
-                            DateTime ex = DateTime.MinValue;
-                            DateTime.TryParse(BidExpireTime, out ex);
-                            if (ex != DateTime.MinValue)
-                            bidModel.BidExpireTime = ex;
-                        }
+                            //更新截止时间
+                            string BidExpireTime = FindSpecialSegmentByContent("截止时间：", BidContent);
+                            if (BidExpireTime.Trim() == "")
+                            {
+                                BidExpireTime = FindSpecialSegmentByContent("截止日期：", BidContent);
+                            }
+                            if (BidExpireTime.Trim() == "")
+                            {
+                                BidExpireTime = FindSpecialSegmentByContent("截止时间", BidContent);
+                            }
+                            if (!string.IsNullOrEmpty(BidExpireTime))
+                            {
+                                DateTime ex = DateTime.MinValue;
+                                DateTime.TryParse(BidExpireTime, out ex);
+                                if (ex != DateTime.MinValue)
+                                    bidModel.BidExpireTime = ex;
+                            }
 
-                        //开标时间
-                        string BidOpenTime = FindSpecialSegmentByContent("开标时间：", BidContent);
-                        if (BidOpenTime.Trim() == "")
-                        {
-                            BidOpenTime = FindSpecialSegmentByContent("开标日期：", BidContent);
-                        }
-                        if (BidOpenTime.Trim() == "")
-                        {
-                            BidOpenTime = FindSpecialSegmentByContent("开标时间", BidContent);
-                        }
-                        if (!string.IsNullOrEmpty(BidOpenTime))
-                        {
-                            DateTime ex = DateTime.MinValue;
-                            DateTime.TryParse(BidOpenTime, out ex);
-                            if (ex != DateTime.MinValue)
-                                bidModel.BidOpenTime = ex;
-                        }
+                            //开标时间
+                            string BidOpenTime = FindSpecialSegmentByContent("开标时间：", BidContent);
+                            if (BidOpenTime.Trim() == "")
+                            {
+                                BidOpenTime = FindSpecialSegmentByContent("开标日期：", BidContent);
+                            }
+                            if (BidOpenTime.Trim() == "")
+                            {
+                                BidOpenTime = FindSpecialSegmentByContent("开标时间", BidContent);
+                            }
+                            if (!string.IsNullOrEmpty(BidOpenTime))
+                            {
+                                DateTime ex = DateTime.MinValue;
+                                DateTime.TryParse(BidOpenTime, out ex);
+                                if (ex != DateTime.MinValue)
+                                    bidModel.BidOpenTime = ex;
+                            }
 
-                        //开标时间
-                        string budget = FindSpecialSegmentByContent("预算：", BidContent);
-                        if (budget.Trim() == "")
-                        {
-                            BidOpenTime = FindSpecialSegmentByContent("总金额：", BidContent);
-                        }
-                        if (!string.IsNullOrEmpty(budget))
-                        {
-                            //bidModel.TotalAmount = decimal.Parse(budget);
-                        }
+                            //开标时间
+                            string budget = FindSpecialSegmentByContent("预算：", BidContent);
+                            if (budget.Trim() == "")
+                            {
+                                BidOpenTime = FindSpecialSegmentByContent("总金额：", BidContent);
+                            }
+                            if (!string.IsNullOrEmpty(budget))
+                            {
+                                //bidModel.TotalAmount = decimal.Parse(budget);
+                            }
 
-                        bizBid.Update(bidModel);
+                            bizBid.Update(bidModel);
+                        }
                     }
-                }
-                else
-                {
-                    break;
-                }
+                    else
+                    {
+                        pageNumber = 1;
+                    }
 
+                    Thread.Sleep(100);
+                }
+            }
+            catch (Exception err)
+            {
+                Logger.Warn(err.Message, err.StackTrace, "GoBidingJob");
             }
 
         }

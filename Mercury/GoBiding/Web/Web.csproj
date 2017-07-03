@@ -317,6 +317,7 @@
     <Content Include="CompanyBidList.aspx" />
     <Content Include="BidNewsList.aspx" />
     <Content Include="BindAccount.aspx" />
+    <Content Include="css\bidlist.css" />
     <Content Include="HighSchoolListByAlpha.aspx" />
     <Content Include="HighSchoolBidList.aspx" />
     <Content Include="HighSchoolBid.aspx" />
@@ -1064,6 +1065,8 @@
     <Content Include="UserCenter\UserCenterPage\PublishAbortive.aspx" />
     <Content Include="UserCenter\UserCenterPage\PublishPurchaseOrder.aspx" />
     <Content Include="UserCenter\UserCenterPage\PurchaseOrderList.aspx" />
+    <Content Include="UserCenter\UserCenterPage\SystemInfo\SmartCategoryList.aspx" />
+    <Content Include="UserCenter\UserCenterPage\SystemInfo\SpiderList.aspx" />
     <Content Include="UserCenter\UserCenterPage\SystemInfo\SechduleList.aspx" />
     <Content Include="UserCenter\UserCenterPage\SystemInfo\LogList.aspx" />
     <Content Include="UserCenter\UserControls\UserCenterMenu.ascx" />
@@ -1527,6 +1530,20 @@
     </Compile>
     <Compile Include="UserCenter\UserCenterPage\PurchaseOrderList.aspx.designer.cs">
       <DependentUpon>PurchaseOrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\UserCenterPage\SystemInfo\SmartCategoryList.aspx.cs">
+      <DependentUpon>SmartCategoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\UserCenterPage\SystemInfo\SmartCategoryList.aspx.designer.cs">
+      <DependentUpon>SmartCategoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\UserCenterPage\SystemInfo\SpiderList.aspx.cs">
+      <DependentUpon>SpiderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\UserCenterPage\SystemInfo\SpiderList.aspx.designer.cs">
+      <DependentUpon>SpiderList.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserCenter\UserCenterPage\SystemInfo\SechduleList.aspx.cs">
       <DependentUpon>SechduleList.aspx</DependentUpon>

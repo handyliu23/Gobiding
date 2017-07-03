@@ -121,7 +121,9 @@
     <Compile Include="CatchCompany.cs" />
     <Compile Include="CatchCompanyIndustry.cs" />
     <Compile Include="CommonUtility.cs" />
+    <Compile Include="EmailLogs.cs" />
     <Compile Include="Hearts.cs" />
+    <Compile Include="Logger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -133,6 +135,7 @@
     <Compile Include="Provinces.cs" />
     <Compile Include="SpiderLogs.cs" />
     <Compile Include="Spiders.cs" />
+    <Compile Include="SystemLog.cs" />
     <Compile Include="Sys_Users.cs" />
     <Compile Include="Sys_UserTrackers.cs" />
   </ItemGroup>

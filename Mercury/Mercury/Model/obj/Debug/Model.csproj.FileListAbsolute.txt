@@ -1,0 +1,4 @@
+C:\Git\Gobiding\Mercury\Mercury\Model\bin\Debug\Mercury.Model.dll
+C:\Git\Gobiding\Mercury\Mercury\Model\bin\Debug\Mercury.Model.pdb
+C:\Git\Gobiding\Mercury\Mercury\Model\obj\Debug\Mercury.Model.dll
+C:\Git\Gobiding\Mercury\Mercury\Model\obj\Debug\Mercury.Model.pdb

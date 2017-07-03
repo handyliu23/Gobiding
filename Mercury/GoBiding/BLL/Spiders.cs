@@ -10,7 +10,7 @@ namespace GoBiding.BLL
 	/// </summary>
 	public partial class Spiders
 	{
-		private readonly GoBiding.DAL.Spiders dal=new GoBiding.DAL.Spiders();
+		private readonly DAL.Spiders dal=new DAL.Spiders();
 		public Spiders()
 		{}
 		#region  BasicMethod
@@ -25,7 +25,7 @@ namespace GoBiding.BLL
 		/// <summary>
 		/// 增加一条数据
 		/// </summary>
-		public long Add(GoBiding.Model.Spiders model)
+		public long Add(Model.Spiders model)
 		{
 			return dal.Add(model);
 		}
@@ -33,7 +33,7 @@ namespace GoBiding.BLL
 		/// <summary>
 		/// 更新一条数据
 		/// </summary>
-		public bool Update(GoBiding.Model.Spiders model)
+		public bool Update(Model.Spiders model)
 		{
 			return dal.Update(model);
 		}
@@ -57,7 +57,7 @@ namespace GoBiding.BLL
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public GoBiding.Model.Spiders GetModel(long SpiderId)
+		public Model.Spiders GetModel(long SpiderId)
 		{
 			
 			return dal.GetModel(SpiderId);
@@ -66,7 +66,7 @@ namespace GoBiding.BLL
 		/// <summary>
 		/// 得到一个对象实体，从缓存中
 		/// </summary>
-		public GoBiding.Model.Spiders GetModelByCache(long SpiderId)
+		public Model.Spiders GetModelByCache(long SpiderId)
 		{
 			
 			string CacheKey = "SpidersModel-" + SpiderId;
@@ -84,7 +84,7 @@ namespace GoBiding.BLL
 				}
 				catch{}
 			}
-			return (GoBiding.Model.Spiders)objModel;
+			return (Model.Spiders)objModel;
 		}
 
 		/// <summary>
@@ -104,7 +104,7 @@ namespace GoBiding.BLL
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
-		public List<GoBiding.Model.Spiders> GetModelList(string strWhere)
+		public List<Model.Spiders> GetModelList(string strWhere)
 		{
 			DataSet ds = dal.GetList(strWhere);
 			return DataTableToList(ds.Tables[0]);
@@ -112,13 +112,13 @@ namespace GoBiding.BLL
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
-		public List<GoBiding.Model.Spiders> DataTableToList(DataTable dt)
+		public List<Model.Spiders> DataTableToList(DataTable dt)
 		{
-			List<GoBiding.Model.Spiders> modelList = new List<GoBiding.Model.Spiders>();
+			List<Model.Spiders> modelList = new List<Model.Spiders>();
 			int rowsCount = dt.Rows.Count;
 			if (rowsCount > 0)
 			{
-				GoBiding.Model.Spiders model;
+				Model.Spiders model;
 				for (int n = 0; n < rowsCount; n++)
 				{
 					model = dal.DataRowToModel(dt.Rows[n]);

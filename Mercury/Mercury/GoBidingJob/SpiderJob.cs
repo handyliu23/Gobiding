@@ -30,23 +30,30 @@ namespace GoBidingJob
 
         public void Execute(IJobExecutionContext context)
         {
-            _logger.InfoFormat("SendSubscribeBids Job start.");
-
-            var heart = heartsService.GetModel(1);
-            if (DateTime.Now > heart.HeartTime.Value.AddMinutes(5))
+            try
             {
-                //启动爬虫
-                DataSet ds = spidersService.GetList(1, "", "LastRunTime desc");
+                _logger.InfoFormat("Spider Job start.");
 
-                int spiderId = 1;
-                if (ds != null && ds.Tables[0].Rows.Count > 0)
+                var heart = heartsService.GetModel(1);
+                if (DateTime.Now > heart.HeartTime.Value.AddMinutes(5))
                 {
-                    spiderId = int.Parse(ds.Tables[0].Rows[0]["SpiderId"].ToString());
-                }
+                    //启动爬虫
+                    DataSet ds = spidersService.GetList(1, "", "LastRunTime desc");
 
-                string[] arg = new string[1];
-                arg[0] = spiderId.ToString();
-                StartProcess(@"C:/Mercury/Mercury/Mercury/MercurySpider/bin/Debug/MercurySpider.exe", arg);
+                    int spiderId = 1;
+                    if (ds != null && ds.Tables[0].Rows.Count > 0)
+                    {
+                        spiderId = int.Parse(ds.Tables[0].Rows[0]["SpiderId"].ToString());
+                    }
+
+                    string[] arg = new string[1];
+                    arg[0] = spiderId.ToString();
+                    StartProcess(@"C:/Mercury/Mercury/Debug/MercurySpider.exe", arg);
+                }
+            }
+            catch (Exception err)
+            {
+                Logger.Warn(err.Message, err.StackTrace, "GoBidingJob");
             }
 
         }
@@ -70,8 +77,9 @@ namespace GoBidingJob
                 myprocess.Start();
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception err)
             {
+                Logger.Warn(err.Message, err.StackTrace, "GoBidingJob");
             }
             return false;
         }

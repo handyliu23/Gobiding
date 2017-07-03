@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartCategoryRobot", "Smart
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoBidingJob", "GoBidingJob\GoBidingJob.csproj", "{F956229E-D36B-4868-BF2C-104D884BD901}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitCatchCompanyUser", "InitCatchCompanyUser\InitCatchCompanyUser.csproj", "{D577CA1F-61E2-498C-B439-5B690128816D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|.NET = Debug|.NET
@@ -138,6 +140,18 @@ Global
 		{F956229E-D36B-4868-BF2C-104D884BD901}.Release|Mixed Platforms.Build.0 = Release|x86
 		{F956229E-D36B-4868-BF2C-104D884BD901}.Release|x86.ActiveCfg = Release|x86
 		{F956229E-D36B-4868-BF2C-104D884BD901}.Release|x86.Build.0 = Release|x86
+		{D577CA1F-61E2-498C-B439-5B690128816D}.Debug|.NET.ActiveCfg = Debug|x86
+		{D577CA1F-61E2-498C-B439-5B690128816D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D577CA1F-61E2-498C-B439-5B690128816D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{D577CA1F-61E2-498C-B439-5B690128816D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{D577CA1F-61E2-498C-B439-5B690128816D}.Debug|x86.ActiveCfg = Debug|x86
+		{D577CA1F-61E2-498C-B439-5B690128816D}.Debug|x86.Build.0 = Debug|x86
+		{D577CA1F-61E2-498C-B439-5B690128816D}.Release|.NET.ActiveCfg = Release|x86
+		{D577CA1F-61E2-498C-B439-5B690128816D}.Release|Any CPU.ActiveCfg = Release|x86
+		{D577CA1F-61E2-498C-B439-5B690128816D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{D577CA1F-61E2-498C-B439-5B690128816D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{D577CA1F-61E2-498C-B439-5B690128816D}.Release|x86.ActiveCfg = Release|x86
+		{D577CA1F-61E2-498C-B439-5B690128816D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

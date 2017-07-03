@@ -164,6 +164,7 @@ namespace MercurySpider
             }
             catch (Exception err)
             {
+                Logger.Warn(err.Message, err.StackTrace, "GoBidingJob");
                 return "";
             }
         }
@@ -187,6 +188,7 @@ namespace MercurySpider
                     }
                     catch (Exception err)
                     {
+                        Logger.Warn(err.Message, err.StackTrace, "GoBidingJob");
                         spider.PageParameter = (int.Parse(spider.PageParameter) + i).ToString();
                         spiderBussiness.Update(spider);
                         break;
@@ -420,6 +422,7 @@ namespace MercurySpider
                 }
                 catch (Exception err)
                 {
+                    Logger.Warn(err.Message, err.StackTrace, "GoBidingJob");
                     Mercury.Model.SpiderLogs log = new Mercury.Model.SpiderLogs();
                     log.IsSuccess = false;
                     log.Message = "列表页访问失败" + DateTime.Now.ToString();
@@ -517,146 +520,156 @@ namespace MercurySpider
                             if (i > 30)
                                 break;
                         }
-                        #region 获取列表页标题，日期
-                        string _bidCompanyName = "";
-                        string _bidPubTime = "";
+                        try
+                        {
+                            #region 获取列表页标题，日期
+                            string _bidCompanyName = "";
+                            string _bidPubTime = "";
 
-                        if (spider.SpiderName == "中国政府采购网")
-                        {
-                            spider.ProvinceId = ParseProvinceId(provincesmatch[i].Groups["v"].Value);
-                            _bidCompanyName = bidCompanyNames[i].Groups["v"].Value;
-                        }
-                        string _bidTitle = "";
-                        if (spider.SpiderName == "山东省政府采购网" || spider.SpiderName == "芜湖市政府采购网" ||
-                            spider.SpiderId > 67 || spider.SpiderName == "中国政府采购网" || spider.SpiderName == "中华人民共和国财政部" || spider.SpiderName == "深圳市政府采购网")
-                        {
-                            _bidTitle = bidTitles[i].Groups["v"].Value;
-                        }
-                        if (spider.SpiderName == "上海市政府采购网" || spider.SpiderName == "天津市政府采购网" || spider.SpiderName == "山东省政府采购网")
-                        {
-                            _bidTitle = bidTitles[i].Groups["v"].Value;
-                            _bidPubTime = bidPubTimes[i].Groups["v"].Value;
-                            if (spider.SpiderName == "山东省政府采购网" && _bidPubTime.Contains("img"))
+                            if (spider.SpiderName == "中国政府采购网")
                             {
-                                _bidPubTime = GetElement("(.*?)>(?<v>.*?)", _bidPubTime);
+                                spider.ProvinceId = ParseProvinceId(provincesmatch[i].Groups["v"].Value);
+                                _bidCompanyName = bidCompanyNames[i].Groups["v"].Value;
                             }
-                        }
-                        if (spider.SpiderName == "甘肃省政府采购网")
-                        {
-                            if (bidTitleTypes[i].Groups["v"].Value.Contains("其他公告"))
-                                continue;
-                        }
-                        if (spider.SpiderName == "福建省政府采购网")
-                        {
-                            try
+                            string _bidTitle = "";
+                            if (spider.SpiderName == "山东省政府采购网" || spider.SpiderName == "芜湖市政府采购网" ||
+                                spider.SpiderId > 67 || spider.SpiderName == "中国政府采购网" || spider.SpiderName == "中华人民共和国财政部" || spider.SpiderName == "深圳市政府采购网")
                             {
+                                _bidTitle = bidTitles[i].Groups["v"].Value;
+                            }
+                            if (spider.SpiderName == "上海市政府采购网" || spider.SpiderName == "天津市政府采购网" || spider.SpiderName == "山东省政府采购网")
+                            {
+                                _bidTitle = bidTitles[i].Groups["v"].Value;
                                 _bidPubTime = bidPubTimes[i].Groups["v"].Value;
-                                if (!string.IsNullOrEmpty(_bidPubTime))
+                                if (spider.SpiderName == "山东省政府采购网" && _bidPubTime.Contains("img"))
+                                {
+                                    _bidPubTime = GetElement("(.*?)>(?<v>.*?)", _bidPubTime);
+                                }
+                            }
+                            if (spider.SpiderName == "甘肃省政府采购网")
+                            {
+                                if (bidTitleTypes[i].Groups["v"].Value.Contains("其他公告"))
+                                    continue;
+                            }
+                            if (spider.SpiderName == "福建省政府采购网")
+                            {
+                                try
+                                {
+                                    _bidPubTime = bidPubTimes[i].Groups["v"].Value;
+                                    if (!string.IsNullOrEmpty(_bidPubTime))
+                                    {
+                                        _bidPubTime = _bidPubTime.Substring(0, 4) + "-" + _bidPubTime.Substring(4, 2) + "-" +
+                                                      _bidPubTime.Substring(6, 2);
+                                    }
+                                }
+                                catch (Exception err)
+                                {
+                                    Logger.Warn(err.Message, err.StackTrace, "GoBidingJob");
+                                }
+                            }
+
+                            if ((spider.SpiderId > 79 || spider.SpiderName == "中华人民共和国财政部" || spider.SpiderName == "无锡市政府采购网" || spider.SpiderName == "深圳市政府采购网")
+                                && spider.SpiderName != "内蒙古政府采购网" && spider.SpiderName != "济南市政务服务中心" && spider.SpiderName != "广元市公共资源交易网" && spider.SpiderName != "厦门市政府采购网"
+                                && spider.SpiderName != "大连市建设工程信息网")
+                            {
+                                if (spider.SpiderName != "南京市公共资源交易中心")
+                                {
+                                    _bidPubTime = bidPubTimes[i].Groups["v"].Value.Trim();
+                                }
+                                if (spider.SpiderName == "广东招投标监管网")
+                                {
+                                    if (int.Parse(_bidPubTime.Substring(0, 2)) > 6)
+                                        _bidPubTime = DateTime.Now.Year - 1 + "-" + _bidPubTime;
+                                    else
+                                    {
+                                        _bidPubTime = DateTime.Now.Year + "-" + _bidPubTime;
+                                    }
+                                }
+                                if (spider.SpiderId == 745 || spider.SpiderName == "上海地铁采购平台")
                                 {
                                     _bidPubTime = _bidPubTime.Substring(0, 4) + "-" + _bidPubTime.Substring(4, 2) + "-" +
-                                                  _bidPubTime.Substring(6, 2);
+                                                      _bidPubTime.Substring(6, 2);
                                 }
                             }
-                            catch (Exception e) { }
-                        }
+                            if (spider.SpiderName == "贵州省招投标网")
+                            {
+                                _bidPubTime = DateTime.Now.Year + "-" + bidPubTimes[i].Groups["v"].Value.Trim();
+                            }
 
-                        if ((spider.SpiderId > 79 || spider.SpiderName == "中华人民共和国财政部" || spider.SpiderName == "无锡市政府采购网" || spider.SpiderName == "深圳市政府采购网")
-                            && spider.SpiderName != "内蒙古政府采购网" && spider.SpiderName != "济南市政务服务中心" && spider.SpiderName != "广元市公共资源交易网" && spider.SpiderName != "厦门市政府采购网"
-                            && spider.SpiderName != "大连市建设工程信息网")
+                            #endregion
+
+                            #region 获取详情页
+                            g = matchs[i].Groups["v"];
+
+                            if (spider.SpiderName == "湖北省政府采购网")
+                            {
+                                try
+                                {
+                                    ExceuteDetail(spider.SpiderUrlPrefix + g.Value.Replace("HTMLPATH", "queryInfo.isHtmlPage"),
+                                        spider.EncodeType, spider, _bidCompanyName, _bidTitle, _bidPubTime);
+                                }
+                                catch (Exception err)
+                                {
+                                    Logger.Warn(err.Message, err.StackTrace, "GoBidingJob");
+                                }
+                            }
+                            else if (spider.SpiderName == "苏州市政府采购网")
+                            {
+                                ExceuteDetail(spider.SpiderUrlPrefix + g.Value + ".shtml", spider.EncodeType, spider, _bidCompanyName, _bidTitle, _bidPubTime);
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    if (spider.SpiderName == "日照市公共资源交易网" && _bidTitle.Contains("通知"))
+                                        continue;
+
+                                    if (spider.SpiderName == "株洲市政府采购网" || spider.SpiderName == "内蒙古政府采购网" || spider.SpiderName == "北京市建设工程信息网")
+                                    {
+                                        _bidPubTime = DateTime.Now.ToString();
+                                    }
+                                    if (spider.SpiderName == "浙江省政府采购网")
+                                    {
+                                        _bidPubTime = DateTime.Parse(_bidPubTime).AddDays(-90).ToString();
+                                    }
+                                    if (spider.SpiderName == "南京市公共资源交易中心")
+                                    {
+                                        _bidPubTime = "";
+                                    }
+                                    if (spider.SpiderName == "福州市政府采购网")
+                                    {
+                                        string copytime = _bidPubTime;
+                                        _bidPubTime = copytime.Substring(0, 4) + "-" + copytime.Substring(4, 2) + "-" + copytime.Substring(6, 2);
+                                    }
+                                    if (spider.SpiderName == "沧州市政府采购网")
+                                    {
+                                        string copytime = _bidPubTime;
+                                        _bidPubTime = "1" + _bidPubTime;
+                                    }
+
+                                    string listExpression = g.Value.Replace("&amp;", "&");
+                                    if (spider.SpiderName == "上海地铁采购平台")
+                                    {
+                                        string str1 = g.Value.Replace("&amp;", "&").Substring(0, 16);
+                                        string str2 = g.Value.Replace("&amp;", "&").Substring(19, 16);
+                                        listExpression =
+                                            string.Format(
+                                                "code={1}&articleId={0}&columnId={1}",
+                                                str1, str2);
+                                    }
+                                    ExceuteDetail(spider.SpiderUrlPrefix + listExpression, spider.EncodeType, spider, _bidCompanyName, _bidTitle, _bidPubTime);
+                                }
+                                catch (Exception err)
+                                {
+                                    Logger.Warn(err.Message, err.StackTrace, "GoBidingJob");
+                                }
+                            }
+                            #endregion
+                        }
+                        catch (Exception err)
                         {
-                            if (spider.SpiderName != "南京市公共资源交易中心")
-                            {
-                                _bidPubTime = bidPubTimes[i].Groups["v"].Value.Trim();
-                            }
-                            if (spider.SpiderName == "广东招投标监管网")
-                            {
-                                if (int.Parse(_bidPubTime.Substring(0, 2)) > 6)
-                                    _bidPubTime = DateTime.Now.Year - 1 + "-" + _bidPubTime;
-                                else
-                                {
-                                    _bidPubTime = DateTime.Now.Year + "-" + _bidPubTime;
-                                }
-                            }
-                            if (spider.SpiderId == 745 || spider.SpiderName == "上海地铁采购平台")
-                            {
-                                _bidPubTime = _bidPubTime.Substring(0, 4) + "-" + _bidPubTime.Substring(4, 2) + "-" +
-                                                  _bidPubTime.Substring(6, 2);
-                            }
+                            Logger.Warn(err.Message, err.StackTrace, "GoBidingJob");
                         }
-                        if (spider.SpiderName == "贵州省招投标网")
-                        {
-                            _bidPubTime = DateTime.Now.Year + "-" + bidPubTimes[i].Groups["v"].Value.Trim();
-                        }
-
-                        #endregion
-
-                        #region 获取详情页
-                        g = matchs[i].Groups["v"];
-
-                        if (spider.SpiderName == "湖北省政府采购网")
-                        {
-                            try
-                            {
-                                ExceuteDetail(spider.SpiderUrlPrefix + g.Value.Replace("HTMLPATH", "queryInfo.isHtmlPage"),
-                                    spider.EncodeType, spider, _bidCompanyName, _bidTitle, _bidPubTime);
-                            }
-                            catch (Exception err)
-                            {
-
-                            }
-                        }
-                        else if (spider.SpiderName == "苏州市政府采购网")
-                        {
-                            ExceuteDetail(spider.SpiderUrlPrefix + g.Value + ".shtml", spider.EncodeType, spider, _bidCompanyName, _bidTitle, _bidPubTime);
-                        }
-                        else
-                        {
-                            try
-                            {
-                                if (spider.SpiderName == "日照市公共资源交易网" && _bidTitle.Contains("通知"))
-                                    continue;
-
-                                if (spider.SpiderName == "株洲市政府采购网" || spider.SpiderName == "内蒙古政府采购网" || spider.SpiderName == "北京市建设工程信息网")
-                                {
-                                    _bidPubTime = DateTime.Now.ToString();
-                                }
-                                if (spider.SpiderName == "浙江省政府采购网")
-                                {
-                                    _bidPubTime = DateTime.Parse(_bidPubTime).AddDays(-90).ToString();
-                                }
-                                if (spider.SpiderName == "南京市公共资源交易中心")
-                                {
-                                    _bidPubTime = "";
-                                }
-                                if (spider.SpiderName == "福州市政府采购网")
-                                {
-                                    string copytime = _bidPubTime;
-                                    _bidPubTime = copytime.Substring(0, 4) + "-" + copytime.Substring(4, 2) + "-" + copytime.Substring(6, 2);
-                                }
-                                if (spider.SpiderName == "沧州市政府采购网")
-                                {
-                                    string copytime = _bidPubTime;
-                                    _bidPubTime = "1" + _bidPubTime;
-                                }
-
-                                string listExpression = g.Value.Replace("&amp;", "&");
-                                if (spider.SpiderName == "上海地铁采购平台")
-                                {
-                                    string str1 = g.Value.Replace("&amp;", "&").Substring(0, 16);
-                                    string str2 = g.Value.Replace("&amp;", "&").Substring(19, 16);
-                                    listExpression =
-                                        string.Format(
-                                            "code={1}&articleId={0}&columnId={1}",
-                                            str1, str2);
-                                }
-                                ExceuteDetail(spider.SpiderUrlPrefix + listExpression, spider.EncodeType, spider, _bidCompanyName, _bidTitle, _bidPubTime);
-                            }
-                            catch (Exception err)
-                            {
-
-                            }
-                        }
-                        #endregion
                     }
                 }
 
@@ -829,7 +842,7 @@ namespace MercurySpider
                 }
 
                 bid.BidTitle = bid.BidTitle.Trim();
-                if (bidsBussiness.GetList("BidTitle = '" + bid.BidTitle + "'").Tables[0].Rows.Count > 0)
+                if (bidsBussiness.GetList(" CreateTime > (getDate() - 7) and BidTitle = '" + bid.BidTitle + "'").Tables[0].Rows.Count > 0)
                 {
                     Console.WriteLine("已存在");
                     return;
@@ -896,6 +909,10 @@ namespace MercurySpider
                 {
                     bid.BidPublishTime = DateTime.Now;
                 }
+
+                bid.BidPublishTime.AddHours(DateTime.Now.Hour);
+                bid.BidPublishTime.AddMinutes(DateTime.Now.Minute);
+                bid.BidPublishTime.AddSeconds(DateTime.Now.Second);
 
                 //content
                 if (string.IsNullOrEmpty(spider.ContentExpression))
@@ -1001,7 +1018,7 @@ namespace MercurySpider
                 bid.LastChangeTime = DateTime.Now;
 
                 bid.BidCompanyName = bidCompanyName;
-                bid.ProvinceId = spider.ProvinceId;
+                bid.ProvinceId = spider.ProvinceId??0;
                 bid.CityId = spider.CityId;
                 if (spider.SpiderName == "中国电力招标采购网" || spider.SpiderName == "中国移动采招网" || spider.SpiderName == "中煤招标与采购网")
                 {
@@ -1076,7 +1093,7 @@ namespace MercurySpider
                     bid.BidType = "2";  //变更公告
                 else if (bid.BidTitle.Contains("预告") || bid.BidTitle.Contains("预公告") || bid.BidTitle.Contains("预公式"))
                     bid.BidType = "4"; //"招标预告"
-                else if (bid.BidTitle.Contains("中止") || bid.BidTitle.Contains("撤销") || bid.BidTitle.Contains("废标"))
+                else if (bid.BidTitle.Contains("终止") || bid.BidTitle.Contains("中止") || bid.BidTitle.Contains("撤销") || bid.BidTitle.Contains("废标"))
                     bid.BidType = "5"; //"中止公告";
                 else if (bid.BidTitle.Contains("邀请"))
                     bid.BidType = "6"; //"邀请招标";
@@ -1107,6 +1124,7 @@ namespace MercurySpider
             }
             catch (Exception err)
             {
+                Logger.Warn(err.Message, err.StackTrace, "GoBidingJob");
                 Mercury.Model.SpiderLogs log = new Mercury.Model.SpiderLogs();
                 log.IsSuccess = false;
                 log.Message = DateTime.Now.ToString() + err.Message;

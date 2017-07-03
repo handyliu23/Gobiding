@@ -1,0 +1,9 @@
+C:\Git\Gobiding\Mercury\Mercury\DBUtility\bin\Debug\Mercury.DBUtility.dll
+C:\Git\Gobiding\Mercury\Mercury\DBUtility\bin\Debug\Mercury.DBUtility.pdb
+C:\Git\Gobiding\Mercury\Mercury\DBUtility\bin\Debug\IBatisNet.Common.dll
+C:\Git\Gobiding\Mercury\Mercury\DBUtility\bin\Debug\IBatisNet.DataMapper.dll
+C:\Git\Gobiding\Mercury\Mercury\DBUtility\bin\Debug\MySql.Data.dll
+C:\Git\Gobiding\Mercury\Mercury\DBUtility\bin\Debug\System.Data.SQLite.DLL
+C:\Git\Gobiding\Mercury\Mercury\DBUtility\obj\Debug\Mercury.DBUtility.dll
+C:\Git\Gobiding\Mercury\Mercury\DBUtility\obj\Debug\Mercury.DBUtility.pdb
+C:\Git\Gobiding\Mercury\Mercury\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache

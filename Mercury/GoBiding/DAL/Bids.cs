@@ -49,9 +49,9 @@ namespace GoBiding.DAL
 		{
 			StringBuilder strSql=new StringBuilder();
 			strSql.Append("insert into Bids(");
-			strSql.Append("BidTitle,BidPublishTime,BidContent,CityId,ProvinceId,BidNumber,BidExpireTime,BidFileName,BidProjectName,BidAgent,BidKeywords,BidContacter,BidContacterMobile,BidContacterTel,BidContacterAddress,BidContacterURL,BidSourceURL,BidSourceName,CreateTime,LastChangeTime,BidType,BidFileNameURI,BidSpiderName,BidCategoryId,BidCompanyId,BidCompanyName,BidOpenTime,BidPlatFrom,SysUserId,BidCategoryType,TotalAmount,WinBidCompanyName,IsEmergency)");
+            strSql.Append("BidTitle,BidPublishTime,BidContent,CityId,ProvinceId,BidNumber,BidExpireTime,BidFileName,BidProjectName,BidAgent,BidKeywords,BidContacter,BidContacterMobile,BidContacterTel,BidContacterAddress,BidContacterURL,BidSourceURL,BidSourceName,CreateTime,LastChangeTime,BidType,BidFileNameURI,BidSpiderName,BidCategoryId,BidCompanyId,BidCompanyName,BidOpenTime,BidPlatFrom,SysUserId,BidCategoryType,TotalAmount,WinBidCompanyName,IsEmergency,SubBidCategoryId)");
 			strSql.Append(" values (");
-			strSql.Append("@BidTitle,@BidPublishTime,@BidContent,@CityId,@ProvinceId,@BidNumber,@BidExpireTime,@BidFileName,@BidProjectName,@BidAgent,@BidKeywords,@BidContacter,@BidContacterMobile,@BidContacterTel,@BidContacterAddress,@BidContacterURL,@BidSourceURL,@BidSourceName,@CreateTime,@LastChangeTime,@BidType,@BidFileNameURI,@BidSpiderName,@BidCategoryId,@BidCompanyId,@BidCompanyName,@BidOpenTime,@BidPlatFrom,@SysUserId,@BidCategoryType,@TotalAmount,@WinBidCompanyName,@IsEmergency)");
+            strSql.Append("@BidTitle,@BidPublishTime,@BidContent,@CityId,@ProvinceId,@BidNumber,@BidExpireTime,@BidFileName,@BidProjectName,@BidAgent,@BidKeywords,@BidContacter,@BidContacterMobile,@BidContacterTel,@BidContacterAddress,@BidContacterURL,@BidSourceURL,@BidSourceName,@CreateTime,@LastChangeTime,@BidType,@BidFileNameURI,@BidSpiderName,@BidCategoryId,@BidCompanyId,@BidCompanyName,@BidOpenTime,@BidPlatFrom,@SysUserId,@BidCategoryType,@TotalAmount,@WinBidCompanyName,@IsEmergency,@SubBidCategoryId)");
 			strSql.Append(";select @@IDENTITY");
 			SqlParameter[] parameters = {
 					new SqlParameter("@BidTitle", SqlDbType.NVarChar,300),
@@ -86,7 +86,8 @@ namespace GoBiding.DAL
 					new SqlParameter("@BidCategoryType", SqlDbType.Int,4),
 					new SqlParameter("@TotalAmount", SqlDbType.Decimal,9),
 					new SqlParameter("@WinBidCompanyName", SqlDbType.VarChar,200),
-					new SqlParameter("@IsEmergency", SqlDbType.Int,4)};
+					new SqlParameter("@IsEmergency", SqlDbType.Int,4),
+                    new SqlParameter("@SubBidCategoryId", SqlDbType.Int,4)};
 			parameters[0].Value = model.BidTitle;
 			parameters[1].Value = model.BidPublishTime;
 			parameters[2].Value = model.BidContent;
@@ -119,7 +120,8 @@ namespace GoBiding.DAL
 			parameters[29].Value = model.BidCategoryType;
 			parameters[30].Value = model.TotalAmount;
 			parameters[31].Value = model.WinBidCompanyName;
-			parameters[32].Value = model.IsEmergency;
+            parameters[32].Value = model.IsEmergency;
+            parameters[33].Value = model.SubBidCategoryId;
 
 			object obj = DbHelperSQL.GetSingle(strSql.ToString(),parameters);
 			if (obj == null)

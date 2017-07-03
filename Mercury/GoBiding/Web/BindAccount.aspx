@@ -15,18 +15,22 @@
     <form id="form1" runat="server">
     <uc2:Top ID="Top1" runat="server" />
     <div style="width: 70%; border: 1px solid #fff; background-color: #fff; padding: 10px;
-        margin: 0px auto; font-family: '微软雅黑'; margin-top: 5%; padding-bottom:40px;">
+        margin: 0px auto; font-family: '微软雅黑'; margin-top: 3%; padding-bottom:10px;">
         <div style="font-size: 16px; font-weight: bold; margin-left: 10px; padding-left: 10px;
             margin-top: 10px; border-left: 4px solid #000;">
             绑定用户
         </div>
-        <br />
-        <br />
         <table style="width: 90%; margin-left: 40px;">
+            <tr>
+            <td colspan="2" style="height:160px;padding-left:20px;">
+                <img src="/imgs/ad/ad_m_2.gif" width="920" alt=""/>
+            </td>
+            </tr>
+             
             <tr>
                 <td style="width: 50%; padding-left: 20px; line-height: 30px; color: #333; border-right: 1px solid #ececec;
                     vertical-align: top;">
-                    未注册过去投标网，请绑定新帐户
+                    从未注册过去投标网，请填写邮箱地址创建新帐户
                     <br />
                     <div style="margin-top: 20px;">
                         <table cellpadding="0" cellspacing="0">
@@ -108,7 +112,7 @@
                 </td>
             </tr>
             <tr>
-                <td>
+                <td style="height:70px;">
                 </td>
                 <td>
                 </td>
