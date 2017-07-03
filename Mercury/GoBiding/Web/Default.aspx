@@ -17,6 +17,13 @@
     <link href="/css/index.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" type="image/x-icon" href="/imgs/system/logo_16_16.png"
         media="screen" />
+        <style>
+            .btn span
+            {
+                color:#FFF;
+                }
+            .btn 
+        </style>
 </head>
 <body>
     <uc2:Top ID="Top1" runat="server" />
