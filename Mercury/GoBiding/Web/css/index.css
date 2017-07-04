@@ -112,15 +112,11 @@ a,li,div,span
 }
 .provincesite th, .provincesite td
 {
-    width: 60px;
-    height: 30px;
     font-size: 12px;
     color: #666;
 }
 .provincesite th
 {
-    width: 80px;
-    text-align: center;
 }
 .categorysite td
 {

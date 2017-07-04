@@ -19,7 +19,7 @@ namespace GoBiding.Web.UserCenter.Index
 
         public void Init()
         {
-            lstCategoryList.DataSource = new GoBiding.BLL.BidCategorys().GetList(" ParentCategoryId = 0");
+            lstCategoryList.DataSource = new GoBiding.BLL.BidCategorys().GetList(" ParentCategoryId = 0 and BidCategoryId <> 46 and BidCategoryId <> 48");
             lstCategoryList.DataBind();
         }
     }

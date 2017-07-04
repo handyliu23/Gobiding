@@ -1,6 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="aspx.html.cs" Inherits="GoBiding.Web.BidDetail" %>
 
 <%@ Register Src="UserCenter/Index/Top.ascx" TagName="Top" TagPrefix="uc1" %>
+<%@ Register src="UserCenter/Index/Bottom.ascx" tagname="Bottom" tagprefix="uc2" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -483,7 +484,6 @@
             changeFrameHeight();
         } 
     </script>
-    </form>
     <link href="/css/biddetail.css" rel="stylesheet" type="text/css" />
     <script>
         window._bd_share_config = {
@@ -508,5 +508,7 @@
         }
         with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~(-new Date() / 36e5)];
     </script>
-</body>
+    <uc2:Bottom ID="Bottom1" runat="server" />
+    </form>
+    </body>
 </html>

@@ -39,7 +39,7 @@ namespace GoBidingJob
                 try
                 {
                     StringBuilder strSql = new StringBuilder();
-                    strSql.Append("select top 500 BidId,BidTitle,ProvinceId From Bids where CityId = 0 order by 1 desc");
+                    strSql.Append("select top 100 BidId,BidTitle,ProvinceId From Bids where CityId = 0 order by 1 desc");
 
 
                     var ds = DbHelperSQL.Query(strSql.ToString());
@@ -54,7 +54,7 @@ namespace GoBidingJob
                         int districtId = -1;
                         int cityId = -1;
                         int provinceId = -1;
-                        districtId = findInDistricts(bidTitle, out cityId, out provinceId);
+                        districtId = findInDistricts(bidTitle, bidprovinceId, out cityId, out provinceId);
                         if (districtId > 0)
                         {
                             if (bidprovinceId == 0 || bidprovinceId == provinceId)
@@ -151,13 +151,29 @@ namespace GoBidingJob
         /// <param name="target"></param>
         /// <param name="cityId">找到districtid的cityid</param>
         /// <returns>找到的districtid</returns>
-        public int findInDistricts(string target, out int cityId, out int provinceId)
+        public int findInDistricts(string target, int bidprovinceId, out int cityId, out int provinceId)
         {
-            for (int i = 0; i < districts.Tables[0].Rows.Count; i++)
-            {
-                int districtId = int.Parse(districts.Tables[0].Rows[i]["DistrictID"].ToString());
-                string district = districts.Tables[0].Rows[i]["DistrictName"].ToString();
+            //根据已知供应商id下的城市id，可以更精准的匹配县。
+            var currentdistricts = districts;
 
+            if (bidprovinceId > 0)
+            {
+                Mercury.BLL.Citys cityBLL = new Mercury.BLL.Citys();
+                var currentcitys = cityBLL.GetModelList(" ProvinceID = " + bidprovinceId);
+                string condintion = string.Join(",",currentcitys.Select(o => o.CityID).ToArray());
+             
+                string where = " CityID in (" + condintion + ")";
+
+                currentdistricts = new Mercury.BLL.Districts().GetList(where);
+            }
+
+            for (int i = 0; i < currentdistricts.Tables[0].Rows.Count; i++)
+            {
+                int districtId = int.Parse(currentdistricts.Tables[0].Rows[i]["DistrictID"].ToString());
+                string district = currentdistricts.Tables[0].Rows[i]["DistrictName"].ToString();
+                
+                if (district.Length > 2 && district.Contains("自治"))
+                    district = district.Substring(0, 2);
                 if (district.Length > 2)
                     district = district.Replace("自治市", "").Replace("自治区", "").Replace("自治县", "");
                 if (district.Length > 2)
@@ -172,7 +188,7 @@ namespace GoBidingJob
 
                 if (target.Contains(district))
                 {
-                    cityId = int.Parse(districts.Tables[0].Rows[i]["CityID"].ToString());
+                    cityId = int.Parse(currentdistricts.Tables[0].Rows[i]["CityID"].ToString());
                     provinceId = GetProvinceIdByCityId(cityId);
                     return districtId;
                 }
