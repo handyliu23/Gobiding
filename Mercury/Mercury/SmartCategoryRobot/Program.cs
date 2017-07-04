@@ -145,6 +145,40 @@ namespace SmartCategoryRobot
                                     bidModel.BidOpenTime = ex;
                             }
 
+                            //招标代理机构
+                            string AgentCompany = FindSpecialSegmentByContent("招标代理机构：", BidContent);
+                            if (AgentCompany.Trim() == "")
+                            {
+                                AgentCompany = FindSpecialSegmentByContent("代理机构名称：", BidContent);
+                            }
+                            if (AgentCompany.Trim() == "")
+                            {
+                                AgentCompany = FindSpecialSegmentByContent("采购代理机构全称：", BidContent);
+                            }
+                            if (!string.IsNullOrEmpty(AgentCompany))
+                            {
+                                bidModel.BidAgent = AgentCompany;
+                                
+                                //将catchcompany中的企业修改为招标代理企业
+                                var agentcatchcompanys = new Mercury.BLL.CatchCompany().GetModelList(" vendorname = '" + AgentCompany + "'");
+                                if (agentcatchcompanys == null || agentcatchcompanys.Count == 0)
+                                {
+                                    var agentcatchcompany = new Mercury.Model.CatchCompany();
+                                    agentcatchcompany.VendorName = AgentCompany;
+                                    agentcatchcompany.OnCreated = DateTime.Now;
+                                    agentcatchcompany.IsBidAgent = 1;
+
+                                    new Mercury.BLL.CatchCompany().Add(agentcatchcompany);
+                                }
+                                else {
+                                    var agentcatchcompany = agentcatchcompanys.FirstOrDefault();
+                                    agentcatchcompany.IsBidAgent = 1;
+                                    new Mercury.BLL.CatchCompany().Update(agentcatchcompany);
+                                }
+
+
+                            }
+
                             //开标时间
                             string budget = FindSpecialSegmentByContent("预算：", BidContent);
                             if (budget.Trim() == "")

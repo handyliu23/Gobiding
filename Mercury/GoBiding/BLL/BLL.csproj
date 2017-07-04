@@ -129,6 +129,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PurchaseOrder.cs" />
+    <Compile Include="SmartPurchaseOrderCategory.cs" />
     <Compile Include="SysManage.cs" />
     <Compile Include="BidCategorys.cs" />
     <Compile Include="Bids.cs" />

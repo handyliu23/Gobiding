@@ -2,3 +2,8 @@ C:\Git\Gobiding\Mercury\Mercury\Model\bin\Debug\Mercury.Model.dll
 C:\Git\Gobiding\Mercury\Mercury\Model\bin\Debug\Mercury.Model.pdb
 C:\Git\Gobiding\Mercury\Mercury\Model\obj\Debug\Mercury.Model.dll
 C:\Git\Gobiding\Mercury\Mercury\Model\obj\Debug\Mercury.Model.pdb
+D:\GoBiding\GoBiding\Mercury\Mercury\Model\bin\Debug\Mercury.Model.dll
+D:\GoBiding\GoBiding\Mercury\Mercury\Model\bin\Debug\Mercury.Model.pdb
+D:\GoBiding\GoBiding\Mercury\Mercury\Model\obj\Debug\ResolveAssemblyReference.cache
+D:\GoBiding\GoBiding\Mercury\Mercury\Model\obj\Debug\Mercury.Model.dll
+D:\GoBiding\GoBiding\Mercury\Mercury\Model\obj\Debug\Mercury.Model.pdb

@@ -366,7 +366,7 @@
     <Content Include="imgs\system\bg.png" />
     <Content Include="imgs\system\print.png" />
     <Content Include="imgs\system\resizeApi _city.png" />
-    <Content Include="imgs\system\resizeApi.png" />
+    <Content Include="imgs\system\resizeApi_news.png" />
     <Content Include="imgs\system\smalllogo.png" />
     <Content Include="imgs\system\sucai\homepagead.png" />
     <Content Include="imgs\system\synctime.png" />
