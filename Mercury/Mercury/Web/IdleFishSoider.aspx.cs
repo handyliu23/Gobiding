@@ -197,7 +197,7 @@ namespace Mercury.Web
             purchaseOrder.PublishTime = DateTime.Now;
             string title = item.title.Replace("[ 求购]", string.Empty).Replace("[", string.Empty).Replace("]", string.Empty).Replace("【", string.Empty).Replace("】", string.Empty).Trim();
 
-            purchaseOrder.Title = title.Length > 20 ? title.Substring(0, 20) : title;
+            purchaseOrder.Title = title;
             purchaseOrder.SysUserId = userId;
             //purchaseOrder.ProductCategoryId = 1;
             //purchaseOrder.Status = 1;

@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using System.Text.RegularExpressions;
 using GoBiding.BLL;
 using System.Web.UI.HtmlControls;
+using System.Data;
+using Maticsoft.DBUtility;
 
 namespace GoBiding.Web
 {
@@ -64,7 +66,8 @@ namespace GoBiding.Web
                         ltrcity.Text = new BLL.Citys().GetModel(bid.RecvCityId ?? 0).CityName;
 
                     }
-                    else {
+                    else
+                    {
                         divPersonUser.Visible = false;
                         divCompanyUser.Visible = true;
 
@@ -83,7 +86,8 @@ namespace GoBiding.Web
                     if (string.IsNullOrEmpty(publishUser.QQ))
                     {
                         qqstring = "715794512";
-                    }else
+                    }
+                    else
                         qqstring = publishUser.QQ;
 
                     var company = new BLL.CatchCompany().GetModel(publishUser.CompanyId);
@@ -134,6 +138,8 @@ namespace GoBiding.Web
                     //EncodeValueByRegex(bid, addressRegex);
 
                     lblContent.Text = bid.Description;
+
+                    BindPur();
                 }
                 catch (Exception er)
                 {
@@ -175,5 +181,39 @@ namespace GoBiding.Web
 
             return "";
         }
+
+        //todo 按purchaseType 展示同类商品 整理代码
+        private void BindPur()
+        {
+            string sql = @"
+select top 9 Id,Title,PublishTime,ExpireTime,Status,PurchaseType,IsEmergency,IsSetTop,po.CompanyName,p.ProvinceName, c.CityName,su.UserProfile,su.CreateByPlatform
+from PurchaseOrder po left join Provinces p on po.RecvProvinceId = p.ProvinceID 
+left join Citys c on c.CityID = po.RecvCityId
+left join Sys_Users su on su.Sys_UserId = po.SysUserId
+
+order by 1 desc
+                ";
+
+            DataSet ds = DbHelperSQL.Query(sql);
+
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+                if (ds.Tables[0].Rows[i]["CreateByPlatform"].ToString().Equals("1"))
+                {
+                    if (ds.Tables[0].Rows[i]["UserProfile"] == null || string.IsNullOrEmpty(ds.Tables[0].Rows[i]["UserProfile"].ToString()))
+                    {
+                        ds.Tables[0].Rows[i]["UserProfile"] = "/imgs/system/zwtp.png";
+                    }
+                }
+
+            }
+
+            if (ds != null && ds.Tables[0].Rows.Count > 0)
+            {
+                rptPurchaseOrderList.DataSource = ds;
+                rptPurchaseOrderList.DataBind();
+            }
+        }
+
     }
 }
