@@ -55,8 +55,11 @@ select top 1 sys_userid from EmailLogs order by 1 desc
                     if (trackerlist == null || trackerlist.Count == 0)
                     {
                         //没有设置订阅的，直接推送最新招标信息
-                        bidList = bidService.GetModelList(10, "BidType = 1 and BidPublishTime > '" + DateTime.Now.ToShortDateString() + "'", " BidPublishTime desc");
-
+                        bidList = bidService.GetModelList(10, "BidType = 1 and BidPublishTime > '" + DateTime.Now.Date.ToShortDateString() + "'", " BidPublishTime desc");
+                        if (bidList == null || bidList.Count == 0)
+                        {
+                            bidList = bidService.GetModelList(10, "BidType = 1 and BidPublishTime > '" + DateTime.Now.AddDays(-1).Date.ToShortDateString() + "'", " BidPublishTime desc");
+                        }
                     }
                     else
                     {
@@ -103,7 +106,7 @@ select top 1 sys_userid from EmailLogs order by 1 desc
                         //"<br/>√ 信息分类：<span style='color:orange;'>" + tracker. + "</span>";
                     }
 
-                    content += "<br/><br/>去投标网向您推荐最新的招标信息：<br/>";
+                    content += "<img src='http://www.gobiding.com/imgs/ad/ad_m_2.gif' /><br/>去投标网免费向您推荐最新的招标信息：<br/><br/>";
 
                     string url = "http://www.gobiding.com/BidDetail.aspx?bId={0}";
 
@@ -117,13 +120,14 @@ select top 1 sys_userid from EmailLogs order by 1 desc
                             );
                     }
 
-                    content += "<br/><br/>订阅说明：去投标网每日为您免费推送一次全国各行业招标信息，登录平台可以设置追踪器获取更多精准的招标采购信息";
+                    content += "<br/><br/>订阅说明：去投标网每日为您免费推送一次全国各行业招标信息，<a href='http://www.goboding.com'>登录官方平台</a>可以设置追踪器获取更多精准的招标采购信息";
                     content += "<br/>商业市场竞争激烈，愿您抓住每一个机会，您的成功是我们为之努力的心愿！<br/><br/>扫一扫关注微信公众号即可手机微信订阅，万千商机，尽在掌握！<br/><img src='http://gobiding.com/imgs/system/wx300_300.png'/>";
-                    //content += "<br/>如有任何疑问或者建议请及时联系我们！";
-                    //content += "<br/>官方网址：http://www.gobiding.com";
-                    //content += "<br/>微信公众号：去投标网";
-                    //content += "<br/>邮箱：postmaster@gobiding.com";
-                    //content += "<br/>qq客服：2968038259";
+                    content += "<br/>如有任何疑问或者建议请及时联系我们！";
+                    content += "<br/>官方网址：http://www.gobiding.com";
+                    content += "<br/>联系地址：上海市长宁区金钟路968号";
+                    content += "<br/>微信公众号：去投标网";
+                    content += "<br/>邮箱：postmaster@gobiding.com";
+                    content += "<br/>qq客服：2968038259";
 
                     SendEmail(receiver, content);
 
@@ -134,7 +138,7 @@ select top 1 sys_userid from EmailLogs order by 1 desc
             
                     AddEmailLog(sys_UserId, "");
 
-                    Thread.Sleep(60000);
+                    Thread.Sleep(120000);
 
                 }
             }
