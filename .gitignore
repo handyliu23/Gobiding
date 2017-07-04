@@ -165,3 +165,10 @@ $RECYCLE.BIN/
 /Presenter/PkgIptSiteUI/Config/ServiceModel.Client.config
 /Presenter/PkgIptSiteUI/Config/Wcf.config
 /Presenter/PkgIptSiteUI/Web.config
+/Mercury/GoBiding/Web/bin
+/Mercury/GoBiding/Model/bin
+/Mercury/GoBiding/BLL/bin
+/Mercury/GoBiding/Common/bin
+/Mercury/GoBiding/DBUtility/bin
+/Mercury/GoBiding/DAL/bin
+/Mercury/GoBiding/_ReSharper.GoBiding
