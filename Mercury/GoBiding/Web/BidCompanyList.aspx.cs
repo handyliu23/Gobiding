@@ -45,7 +45,15 @@ namespace GoBiding.Web
                 {
                     var bid = new Model.Bids();
                     bid.BidCompanyName = reader.GetValue(1).ToString();
-                    bid.ProvinceId = int.Parse(reader.GetValue(2).ToString());
+                    try
+                    {
+                        if (reader.GetValue(2) != null && reader.GetValue(2).ToString() != "")
+                            bid.ProvinceId = int.Parse(reader.GetValue(2).ToString());
+                        else
+                            bid.ProvinceId = 0;
+                    }
+                    catch (Exception err)
+                    { }
                     bid.CreateTime = DateTime.Parse(reader.GetValue(3).ToString());
                     
                     list.Add(bid);
