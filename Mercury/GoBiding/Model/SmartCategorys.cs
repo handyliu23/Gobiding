@@ -14,6 +14,7 @@ namespace GoBiding.Model
 		private string _keywords;
 		private int? _bidcategoryid;
 		private string _bidcategoryname;
+		private int? _parentcategoryid;
 		/// <summary>
 		/// 
 		/// </summary>
@@ -45,6 +46,14 @@ namespace GoBiding.Model
 		{
 			set{ _bidcategoryname=value;}
 			get{return _bidcategoryname;}
+		}
+		/// <summary>
+		/// 
+		/// </summary>
+		public int? ParentCategoryId
+		{
+			set{ _parentcategoryid=value;}
+			get{return _parentcategoryid;}
 		}
 		#endregion Model
 

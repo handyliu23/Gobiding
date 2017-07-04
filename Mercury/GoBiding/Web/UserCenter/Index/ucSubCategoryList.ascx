@@ -4,10 +4,13 @@
     #ulCategoryList {
         text-decoration: none;
         list-style: none;
+        text-align:left;
         float: left;
         margin-top: 10px;
         margin-left: 0px;
         padding-left: 10px;
+        padding-right:50px;
+        width:480px;
     }
     #ulCategoryList li {
         display: inline;

@@ -14,6 +14,13 @@ namespace GoBiding.Web.UserCenter.UserCenterPage.SystemInfo
         {
             if(!IsPostBack)
             {
+                if (Session["UserSessionId"] == null)
+                {
+                    mainContent.Visible = false;
+                    Response.Redirect("/Login.aspx");
+                    return;
+                }
+
                 Bind();
             }
         }
