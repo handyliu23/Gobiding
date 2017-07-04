@@ -18,6 +18,7 @@
     </UpgradeBackupLocation>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -58,6 +59,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\Microsoft.Web.UI.WebControls.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -315,6 +320,7 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\calendar.css" />
     <Content Include="Global.asax" />
+    <Content Include="IdleFishSoider.aspx" />
     <Content Include="js\calendar1.js" />
     <Content Include="js\CheckBox.js" />
     <Content Include="Tools\SmartCategoryList.aspx" />
@@ -618,6 +624,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="IdleFishSoider.aspx.cs">
+      <DependentUpon>IdleFishSoider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IdleFishSoider.aspx.designer.cs">
+      <DependentUpon>IdleFishSoider.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.master.cs">
       <DependentUpon>MasterPage.master</DependentUpon>
