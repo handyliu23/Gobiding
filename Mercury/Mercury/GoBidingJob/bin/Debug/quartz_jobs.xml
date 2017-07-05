@@ -32,7 +32,7 @@
         <cron-expression>0 0 0/12 * * ?</cron-expression>
       </cron>
     </trigger>
-    <!--<job>
+    <job>
       <name>SpiderJob</name>
       <group>Spider</group>
       <description>抓数据Job</description>
@@ -49,7 +49,7 @@
         <start-time>2017-01-01T00:00:00+08:00</start-time>
         <cron-expression>0 0 0/12 * * ?</cron-expression>
       </cron>
-    </trigger>-->
+    </trigger>
 
     <!--<job>
       <name>FillBidCityIdJob</name>
