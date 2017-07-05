@@ -179,6 +179,18 @@ order by 1 desc
                     rptPurchaseOrderList.DataBind();
                 }
 
+                string sql2 = @"
+SELECT top 4 n.*, t.TypeName  from 
+DynamicNews n inner join DynamicNewsType t on n.DynamicNewsTypeId = t.Id  where 
+ DynamicNewsTypeId <> 1
+order by n.Id desc
+";
+
+                var ds2 = DbHelperSQL.Query(sql2);
+                this.rptNewsList.DataSource = ds2;
+                this.rptNewsList.DataBind();
+
+
 //                string sql2 =
 //@"select top 8 Sys_UserId, CompanyId,OnCreate, DistrictId, CompanyName, c.CityName from Sys_Users u
 //inner join Citys c on u.DistrictId = c.CityID

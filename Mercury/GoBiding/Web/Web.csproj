@@ -366,8 +366,9 @@
     <Content Include="imgs\system\bg.png" />
     <Content Include="imgs\system\print.png" />
     <Content Include="imgs\system\resizeApi _city.png" />
-    <Content Include="imgs\system\resizeApi.png" />
+    <Content Include="imgs\system\resizeApi_news.png" />
     <Content Include="imgs\system\smalllogo.png" />
+    <Content Include="imgs\system\sucai\homepagead.png" />
     <Content Include="imgs\system\synctime.png" />
     <Content Include="imgs\system\true.jpg" />
     <Content Include="imgs\system\wx300_300.png" />
@@ -711,6 +712,7 @@
     <Content Include="UserCenter\Index.aspx" />
     <Content Include="UserCenter\Index\BidListByCategory.ascx" />
     <Content Include="UserCenter\Index\BidListBySchool.ascx" />
+    <Content Include="UserCenter\Index\Bottom.ascx" />
     <Content Include="UserCenter\Index\Top.ascx" />
     <Content Include="UserCenter\Index\BidListByCategory2.ascx" />
     <Content Include="UserCenter\Index\BidListByCategory3.ascx" />
@@ -1339,6 +1341,13 @@
     </Compile>
     <Compile Include="UserCenter\Index\BidListBySchool.ascx.designer.cs">
       <DependentUpon>BidListBySchool.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserCenter\Index\Bottom.ascx.cs">
+      <DependentUpon>Bottom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserCenter\Index\Bottom.ascx.designer.cs">
+      <DependentUpon>Bottom.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserCenter\Index\Top.ascx.cs">
       <DependentUpon>Top.ascx</DependentUpon>

@@ -112,6 +112,15 @@ namespace GoBiding.Web {
         protected global::System.Web.UI.WebControls.Literal lblContent;
         
         /// <summary>
+        /// rptPurchaseOrderList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView rptPurchaseOrderList;
+        
+        /// <summary>
         /// divCompanyUser control.
         /// </summary>
         /// <remarks>

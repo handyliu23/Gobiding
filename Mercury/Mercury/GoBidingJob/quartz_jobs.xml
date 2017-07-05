@@ -14,7 +14,7 @@
     <!--<cron-expression>0 0 0/1 * * ?</cron-expression>-->
     
     <!--TestJob测试 任务配置-->
-    <job>
+    <!--<job>
       <name>EmailNoticeJob</name>
       <group>Test</group>
       <description>邮件推送Job</description>
@@ -31,8 +31,8 @@
         <start-time>2017-01-01T00:00:00+08:00</start-time>
         <cron-expression>0 0 0/12 * * ?</cron-expression>
       </cron>
-    </trigger>
-    <job>
+    </trigger>-->
+    <!--<job>
       <name>SpiderJob</name>
       <group>Spider</group>
       <description>抓数据Job</description>
@@ -49,9 +49,9 @@
         <start-time>2017-01-01T00:00:00+08:00</start-time>
         <cron-expression>0 0 0/12 * * ?</cron-expression>
       </cron>
-    </trigger>
+    </trigger>-->
 
-    <!--<job>
+    <job>
       <name>FillBidCityIdJob</name>
       <group>Spider</group>
       <description>FillBidCityIdJob</description>
@@ -68,6 +68,6 @@
         <start-time>2017-01-01T00:00:00+08:00</start-time>
         <cron-expression>0 0/30 * * * ?</cron-expression>
       </cron>
-    </trigger>-->
+    </trigger>
   </schedule>
 </job-scheduling-data>

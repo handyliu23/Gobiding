@@ -132,6 +132,7 @@
     </Compile>
     <Compile Include="PurchaseOrder.cs" />
     <Compile Include="SiteSessionInfo.cs" />
+    <Compile Include="SmartPurchaseOrderCategory.cs" />
     <Compile Include="SysNode.cs" />
     <Compile Include="BidCategorys.cs" />
     <Compile Include="Bids.cs" />

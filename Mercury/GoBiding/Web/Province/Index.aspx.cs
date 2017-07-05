@@ -36,36 +36,75 @@ namespace GoBiding.Web.Province
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            categorys = new BLL.BidCategorys().GetModelList("");
-            
-            Id = Request.QueryString["id"];
-
-            if (!IsPostBack)
+            try
             {
-                InitDDL();
+                categorys = new BLL.BidCategorys().GetModelList("");
 
-                string type = Request.QueryString["type"];
+                Id = Request.QueryString["id"];
+                if (string.IsNullOrEmpty(Id))
+                    return;
 
-                AspNetPager1.UrlRewritePattern = "/Province/index/p/" + Id + ".html?page={0}";
-
-                if (string.IsNullOrEmpty(type) || type == "p")
+                if (!IsPostBack)
                 {
-                    InitForProvinceId("");
-                }
-                if (type == "c")
-                {
-                    InitForCityId();
-                }
+                    InitDDL();
 
-                InitForAgentCompany();
+                    string type = Request.QueryString["type"];
+                    string bidType = Request.QueryString["bidType"];
+                    string cityId = Request.QueryString["cityId"];
+                    string keyword = Request.QueryString["keyword"];
+
+                    AspNetPager1.UrlRewritePattern = "http://www.gobiding.com/Province/index/" + type + "/" + Id + ".html?page={0}";
+
+                    if (!string.IsNullOrEmpty(bidType))
+                    {
+                        ddlSelectBidType.SelectedValue = bidType;
+                        AspNetPager1.UrlRewritePattern += ("&bidtype=" + bidType);
+                    }
+                    if (!string.IsNullOrEmpty(cityId))
+                    {
+                        ddlCitys.SelectedValue = cityId;
+                        AspNetPager1.UrlRewritePattern += ("&cityId=" + cityId);
+                    }
+                    if (!string.IsNullOrEmpty(keyword))
+                    {
+                        txtKeywords.Text = keyword;
+                        AspNetPager1.UrlRewritePattern += ("&keyword=" + keyword);
+                    }
+
+                    if (string.IsNullOrEmpty(type) || type == "p")
+                    {
+                        InitForProvinceId("");
+                    }
+                    if (type == "c")
+                    {
+                        InitForCityId();
+                    }
+
+                    InitForAgentCompany();
+                }
+            }
+            catch (Exception err)
+            { 
+                BLL.Logger.Warn(err.Message,err.StackTrace);
             }
         }
 
         public void InitForAgentCompany()
         {
-            string sql = string.Format(@"
+            string type = Request.QueryString["type"];
+            string sql = "";
+            if (string.IsNullOrEmpty(type) || type == "p")
+            {
+                sql = string.Format(@"
 select top 10 * from CatchCompany where IsBidAgent = 1 and ProvinceId = {0}
 ", Id);
+            }
+            if (type == "c")
+            {
+                sql = string.Format(@"
+select top 10 * from CatchCompany where IsBidAgent = 1 and CityId = {0}
+", Id);
+            }
 
             rptCompanyAgentList.DataSource = DbHelperSQL.Query(sql);
             rptCompanyAgentList.DataBind();
@@ -121,6 +160,20 @@ select top 10 * from CatchCompany where IsBidAgent = 1 and ProvinceId = {0}
             }
 
             where += " and provinceId = " + Id;
+
+            if (ddlCitys.SelectedValue != "0")
+            {
+                where += " and cityId = " + int.Parse(ddlCitys.SelectedValue);
+            }
+            if (ddlSelectBidType.SelectedValue != "0")
+            {
+                where += " and bidtype = " + int.Parse(ddlSelectBidType.SelectedValue);
+            }
+            if (!string.IsNullOrEmpty(txtKeywords.Text))
+            {
+                where += String.Format(" and (contains(BidTitle,'{0}') or contains(BidContent,'{0}' )) ", txtKeywords.Text);
+            }
+
             string sql = string.Format(@"
 SELECT TOP {0} BidId,BidTitle,BidPublishTime,BidCompanyName,ProvinceId,BidCategoryId,BidType,CityId
 FROM 
@@ -177,86 +230,5 @@ WHERE RowNumber > {0}*({1} - 1)
 
         }
 
-        protected void btnSearch_Click(object sender, EventArgs e)
-        {
-            string typeId = ddlSelectBidType.SelectedValue;
-            string cityId = ddlCitys.SelectedValue;
-            string keywords = txtKeywords.Text;
-            string where = "";
-
-            if (!string.IsNullOrEmpty(typeId) && typeId !="0")
-            {
-                where += " and bidtype = " + typeId;
-            }
-
-            if (!string.IsNullOrEmpty(cityId) && cityId != "0")
-            {
-                where += " and cityId = " + cityId;
-            }
-            if (!string.IsNullOrEmpty(keywords))
-            {
-                where += String.Format(" and (contains(BidTitle,'{0}') or contains(BidContent,'{0}' )) ", keywords);
-            }
-
-            Id = Request.QueryString["id"];
-            string type = Request.QueryString["type"];
-
-            if (string.IsNullOrEmpty(type) || type == "p")
-            {
-                InitForProvinceId(where);
-            }
-            if (type == "c")
-            {
-                InitForCityId();
-            }
-        }
-
-        protected void lnkType1_Click(object sender, EventArgs e)
-        {
-            ddlSelectBidType.SelectedIndex = 1;
-            btnSearch_Click(null, null);
-        }
-
-        protected void lnkType2_Click(object sender, EventArgs e)
-        {
-            ddlSelectBidType.SelectedIndex = 2;
-            btnSearch_Click(null, null);
-        }
-
-        protected void lnkType3_Click(object sender, EventArgs e)
-        {
-            ddlSelectBidType.SelectedIndex = 3;
-            btnSearch_Click(null, null);
-        }
-
-        protected void lnkType4_Click(object sender, EventArgs e)
-        {
-            ddlSelectBidType.SelectedIndex = 4;
-            btnSearch_Click(null, null);
-        }
-
-        protected void lnkType5_Click(object sender, EventArgs e)
-        {
-            ddlSelectBidType.SelectedIndex = 5;
-            btnSearch_Click(null, null);
-        }
-
-        protected void lnkType6_Click(object sender, EventArgs e)
-        {
-            ddlSelectBidType.SelectedIndex = 6;
-            btnSearch_Click(null, null);
-        }
-
-        protected void lnkType7_Click(object sender, EventArgs e)
-        {
-            ddlSelectBidType.SelectedIndex = 7;
-            btnSearch_Click(null, null);
-        }
-
-        protected void lnkType8_Click(object sender, EventArgs e)
-        {
-            ddlSelectBidType.SelectedIndex = 8;
-            btnSearch_Click(null, null);
-        }
     }
 }

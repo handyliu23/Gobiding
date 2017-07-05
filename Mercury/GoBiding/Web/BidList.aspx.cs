@@ -76,7 +76,7 @@ namespace GoBiding.Web
 
             List<SqlParameter> _params = new List<SqlParameter>
                                              {
-                                                 new SqlParameter("@pageindex", AspNetPager1.CurrentPageIndex),
+                                                 new SqlParameter("@pageindex", pageindex),
                                                  new SqlParameter("@pagesize", AspNetPager1.PageSize)
                                              };
 
@@ -159,7 +159,7 @@ namespace GoBiding.Web
 
                 #region 计算总数
                 List<SqlParameter> _countparams = new List<SqlParameter> { 
-                new SqlParameter("@pageIndex", AspNetPager1.CurrentPageIndex),
+                new SqlParameter("@pageIndex", pageindex),
                 new SqlParameter("@pageSize", AspNetPager1.PageSize)
                     };
 

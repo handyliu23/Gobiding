@@ -2,6 +2,7 @@
 
 <%@ Register Src="UserCenter/Index/Top.ascx" TagName="Top" TagPrefix="uc1" %>
 <%@ Register TagPrefix="webdiyer" Namespace="Wuqi.Webdiyer" Assembly="AspNetPager" %>
+<%@ Register src="UserCenter/Index/Bottom.ascx" tagname="Bottom" tagprefix="uc2" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -84,15 +85,10 @@
                                                 <td style="text-align: left; height: 30px; line-height: 30px; padding-left: 15px;
                                                     padding-top: 2px; vertical-align: top; font-size: 16px; font-weight: normal;">
                                                     【<%# Eval("TypeName").ToString()%>】<a href='/BidNewsDetail/<%#Eval("Id") %>.html'
-                                                        style="color: #000; font-size: 16px; font-weight: normal;"><%#Eval("NewsTitle")%></a>
-                                                    <br />
-                                                    <span style="font-size: 10px; color: Orange;">
-                                                        <%#Eval("OnCreate","{0:yyyy-MM}")%>[查看详细]</span>
+                                                        style="color: #000; font-size: 16px; font-weight: normal;"><%#Eval("NewsTitle")%></a><br /><span style="font-size: 10px; color: Orange;"><%#Eval("OnCreate","{0:yyyy-MM}")%>[查看详细]</span>
                                                     <br />
                                                     <span style="color: #666; font-size: 10px;">发布：去投标网</span> <span style="color: #666;
-                                                        font-size: 10px;">关键词：<%#Eval("Keywords")%>
-                                                    </span>
-                                                </td>
+                                                        font-size: 10px;">关键词：<%#Eval("Keywords")%></span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -134,8 +130,7 @@
                                                 <td style="text-align: left; height: 24px; line-height: 24px; padding-left: 5px;
                                                     padding-top: 2px; vertical-align: top; font-size: 14px; font-weight: normal;">
                                                     【<%# Eval("TypeName").ToString()%>】<a href='/BidNewsDetail/<%#Eval("Id") %>.html'
-                                                        style="color: #000; font-size: 14px; font-weight: normal;"><%#Eval("NewsTitle")%></a>
-                                                </td>
+                                                        style="color: #000; font-size: 14px; font-weight: normal;"><%#Eval("NewsTitle")%></a></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -150,6 +145,7 @@
             </div>
         </div>
     </div>
+    <uc2:Bottom ID="Bottom1" runat="server" />
     </form>
 </body>
 </html>

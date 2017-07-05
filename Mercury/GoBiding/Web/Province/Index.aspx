@@ -75,7 +75,7 @@
                             </td>
                             <td style="">
                                 <asp:Button runat="server" ID="btnSearch" ClientIDMode="Static" Text="搜索" 
-                                    Height="24" Width="60" onclick="btnSearch_Click"></asp:Button>
+                                    Height="24" Width="60" ></asp:Button>
                             </td>
                         </tr>
                     </table>
@@ -93,36 +93,28 @@
                             <table cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td style="width: 100px;">
-                                        <asp:LinkButton id="lnkType1" Text="招标公告" runat="server" 
-                                            onclick="lnkType1_Click"></asp:LinkButton>
+                                        <span id="lnkType1" style="cursor:pointer;">招标公告</span>
                                     </td>
                                     <td style="width: 100px;">
-                                        <asp:LinkButton id="lnkType2" Text="变更公告" runat="server" 
-                                            onclick="lnkType2_Click"></asp:LinkButton>
+                                        <span id="lnkType2"  style="cursor:pointer;">变更公告</span>
                                     </td>
                                     <td style="width: 100px;">
-                                        <asp:LinkButton id="lnkType3" Text="中标公告" runat="server" 
-                                            onclick="lnkType3_Click"></asp:LinkButton>
+                                        <span id="lnkType3"  style="cursor:pointer;" >中标公告</span>
                                     </td>
                                     <td style="width: 100px;">
-                                        <asp:LinkButton id="lnkType4" Text="招标预告" runat="server" 
-                                            onclick="lnkType4_Click"></asp:LinkButton>
+                                        <span id="lnkType4"  style="cursor:pointer;">招标预告</span>
                                     </td>
                                     <td style="width: 100px;">
-                                        <asp:LinkButton id="lnkType5" Text="废标公告" runat="server" 
-                                            onclick="lnkType5_Click"></asp:LinkButton>
+                                        <span id="lnkType5" style="cursor:pointer;"  >废标公告</span>
                                     </td>
                                     <td style="width: 100px;">
-                                        <asp:LinkButton id="lnkType6" Text="邀请招标" runat="server" 
-                                            onclick="lnkType6_Click"></asp:LinkButton>
+                                        <span id="lnkType6"  style="cursor:pointer;">邀请招标</span>
                                     </td>
                                     <td style="width: 100px;">
-                                        <asp:LinkButton id="lnkType7" Text="竞争性谈判" runat="server" 
-                                            onclick="lnkType7_Click"></asp:LinkButton>
+                                        <span id="lnkType7"  style="cursor:pointer;">竞争性谈判</span>
                                     </td>
                                     <td style="width: 100px;">
-                                        <asp:LinkButton id="lnkType8" Text="单一源公告" runat="server" 
-                                            onclick="lnkType8_Click"></asp:LinkButton>
+                                        <span id="lnkType8"  style="cursor:pointer;">单一源公告</span>
                                     </td>
                                 </tr>
                             </table>
@@ -183,9 +175,9 @@
                             <asp:Repeater runat="server" ID="rptBidInviteList">
                                 <ItemTemplate>
                                     <tr>
-                                        <td style="width: 100%; font-family: '微软雅黑'; font-size: 14px; vertical-align: top;
-                                            padding-left: 30px;">
-                                            <a href="/Province/index/c/<%#Eval("CityID")%>">
+                                        <td style="width: 100%; font-family: '微软雅黑'; font-size: 13px; vertical-align: top;
+                                            padding-left: 20px;">
+                                            <a style="color:#000;" href="/Province/index/c/<%#Eval("CityID")%>.html">
                                                 <%# GetCityName(Eval("CityID").ToString())%>招标信息网</a>
                                         </td>
                                     </tr>
@@ -203,9 +195,9 @@
                             <asp:Repeater runat="server" ID="rptCompanyAgentList">
                                 <ItemTemplate>
                                     <tr>
-                                        <td style="width: 100%; font-family: '微软雅黑'; font-size: 14px; vertical-align: top;
-                                            padding-left: 30px;">
-                                            <a href="/CompanyBidList/<%#Eval("Id")%>.html">
+                                        <td style="width: 100%; font-family: '微软雅黑'; font-size: 13px; vertical-align: top;
+                                            padding-left: 20px;">
+                                            <a style="color:#000;" href="/CompanyBidList/<%#Eval("Id")%>.html">
                                                 <%# Eval("VendorName").ToString()%></a>
                                         </td>
                                     </tr>
@@ -218,6 +210,75 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        $("#btnSearch").click(function () {
+            var redirecturl = location.href;
+            if (redirecturl.indexOf("?") > 0) {
+                redirecturl = redirecturl.substring(0, redirecturl.indexOf("?"));
+            }
+            location.href = redirecturl + "?bidtype=" + $("#ddlSelectBidType option:selected").val() + "&cityId=" + $("#ddlCitys option:selected").val() + "&keyword=" + $("#txtKeywords").val();
+            return false;
+        });
+
+        $("#lnkType1").click(function () {
+            var redirecturl = location.href;
+            if (redirecturl.indexOf("?") > 0) {
+                redirecturl = redirecturl.substring(0, redirecturl.indexOf("?"));
+            }
+            location.href = redirecturl + "?bidtype=1";
+        });
+        $("#lnkType2").click(function () {
+            var redirecturl = location.href;
+            if (redirecturl.indexOf("?") > 0) {
+                redirecturl = redirecturl.substring(0, redirecturl.indexOf("?"));
+            }
+            location.href = redirecturl + "?bidtype=2";
+        });
+        $("#lnkType3").click(function () {
+            var redirecturl = location.href;
+            if (redirecturl.indexOf("?") > 0) {
+                redirecturl = redirecturl.substring(0, redirecturl.indexOf("?"));
+            }
+            location.href = redirecturl + "?bidtype=3";
+        });
+        $("#lnkType4").click(function () {
+            var redirecturl = location.href;
+            if (redirecturl.indexOf("?") > 0) {
+                redirecturl = redirecturl.substring(0, redirecturl.indexOf("?"));
+            }
+            location.href = redirecturl + "?bidtype=4";
+        });
+        $("#lnkType5").click(function () {
+            var redirecturl = location.href;
+            if (redirecturl.indexOf("?") > 0) {
+                redirecturl = redirecturl.substring(0, redirecturl.indexOf("?"));
+            }
+            location.href = redirecturl + "?bidtype=5";
+        });
+        $("#lnkType6").click(function () {
+            var redirecturl = location.href;
+            if (redirecturl.indexOf("?") > 0) {
+                redirecturl = redirecturl.substring(0, redirecturl.indexOf("?"));
+            }
+            location.href = redirecturl + "?bidtype=6";
+        });
+        $("#lnkType7").click(function () {
+            var redirecturl = location.href;
+            if (redirecturl.indexOf("?") > 0) {
+                redirecturl = redirecturl.substring(0, redirecturl.indexOf("?"));
+            }
+            location.href = redirecturl + "?bidtype=7";
+        });
+        $("#lnkType8").click(function () {
+            var redirecturl = location.href;
+            if (redirecturl.indexOf("?") > 0) {
+                redirecturl = redirecturl.substring(0, redirecturl.indexOf("?"));
+            }
+            location.href = redirecturl + "?bidtype=8";
+        });
+    </script>
     </form>
 </body>
 </html>

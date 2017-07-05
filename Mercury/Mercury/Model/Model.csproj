@@ -125,9 +125,11 @@
     <Compile Include="CatchCompanyIndustry.cs" />
     <Compile Include="EmailLogs.cs" />
     <Compile Include="Hearts.cs" />
+    <Compile Include="IdleFishBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="PurchaseOrder.cs" />
     <Compile Include="SmartCategorys.cs" />
     <Compile Include="SysNode.cs" />
     <Compile Include="Bids.cs" />

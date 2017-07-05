@@ -5,6 +5,7 @@
 <%@ Register Src="UserCenter/Index/Top.ascx" TagName="Top" TagPrefix="uc1" %>
 <%@ Register Src="UserCenter/Index/ucBidCategoryList.ascx" TagName="ucBidCategoryList"
     TagPrefix="uc3" %>
+<%@ Register src="UserCenter/Index/Bottom.ascx" tagname="Bottom" tagprefix="uc2" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -418,30 +419,7 @@
         </div>
     </div>
 
-    <div class="container" style="width: 100%; text-align: center; padding-top: 20px;
-        padding-left: 12%; font-family: '微软雅黑'">
-        <div class="row">
-            <div style="line-height: 24px; text-align: left; margin: 0px auto; color: #666; font-size: 12px;">
-                去投标网（上海商麓网络科技有限公司）<br />
-                2015-2017 gobiding.com 版权所有 ICP证：沪ICP备15005938号-3 All Rights Reserved
-            </div>
-            <div style="width: 100%; padding-top: 10px;">
-                <table>
-                    <tr>
-                        <td style="width: 130px;">
-                            <img src="imgs/system/sf-wzba_r1_c1.gif" />
-                        </td>
-                        <td style="width: 130px;">
-                            <img src="imgs/system/sf-wzba_r1_c3.gif" />
-                        </td>
-                        <td style="width: 130px;">
-                            <img src="imgs/system/sf-wzba_r1_c7.gif" />
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
+
     <asp:HiddenField runat="server" ClientIDMode="Static" ID="hdnbidarea" />
     <asp:HiddenField runat="server" ClientIDMode="Static" ID="hdnsubindustry" />
     <asp:HiddenField runat="server" ClientIDMode="Static" ID="hdnbidindustry" />
@@ -456,7 +434,6 @@
             -transform: scale(1.02,1.02);
         }
     </style>
-    </form>
     <script src="/js/thirdplugin.js" type="text/javascript"></script>
     <script src="/js/jquery-1.9.1.js" type="text/javascript"></script>
     <script type="text/javascript">
@@ -594,5 +571,7 @@
         });
 
     </script>
-</body>
+    <uc2:Bottom ID="Bottom1" runat="server" />
+    </form>
+    </body>
 </html>

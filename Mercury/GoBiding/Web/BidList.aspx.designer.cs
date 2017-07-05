@@ -137,5 +137,14 @@ namespace GoBiding.Web {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdnbidtype;
+        
+        /// <summary>
+        /// Bottom1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::GoBiding.Web.UserCenter.Index.Bottom Bottom1;
     }
 }

@@ -22,7 +22,9 @@ namespace SmartCategoryRobot
 
                 while (true)
                 {
-                    var bids = new Mercury.BLL.Bids().GetListByPage(" (BidCategoryId is null or bidcategoryid =0) ", "BidId desc", 1 + (pageNumber - 1) * pageCount, pageNumber * pageCount);
+                    
+                    //var bids = new Mercury.BLL.Bids().GetListByPage(" (BidCategoryId is null or bidcategoryid =0)", "BidId desc", 1 + (pageNumber - 1) * pageCount, pageNumber * pageCount);
+                    var bids = new Mercury.BLL.Bids().GetListByPage(" BidAgent = ''", "BidId desc", 1 + (pageNumber - 1) * pageCount, pageNumber * pageCount);
                     pageNumber++;
                     if (bids != null && bids.Tables[0].Rows.Count > 0)
                     {
@@ -35,29 +37,29 @@ namespace SmartCategoryRobot
 
                             bool ismatch = false;
                             //更新行业分类
-                            foreach (Mercury.Model.SmartCategorys smart in smarts)
-                            {
-                                if (!ismatch)
-                                {
-                                    List<string> keywords = smart.Keywords.Split(' ').ToList();
-                                    foreach (var keyword in keywords)
-                                    {
-                                        if (!string.IsNullOrEmpty(keyword) && title.Contains(keyword))
-                                        {
-                                            var model = bizBid.GetModel(bidId);
-                                            model.BidCategoryId = smart.ParentCategoryId;
-                                            model.SubBidCategoryId = smart.BidCategoryId;
-                                            bizBid.Update(model);
-                                            ismatch = true;
-                                            break;
-                                            //model.BidCategoryName = smart.BidCategoryId;
-                                        }
-                                    }
-                                }
-                                else {
-                                    break;
-                                }
-                            }
+                            //foreach (Mercury.Model.SmartCategorys smart in smarts)
+                            //{
+                            //    if (!ismatch)
+                            //    {
+                            //        List<string> keywords = smart.Keywords.Split(' ').ToList();
+                            //        foreach (var keyword in keywords)
+                            //        {
+                            //            if (!string.IsNullOrEmpty(keyword) && title.Contains(keyword))
+                            //            {
+                            //                var model = bizBid.GetModel(bidId);
+                            //                model.BidCategoryId = smart.ParentCategoryId;
+                            //                model.SubBidCategoryId = smart.BidCategoryId;
+                            //                bizBid.Update(model);
+                            //                ismatch = true;
+                            //                break;
+                            //                //model.BidCategoryName = smart.BidCategoryId;
+                            //            }
+                            //        }
+                            //    }
+                            //    else {
+                            //        break;
+                            //    }
+                            //}
 
                             //更新招标编号
                             //if (bidId == 17724)
@@ -143,6 +145,42 @@ namespace SmartCategoryRobot
                                 DateTime.TryParse(BidOpenTime, out ex);
                                 if (ex != DateTime.MinValue)
                                     bidModel.BidOpenTime = ex;
+                            }
+
+                            //招标代理机构
+                            string AgentCompany = FindSpecialSegmentByContent("招标代理机构：", BidContent);
+                            if (AgentCompany.Trim() == "")
+                            {
+                                AgentCompany = FindSpecialSegmentByContent("代理机构名称：", BidContent);
+                            }
+                            if (AgentCompany.Trim() == "")
+                            {
+                                AgentCompany = FindSpecialSegmentByContent("采购代理机构全称：", BidContent);
+                            }
+                            if (!string.IsNullOrEmpty(AgentCompany))
+                            {
+                                bidModel.BidAgent = AgentCompany;
+
+                                //将catchcompany中的企业修改为招标代理企业
+                                var agentcatchcompanys = new Mercury.BLL.CatchCompany().GetModelList(" vendorname = '" + AgentCompany + "'");
+                                if (agentcatchcompanys == null || agentcatchcompanys.Count == 0)
+                                {
+                                    var agentcatchcompany = new Mercury.Model.CatchCompany();
+                                    agentcatchcompany.VendorName = AgentCompany;
+                                    agentcatchcompany.OnCreated = DateTime.Now;
+                                    agentcatchcompany.IsBidAgent = 1;
+
+                                    new Mercury.BLL.CatchCompany().Add(agentcatchcompany);
+                                }
+                                else
+                                {
+                                    var agentcatchcompany = agentcatchcompanys.FirstOrDefault();
+                                    agentcatchcompany.IsBidAgent = 1;
+                                    new Mercury.BLL.CatchCompany().Update(agentcatchcompany);
+                                }
+                            }
+                            else {
+                                bidModel.BidAgent = "-";
                             }
 
                             //开标时间
