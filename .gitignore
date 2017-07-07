@@ -172,3 +172,5 @@ $RECYCLE.BIN/
 /Mercury/GoBiding/DBUtility/bin
 /Mercury/GoBiding/DAL/bin
 /Mercury/GoBiding/_ReSharper.GoBiding
+/Mercury/Mercury/Web/bin
+/Mercury/Mercury/_ReSharper.Mercury
