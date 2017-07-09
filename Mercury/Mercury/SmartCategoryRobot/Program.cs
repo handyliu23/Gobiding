@@ -37,29 +37,30 @@ namespace SmartCategoryRobot
 
                             bool ismatch = false;
                             //更新行业分类
-                            //foreach (Mercury.Model.SmartCategorys smart in smarts)
-                            //{
-                            //    if (!ismatch)
-                            //    {
-                            //        List<string> keywords = smart.Keywords.Split(' ').ToList();
-                            //        foreach (var keyword in keywords)
-                            //        {
-                            //            if (!string.IsNullOrEmpty(keyword) && title.Contains(keyword))
-                            //            {
-                            //                var model = bizBid.GetModel(bidId);
-                            //                model.BidCategoryId = smart.ParentCategoryId;
-                            //                model.SubBidCategoryId = smart.BidCategoryId;
-                            //                bizBid.Update(model);
-                            //                ismatch = true;
-                            //                break;
-                            //                //model.BidCategoryName = smart.BidCategoryId;
-                            //            }
-                            //        }
-                            //    }
-                            //    else {
-                            //        break;
-                            //    }
-                            //}
+                            foreach (Mercury.Model.SmartCategorys smart in smarts)
+                            {
+                                if (!ismatch)
+                                {
+                                    List<string> keywords = smart.Keywords.Split(' ').ToList();
+                                    foreach (var keyword in keywords)
+                                    {
+                                        if (!string.IsNullOrEmpty(keyword) && title.Contains(keyword))
+                                        {
+                                            var model = bizBid.GetModel(bidId);
+                                            model.BidCategoryId = smart.ParentCategoryId;
+                                            model.SubBidCategoryId = smart.BidCategoryId;
+                                            bizBid.Update(model);
+                                            ismatch = true;
+                                            break;
+                                            //model.BidCategoryName = smart.BidCategoryId;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    break;
+                                }
+                            }
 
                             //更新招标编号
                             //if (bidId == 17724)
