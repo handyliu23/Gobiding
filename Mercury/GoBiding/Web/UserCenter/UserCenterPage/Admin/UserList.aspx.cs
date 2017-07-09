@@ -54,7 +54,7 @@ namespace GoBiding.Web.UserCenter.UserCenterPage.Admin
                 rptBidList.DataSource = DbHelperSQL.RunProcedure("GetSysUserList", _params.ToArray());
                 rptBidList.DataBind();
 
-                int totalUserCount = (int)DbHelperSQL.GetSingle("SELECT COUNT(*) FROM Sys_Users WHERE Deleted <> 1 and CreateByPlatform<>1");
+                int totalUserCount = (int)DbHelperSQL.GetSingle("SELECT COUNT(*) FROM Sys_Users WHERE Deleted <> 1 and (CreateByPlatform is null or CreateByPlatform <> 1)");
 
                 ltrTotalUserCount.Text = totalUserCount.ToString();
                 AspNetPager1.RecordCount = totalUserCount;

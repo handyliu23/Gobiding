@@ -69,5 +69,24 @@
         <cron-expression>0 0/55 * * * ?</cron-expression>
       </cron>
     </trigger>
+    <job>
+      <name>PurchaseOrderSpiderJob</name>
+      <group>Spider</group>
+      <description>PurchaseOrderSpiderJob</description>
+      <job-type>GoBidingJob.PurchaseOrderSpiderJob,GoBidingJob</job-type>
+      <durable>true</durable>
+      <recover>false</recover>
+    </job>
+    <trigger>
+      <cron>
+        <name>PurchaseOrderSpiderTrigger</name>
+        <group>Spider</group>
+        <job-name>PurchaseOrderSpiderJob</job-name>
+        <job-group>Spider</job-group>
+        <start-time>2017-01-01T00:00:00+08:00</start-time>
+        <cron-expression>0 0 0/6 * * ?</cron-expression>
+      </cron>
+    </trigger>
+    
   </schedule>
 </job-scheduling-data>
