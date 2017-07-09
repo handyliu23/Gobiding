@@ -41,7 +41,7 @@ namespace GoBiding.Web
                 return;
             }
             string pwd = DESEncrypt.Decrypt(modellist.FirstOrDefault().Password);
-            string content = string.Format("亲爱的{0}，您在去投标网(www.gobiding.com)的登录密码是{1}", modellist.FirstOrDefault().UserNickName, pwd);
+            string content = string.Format("亲爱的{0}，您在去投标网(www.gobiding.com)的登录密码是{1},您的密码较简单，建议您修改密码。", modellist.FirstOrDefault().UserNickName, pwd);
 
             sendMail(new List<string>(){email}, content);
 
