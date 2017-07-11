@@ -30,7 +30,7 @@ namespace Maticsoft.Common
             smtpSection = new SmtpSection();
             smtpSection.Network.Host = DefaultSmtpSection.Network.Host;
             smtpSection.Network.UserName = DefaultSmtpSection.Network.UserName;
-            smtpSection.Network.Password = DefaultSmtpSection.Network.Password;
+            smtpSection.Network.Password = "19870609040223Yu";
             smtpSection.Network.Port = 25;
             smtpSection.From = "postmaster@gobiding.com";
             

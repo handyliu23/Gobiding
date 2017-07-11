@@ -174,3 +174,16 @@ $RECYCLE.BIN/
 /Mercury/GoBiding/_ReSharper.GoBiding
 /Mercury/Mercury/Web/bin
 /Mercury/Mercury/_ReSharper.Mercury
+/Mercury/Mercury/InitCatchCompanyUser/bin
+/Mercury/Mercury/InitCatchCompanyUser/obj
+/Mercury/Mercury/GoBidingJob/bin
+/Mercury/Mercury/GoBidingJob/obj
+/Mercury/Mercury/DAL/bin
+/Mercury/Mercury/DAL/obj
+/Mercury/Mercury/BLL/bin
+/Mercury/Mercury/BLL/obj
+/Mercury/Mercury/MercurySpider/obj
+/Mercury/Mercury/MercurySpider/bin
+/Mercury/Mercury/SmartCategoryRobot/bin
+/Mercury/Mercury/SmartCategoryRobot/obj
+/Mercury/Mercury/InitCompanyUser/obj
