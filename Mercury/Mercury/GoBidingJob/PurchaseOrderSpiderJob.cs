@@ -17,6 +17,7 @@ using Mercury.Model;
 using System.Net;
 using System.IO;
 using System.Text.RegularExpressions;
+using HtmlAgilityPack;
 
 namespace GoBidingJob
 {
@@ -31,13 +32,21 @@ namespace GoBidingJob
         private DataSet districts = new Mercury.BLL.Districts().GetAllList();
         private DataSet citys = new Mercury.BLL.Citys().GetAllList();
         private DataSet provinces = new Mercury.BLL.Provinces().GetAllList();
+        static HtmlWeb webClient = new HtmlWeb();
 
-        private const string IdleFishSpider_3CUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499005753518_143&start=800&end=&callback=jsonp144&stype=1&catid=50100398&st_trust=1&page=1&q=%C7%F3%B9%BA&ist=1";
-        private const string IdleFishSpider_HomeDailyUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499525575299_143&callback=jsonp144&stype=1&catid=57538002&st_trust=1&q=%B2%C9%B9%BA&ist=1";
-        private const string IdleFishSpider_StationeryAndSportsUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499526536506_143&callback=jsonp144&stype=1&catid=50100412&st_trust=1&q=%B2%C9%B9%BA&ist=1";
-        private const string IdleFishSpider_ComputerUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499526780618_143&callback=jsonp144&stype=1&catid=50100402&st_trust=1&q=%B2%C9%B9%BA&ist=1";
-        private const string IdleFishSpider_PhoneUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499527087019_143&callback=jsonp144&stype=1&catid=50100398&st_trust=1&q=%B2%C9%B9%BA&ist=1";
-        private const string IdleFishSpider_BeautyUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499527290735_156&callback=jsonp157&stype=1&catid=50100405&st_trust=1&q=%B2%C9%B9%BA&ist=1";
+        private const string IdleFishSpider_3CUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499837888477_143&callback=jsonp144&stype=1&catid=50100403&st_trust=1&start=800&q=%B2%C9%B9%BA&ist=1";
+        private const string IdleFishSpider_HomeDailyUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499836187958_143&start=500&callback=jsonp144&stype=1&catid=57538002&st_trust=1&q=%B2%C9%B9%BA&ist=1";
+        private const string IdleFishSpider_StationeryAndSportsUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499836187958_143&start=500&callback=jsonp144&stype=1&catid=50100412&st_trust=1&q=%B2%C9%B9%BA&ist=1";
+        private const string IdleFishSpider_ComputerUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499836187958_143&start=500&callback=jsonp144&stype=1&catid=50100402&st_trust=1&q=%B2%C9%B9%BA&ist=1";
+        private const string IdleFishSpider_PhoneUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499836187958_143&start=500&callback=jsonp144&stype=1&catid=50100398&st_trust=1&q=%B2%C9%B9%BA&ist=1";
+        private const string IdleFishSpider_BeautyUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499836187958_143&start=500&callback=jsonp157&stype=1&catid=50100405&st_trust=1&q=%B2%C9%B9%BA&ist=1";
+        private const string IdleFishSpider_CarUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499873133725_143&callback=jsonp144&stype=1&catid=57556002&st_trust=1&q=%C7%F3%B9%BA&ist=1";
+        private const string IdleFishSpider_GameUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499873306990_143&callback=jsonp144&stype=1&catid=57562001&st_trust=1&q=%C7%F3%B9%BA&ist=1";
+        private const string IdleFishSpider_BicycleUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499873420690_143&callback=jsonp144&stype=1&catid=57532003&st_trust=1&q=%C7%F3%B9%BA&ist=1";
+        private const string IdleFishSpider_CameraUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499873568632_143&callback=jsonp144&stype=1&catid=50100401&st_trust=1&q=%C7%F3%B9%BA&ist=1";
+        private const string IdleFishSpider_TicketUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499873790953_143&callback=jsonp144&stype=1&catid=57556003&st_trust=1&q=%C7%F3%B9%BA&ist=1";
+        private const string IdleFishSpider_LoveBeautyUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499873903818_143&callback=jsonp144&stype=1&catid=50100405&st_trust=1&q=%C7%F3%B9%BA&ist=1";
+        private const string IdleFishSpider_ClockUrl = "https://s.2.taobao.com/list/waterfall/waterfall.htm?wp={0}&_ksTS=1499874073398_143&callback=jsonp144&stype=1&catid=50100414&st_trust=1&q=%C7%F3%B9%BA&ist=1";
 
 
         public void Execute(IJobExecutionContext context)
@@ -49,6 +58,14 @@ namespace GoBidingJob
             ThreadPool.QueueUserWorkItem(new WaitCallback(IdleFishSpider_Computer), new object());
             ThreadPool.QueueUserWorkItem(new WaitCallback(IdleFishSpider_Phone), new object());
             ThreadPool.QueueUserWorkItem(new WaitCallback(IdleFishSpider_Beauty), new object());
+            ThreadPool.QueueUserWorkItem(new WaitCallback(IdleFishSpider_Car), new object());
+            ThreadPool.QueueUserWorkItem(new WaitCallback(IdleFishSpider_Game), new object());
+            ThreadPool.QueueUserWorkItem(new WaitCallback(IdleFishSpider_Bicycle), new object());
+            ThreadPool.QueueUserWorkItem(new WaitCallback(IdleFishSpider_Camera), new object());
+            ThreadPool.QueueUserWorkItem(new WaitCallback(IdleFishSpider_Ticket), new object());
+            ThreadPool.QueueUserWorkItem(new WaitCallback(IdleFishSpider_LoveBeauty), new object());
+            ThreadPool.QueueUserWorkItem(new WaitCallback(IdleFishSpider_Clock), new object());
+
             _logger.InfoFormat("PurchaseOrderSpiderJob Start");
         }
 
@@ -67,7 +84,7 @@ namespace GoBidingJob
         /// <param name="val"></param>
         public void IdleFishSpider_HomeDaily(object val)
         {
-            IdleFishSpider(2, 100, IdleFishSpider_HomeDailyUrl);
+            IdleFishSpider(2, 500, IdleFishSpider_HomeDailyUrl);
         }
 
         /// <summary>
@@ -76,7 +93,7 @@ namespace GoBidingJob
         /// <param name="val"></param>
         public void IdleFishSpider_StationeryAndSports(object val)
         {
-            IdleFishSpider(3, 100, IdleFishSpider_StationeryAndSportsUrl);
+            IdleFishSpider(3, 500, IdleFishSpider_StationeryAndSportsUrl);
         }
 
         /// <summary>
@@ -85,7 +102,7 @@ namespace GoBidingJob
         /// <param name="val"></param>
         public void IdleFishSpider_Computer(object val)
         {
-            IdleFishSpider(5, 800, IdleFishSpider_ComputerUrl);
+            IdleFishSpider(1, 800, IdleFishSpider_ComputerUrl);
         }
 
         /// <summary>
@@ -94,7 +111,7 @@ namespace GoBidingJob
         /// <param name="val"></param>
         public void IdleFishSpider_Phone(object val)
         {
-            IdleFishSpider(6, 800, IdleFishSpider_ComputerUrl);
+            IdleFishSpider(1, 800, IdleFishSpider_ComputerUrl);
         }
 
         /// <summary>
@@ -103,33 +120,110 @@ namespace GoBidingJob
         /// <param name="val"></param>
         public void IdleFishSpider_Beauty(object val)
         {
-            IdleFishSpider(7, 100, IdleFishSpider_BeautyUrl);
+            IdleFishSpider(2, 500, IdleFishSpider_BeautyUrl);
         }
+
+        /// <summary>
+        /// 汽车
+        /// </summary>
+        /// <param name="val"></param>
+        public void IdleFishSpider_Car(object val)
+        {
+            IdleFishSpider(8, 800, IdleFishSpider_BeautyUrl);
+        }
+
+        /// <summary>
+        /// 游戏产品
+        /// </summary>
+        /// <param name="val"></param>
+        public void IdleFishSpider_Game(object val)
+        {
+            IdleFishSpider(1, 800, IdleFishSpider_BeautyUrl);
+        }
+
+
+        /// <summary>
+        /// 自行车
+        /// </summary>
+        /// <param name="val"></param>
+        public void IdleFishSpider_Bicycle(object val)
+        {
+            IdleFishSpider(2, 800, IdleFishSpider_BicycleUrl);
+        }
+
+        /// <summary>
+        /// 相机
+        /// </summary>
+        /// <param name="val"></param>
+        public void IdleFishSpider_Camera(object val)
+        {
+            IdleFishSpider(2, 800, IdleFishSpider_CameraUrl);
+        }
+
+        /// <summary>
+        /// 票务娱乐
+        /// </summary>
+        /// <param name="val"></param>
+        public void IdleFishSpider_Ticket(object val)
+        {
+            IdleFishSpider(9, 500, IdleFishSpider_TicketUrl);
+        }
+
+        /// <summary>
+        /// 美容、美颜、香水
+        /// </summary>
+        /// <param name="val"></param>
+        public void IdleFishSpider_LoveBeauty(object val)
+        {
+            IdleFishSpider(2, 500, IdleFishSpider_LoveBeautyUrl);
+        }
+
+        /// <summary>
+        /// 钟表
+        /// </summary>
+        /// <param name="val"></param>
+        public void IdleFishSpider_Clock(object val)
+        {
+            IdleFishSpider(2, 500, IdleFishSpider_ClockUrl);
+        }
+
 
 
         private void IdleFishSpider(int productCategoryId, decimal price, string url)
         {
             for (int p = 1; p <= 3; p++)
             {
-                string context = GetHtml(url, "gb2312", p.ToString());
-                _logger.InfoFormat("PurchaseOrderSpiderJob" + context);
-                IdleFishBO idleFishBo = Newtonsoft.Json.JsonConvert.DeserializeObject<IdleFishBO>(context);
-                List<string> userNickNames = new List<string>();
-
-                if (idleFishBo != null)
+                try
                 {
-                    idleFishBo.idle.ForEach(i =>
+                    string context = GetHtml(url, "gb2312", p.ToString());
+
+                    if (string.IsNullOrWhiteSpace(context))
                     {
-                        if (i.item.price < price || string.IsNullOrWhiteSpace(i.item.title)
-                            || i.item.title.Trim().Length < 8) return;
+                        continue;
+                    }
 
-                        if (userNickNames.Contains(i.user.userNick)) return;
+                    _logger.InfoFormat("PurchaseOrderSpiderJob" + context);
+                    IdleFishBO idleFishBo = Newtonsoft.Json.JsonConvert.DeserializeObject<IdleFishBO>(context);
+                    List<string> userNickNames = new List<string>();
 
-                        userNickNames.Add(i.user.userNick);
+                    if (idleFishBo != null)
+                    {
+                        idleFishBo.idle.ForEach(i =>
+                        {
+                            if (i.item.price < price || string.IsNullOrWhiteSpace(i.item.title)
+                                || i.item.title.Trim().Length < 8) return;
 
-                        int userId = AddUser(i.user);
-                        AddPurchaseOrder(productCategoryId, userId, i.user.userNick, i.item);
-                    });
+                            if (userNickNames.Contains(i.user.userNick)) return;
+
+                            userNickNames.Add(i.user.userNick);
+
+                            int userId = AddUser(i.user);
+                            AddPurchaseOrder(productCategoryId, userId, i.user.userNick, i.item);
+                        });
+                    }
+                }
+                catch (Exception e)
+                {
                 }
             }
         }
@@ -153,6 +247,11 @@ namespace GoBidingJob
             var response = (HttpWebResponse)request.GetResponse();
             StreamReader streamReader = new StreamReader(response.GetResponseStream(), Encoding.GetEncoding(encode));
             string html = streamReader.ReadToEnd();
+
+            if (string.IsNullOrWhiteSpace(html))
+            {
+                return string.Empty;
+            }
 
             if (response.StatusCode == HttpStatusCode.Redirect)
             {
@@ -282,5 +381,14 @@ namespace GoBidingJob
 
             new Mercury.BLL.PurchaseOrder().Add(purchaseOrder);
         }
+
+
+        //private void dd(string url)
+        //{
+        //    HtmlDocument doc = webClient.Load(url);
+        //    HtmlNodeCollection hrefList = doc.DocumentNode.SelectNodes("//div[@class='ks-waterfall ks-waterfall-col-0 ks-waterfall-col-first']");
+        //    string dd = "";
+        //}
+
     }
 }

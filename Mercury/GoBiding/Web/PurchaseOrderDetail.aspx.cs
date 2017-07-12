@@ -74,10 +74,11 @@ namespace GoBiding.Web
                     }
 
                     companyname = ltrBidCompany.Text;
-                    ltrCategoryId.Text = (bid.ProductCategoryId ?? 0) == 0 ? "其他" : CommonUtility.GetCategoryName(bid.ProductCategoryId ?? 0);
+                    ltrCategoryId.Text = (bid.ProductCategoryId ?? 0) == 0 ? "其他" : CommonUtility.GetPurcahseCategoryName(bid.ProductCategoryId ?? 0);
                     ltrExpireTime.Text = bid.ExpireTime == null ? "长期" : bid.ExpireTime.Value.ToShortDateString();
                     ltrProvinceName.Text = CommonUtility.GetProvinceName(bid.RecvProvinceId.ToString());
                     ltrPublishTime.Text = bid.PublishTime == null ? "" : bid.PublishTime.Value.ToShortDateString();
+                    productImage.ImageUrl = bid.Image1;
 
                     var publishUser = new BLL.Sys_Users().GetModel(bid.SysUserId ?? 0);
                     ltrCompanyName.Text = bid.CompanyName;
@@ -139,7 +140,7 @@ namespace GoBiding.Web
 
                     lblContent.Text = bid.Description;
 
-                    BindPur();
+                    BindPur((int)bid.ProductCategoryId);
                 }
                 catch (Exception er)
                 {
@@ -183,16 +184,14 @@ namespace GoBiding.Web
         }
 
         //todo 按purchaseType 展示同类商品 整理代码
-        private void BindPur()
+        private void BindPur(int productCategroy)
         {
             string sql = @"
 select top 9 Id,Title,PublishTime,ExpireTime,Status,PurchaseType,IsEmergency,IsSetTop,po.CompanyName,p.ProvinceName, c.CityName,su.UserProfile,su.CreateByPlatform
 from PurchaseOrder po left join Provinces p on po.RecvProvinceId = p.ProvinceID 
 left join Citys c on c.CityID = po.RecvCityId
 left join Sys_Users su on su.Sys_UserId = po.SysUserId
-
-order by 1 desc
-                ";
+where po.ProductCategoryId =" + productCategroy + "order by 1 desc ";
 
             DataSet ds = DbHelperSQL.Query(sql);
 
@@ -213,6 +212,11 @@ order by 1 desc
                 rptPurchaseOrderList.DataSource = ds;
                 rptPurchaseOrderList.DataBind();
             }
+        }
+
+        public string GetImage()
+        {
+            return "";
         }
 
     }
