@@ -94,11 +94,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Compile Include="FillBidCityIdJob.cs" />
-    <None Include="Web.config" />
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="quartz_jobs.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
