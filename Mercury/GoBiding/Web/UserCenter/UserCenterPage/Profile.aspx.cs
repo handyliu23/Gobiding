@@ -13,6 +13,18 @@ namespace GoBiding.Web.UserCenter.UserCenterPage
 {
     public partial class Profile : PhoenixBase
     {
+        private int GetCurrentUserId()
+        {
+            int userId = int.Parse(Session["UserSessionId"].ToString());
+
+            if (Request.QueryString["userId"] != null)
+            {
+                userId = int.Parse(Request.QueryString["userId"].ToString());
+            }
+
+            return userId;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -28,7 +40,7 @@ namespace GoBiding.Web.UserCenter.UserCenterPage
             {
                 try
                 {
-                    int userId = int.Parse(Session["UserSessionId"].ToString());
+                    int userId = GetCurrentUserId();
 
                     string filename = Path.GetFileName(FileUploadControl.FileName);
                     string savefilename = userId + "_" + "Profile_" + filename;
@@ -48,7 +60,7 @@ namespace GoBiding.Web.UserCenter.UserCenterPage
 
         public void Init()
         {
-            int userId = int.Parse(Session["UserSessionId"].ToString());
+            int userId = GetCurrentUserId();
 
             var user = new BLL.Sys_Users().GetModel(userId);
             txtUserName.Value = user.UserName;
@@ -91,7 +103,7 @@ namespace GoBiding.Web.UserCenter.UserCenterPage
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            int userId = int.Parse(Session["UserSessionId"].ToString());
+            int userId = GetCurrentUserId();
 
             var user = new BLL.Sys_Users().GetModel(userId);
             user.UserName = txtUserName.Value;
@@ -110,7 +122,7 @@ namespace GoBiding.Web.UserCenter.UserCenterPage
 
         protected void btnSaveDingyue_Click(object sender, EventArgs e)
         {
-            int userId = int.Parse(Session["UserSessionId"].ToString());
+            int userId = GetCurrentUserId();
 
             var user = new BLL.Sys_Users().GetModel(userId);
             user.IsSmsNotice = int.Parse(ddlSmsNotice.SelectedValue);
@@ -137,7 +149,7 @@ namespace GoBiding.Web.UserCenter.UserCenterPage
                 Response.Write("<script>alert('两次密码不一致，请重新输入!');</script>");
             }
 
-            int userId = int.Parse(Session["UserSessionId"].ToString());
+            int userId = GetCurrentUserId();
 
             var user = new BLL.Sys_Users().GetModel(userId);
             user.Password = DESEncrypt.Encrypt(txtPwd.Value);

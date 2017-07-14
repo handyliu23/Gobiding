@@ -165,9 +165,9 @@
         <div class="row">
             <div class="col-lg-12" style="font-size: 12px;">
                 <div style="margin-top: 20px; line-height: 40px; height: 50px; font-weight: bold;
-                    border: 1px solid #dcdcdc; border-top: 4px solid orange; padding: 0px 0px 10px 20px;
+                    border: 1px solid #dcdcdc; border-top: 4px solid #428bca; padding: 0px 0px 10px 20px;
                     background-color: #fafafa;">
-                    <span>按条件查询</span> <span style="color: #333; font-weight: normal; float: right; padding-right: 20px;">
+                    <span>招标大厅</span> <span style="color: #333; font-weight: normal; float: right; padding-right: 20px;">
                         符合条件的共有 <font style="color: Orange;">
                             <asp:Label runat="server" ID="lblTotalCount"></asp:Label></font> 记录</span>
                 </div>
@@ -539,6 +539,7 @@
                         $(".listsubbidtindustry li").eq(17).css("margin-left", "100px");
                         $(".listsubbidtindustry li").eq(25).css("margin-left", "100px");
                         $(".listsubbidtindustry li").eq(33).css("margin-left", "100px");
+                        $(".listsubbidtindustry li").eq(41).css("margin-left", "100px");
                     },
                     error: function (msg) {
                         alert(msg);

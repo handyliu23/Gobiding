@@ -26,7 +26,7 @@ CKEDITOR.editorConfig = function( config )
     //文件上传路径
     config.filebrowserUploadUrl = '/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files';  
     //图片上传路径
-    config.filebrowserImageUploadUrl = '/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images';
+    config.filebrowserImageUploadUrl = '/UserCenter/UploadCKImgHandler.ashx';
     //视频上传路径
     config.filebrowserFlashUploadUrl = '/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Flash';
 

@@ -100,7 +100,7 @@
                             <td style="width: 70px;">
                             <a href='/UserCenter/UserCenterPage/Admin/UserEdit.aspx?option=Auth&userId=<%#Eval("Sys_UserId")%>'>
                                         认证</a><br />
-                                <a href='/UserCenter/UserCenterPage/PublishPurchaseOrder.aspx?option=edit&poId=<%#Eval("Sys_UserId")%>'>
+                                <a href='/UserCenter/UserCenterPage/Profile.aspx?userid=<%#Eval("Sys_UserId")%>'>
                                     编辑</a> <br /> <a href='/UserCenter/UserCenterPage/Admin/UserEdit.aspx?option=Delete&userId=<%#Eval("Sys_UserId")%>'>
                                         删除</a>
                                         <BR />

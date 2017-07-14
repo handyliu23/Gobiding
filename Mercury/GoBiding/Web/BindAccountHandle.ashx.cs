@@ -20,6 +20,8 @@ namespace GoBiding.Web
             //新增一个企业
             var cc = new Model.CatchCompany();
             cc.VendorName = companyname;
+            cc.OnCreated = DateTime.Now;
+            cc.CreatedDate = DateTime.Now.ToString();
             cc.Id = new BLL.CatchCompany().Add(cc);
 
             return cc;

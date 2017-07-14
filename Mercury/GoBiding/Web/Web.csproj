@@ -1384,6 +1384,9 @@
     <Compile Include="UserCenter\Index\ucSubCategoryList.ascx.designer.cs">
       <DependentUpon>ucSubCategoryList.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserCenter\UploadCKImgHandler.ashx.cs">
+      <DependentUpon>UploadCKImgHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="UserCenter\UserCenterHeader.Master.cs">
       <DependentUpon>UserCenterHeader.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1844,6 +1847,7 @@
     <Content Include="wap\handlers\addFavourite.ashx" />
     <Content Include="wap\handlers\addSubscribe.ashx" />
     <Content Include="Web.sitemap" />
+    <Content Include="UserCenter\UploadCKImgHandler.ashx" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
