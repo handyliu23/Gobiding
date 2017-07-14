@@ -60,7 +60,7 @@ namespace GoBiding.BLL
 
         public static string RemoveStyle(string content)
         {
-            content = content.Replace("\r\n", "").Replace("\t", "").Replace("</strong>", "").Replace("align=\"center\"", ""); 
+            content = content.Replace("\r\n", "").Replace("\t", "").Replace("</strong>", "").Replace("align=\"center\"", "");
 
             if (content.Contains("<strong"))
                 content = System.Text.RegularExpressions.Regex.Replace(content, @"<strong(.*?)>", "");
@@ -86,7 +86,7 @@ namespace GoBiding.BLL
             if (content.Contains("<img"))
                 content = System.Text.RegularExpressions.Regex.Replace(content, @"<img(.*?)>", "");
 
-            content = content.Replace("&nbsp;", "").Replace("border=1", "").Replace("<br/>","");
+            content = content.Replace("&nbsp;", "").Replace("border=1", "").Replace("<br/>", "");
             return content;
         }
 
@@ -154,6 +154,15 @@ namespace GoBiding.BLL
             var model = new BLL.BidCategorys().GetModel(cId);
             if (model != null)
                 return model.BidCategoryName;
+
+            return "";
+        }
+
+        public static string GetPurcahseCategoryName(int cId)
+        {
+            var model = new BLL.SmartPurchaseOrderCategory().GetModel(cId);
+            if (model != null)
+                return model.PurchaseCategoryName;
 
             return "";
         }

@@ -75,7 +75,7 @@
                                 <asp:Literal runat="server" ID="ltrPublishTime"></asp:Literal>
                             </td>
                             <th>
-                                招标分类
+                                采购分类
                             </th>
                             <td>
                                 <asp:Literal runat="server" ID="ltrCategoryId"></asp:Literal>
@@ -109,7 +109,7 @@
                                 <asp:Literal runat="server" ID="ltrBidAmount"></asp:Literal>
                             </td>
                         </tr>
-                        <%-- <tr>
+                        <%--<tr>
                             <th style="height: 80px;">
                                 关注过的用户
                             </th>
@@ -120,6 +120,15 @@
                                 <img src="/UserCenter/img/avatar2.png" width="55" style="border-radius: 50%; margin-left: 20px;" />
                             </td>
                         </tr>--%>
+                        <tr>
+                            <th style="height: 80px;">
+                            </th>
+                            <td colspan="3" style="text-align: left; padding-left: 20px;">
+                                <br />
+                                <br />
+                                <asp:Image ID="productImage" runat="server" />
+                            </td>
+                        </tr>
                     </table>
                     <div style="color: #333;">
                     </div>
@@ -129,13 +138,14 @@
                         <asp:Literal runat="server" ID="lblContent"></asp:Literal>
                         <span style="font-size: 11px; color: #000; padding-bottom: 20px;">提示:联系买方时请说明从去投标网看到的采购信息</span>
                         <br />
+                        <br />
                         <div class="row">
                             <div class="col-lg-12" style="margin-top: 0px; padding: 0px;">
                                 <div style="width: 100%; padding-top: 10px; float: left;">
                                     <div class="col-lg-12" id="tablecontent">
                                         <asp:ListView runat="server" ID="rptPurchaseOrderList" GroupItemCount="3">
                                             <LayoutTemplate>
-                                                <table id="bidlisttypediv1" style="width: 100%;">
+                                                <table id="bidlisttypediv1" style="width: 100%; border: 1px solid #ececec;">
                                                     <tr runat="server" id="groupplaceholder">
                                                     </tr>
                                                 </table>
@@ -149,7 +159,7 @@
                                             <ItemTemplate>
                                                 <td style="width: 230px; font-family: '微软雅黑'; line-height: 25px; height: 200px; vertical-align: top;
                                                     border: 0px;">
-                                                    <div style="border: 1px solid #ececec; width: 220px; height: 180px; padding: 10px;
+                                                    <div style="border: 0px solid #ececec; width: 220px; height: 180px; padding: 10px;
                                                         font-size: 12px;">
                                                         <table cellpadding="0" cellspacing="0" border="0">
                                                             <tr>
