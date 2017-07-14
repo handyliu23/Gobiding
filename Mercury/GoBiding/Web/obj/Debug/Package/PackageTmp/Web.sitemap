@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-    <siteMapNode url="http://www.gobiding.com/" title="首页"  description="去投标网_中国最大的免费招投标服务平台_在线招标投标服务平台_最新招标信息_让投标变得更简单">
-      <siteMapNode url="http://www.gobiding.com/BidList.aspx" title="招标大厅"  description="去投标网_招标大厅_免费招标采购信息发布平台_地方采购信息服务平台_上海商麓网络科技有限公司_官网" />
-      <siteMapNode url="http://www.gobiding.com/HighSchoolBid.aspx" title="校园招标"  description="全国大学招标采购网,提供全国范围大学职业大学中学的免费招标采购信息" />
-      <siteMapNode url="http://www.gobiding.com/BidNewsList.aspx" title="招标资讯"  description="去投标网_招标资讯_免费招标采购信息_免费招标_采购信息_公开招标_工程招标_上海商麓网络科技有限公司官网" />
-      <siteMapNode url="http://www.gobiding.com/BidCompanyList.aspx" title="招标代理公司"  description="找全国代理招标公司,招标采购,招标公司,招标代理企业,最新招标代理公司就上去投标网" />
-    </siteMapNode>
-</siteMap>

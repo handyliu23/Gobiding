@@ -24,7 +24,7 @@ CKEDITOR.editorConfig = function( config )
     config.filebrowserImageBrowseUrl = '/ckfinder/ckfinder.html?Type=Images';
     config.filebrowserFlashBrowseUrl = '/ckfinder/ckfinder.html?Type=Flash';
     //文件上传路径
-    config.filebrowserUploadUrl = '/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files';  
+    config.filebrowserUploadUrl = '/UserCenter/UploadCKImgHandler.ashx';  
     //图片上传路径
     config.filebrowserImageUploadUrl = '/UserCenter/UploadCKImgHandler.ashx';
     //视频上传路径
@@ -35,9 +35,9 @@ CKEDITOR.editorConfig = function( config )
     [
   ["Source", "-", "Save", "NewPage", "Preview", "-", "Templates"],
   ["Bold", "Italic", "Underline", "Strike", "-", "Subscript", "Superscript"],
-  ["NumberedList", "BulletedList", "-", "Outdent", "Indent", "Blockquote", "CreateDiv"],
+  ["NumberedList", "BulletedList", "-"],
 //  ["JustifyLeft", "JustifyCenter", "JustifyRight", "JustifyBlock"],
-  ["Link", "Unlink", "Anchor", "Copy"],
+  ["Link", "Copy"],
    "/",
   ["Image", "Flash", "Table", "HorizontalRule", "Smiley", "SpecialChar", "PageBreak", "Iframe"],
   ["Styles", "Format", "Font", "FontSize"],
