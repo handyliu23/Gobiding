@@ -37,6 +37,7 @@
                     <th>作者</th>
                     <th>分类</th>
                     <th>Id</th>
+                    <th>浏览量</th>
                     <th>操作</th>
                 </tr>
                 <asp:Repeater runat="server" ID="rptBidList">
@@ -57,6 +58,9 @@
                             </td>
                                <td style="width: 100px;">
                                  <%#Eval("Id")%>
+                            </td>
+                               <td style="width: 100px;">
+                                 <%#Eval("BrowseCount")%>
                             </td>
                          
                             <td style="width: 100px;">

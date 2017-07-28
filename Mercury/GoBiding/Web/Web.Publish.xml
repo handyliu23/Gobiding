@@ -1,58 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
-  <publishProfile publishUrl="C:\Deploy" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="True" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="administrator" savePWD="False" userPWD="" SelectedForPublish="True">
+  <publishProfile publishUrl="C:\Deploy" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="True" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="配置文件1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="administrator" savePWD="False" userPWD="" SelectedForPublish="True">
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/css/iCheck/square/green.png" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="imgs/xuexiao/北京科技大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="imgs/xuexiao/扬州大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/fr.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/pages/tables/simple.html" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="imgs/system/sucai/homepagead.png" publishTime="07/04/2017 17:13:39" />
     <file relUrl="UserCenter/js/plugins/ckeditor/config.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/iCheck/minimal/yellow@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/UserCenterPage/CreatePurchaseOrder.ashx" publishTime="12/23/2016 18:43:02" />
     <file relUrl="UserCenter/css/iCheck/minimal/green@2x.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="robots.txt" publishTime="06/28/2017 18:50:05" />
+    <file relUrl="ckeditor/lang/es.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="wap/Imgs/type_16.png" publishTime="01/02/2017 21:37:16" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/en.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/css/iCheck/flat/yellow.png" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="ckeditor/plugins/wsc/dialogs/ciframe.html" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/css/iCheck/flat/purple.css" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/UserCenterPage/PublishAbortive.aspx" publishTime="12/23/2016 18:02:42" />
     <file relUrl="UserCenter/UserCenterPage/MessageCenter.aspx" publishTime="12/23/2016 01:01:23" />
-    <file relUrl="bin/GoBiding.Web.pdb" publishTime="07/03/2017 18:26:51" />
+    <file relUrl="bin/GoBiding.Web.pdb" publishTime="07/14/2017 13:07:22" />
     <file relUrl="UserCenter/UserCenterPage/CreateTracker.ashx" publishTime="12/17/2016 12:01:48" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/css/iCheck/square/yellow.css" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.threshold.min.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/css/iCheck/square/red@2x.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/fi.js" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="ckeditor/plugins/div/dialogs/div.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/UserCenterPage/CompanyProfile.aspx" publishTime="06/27/2017 14:09:44" />
     <file relUrl="wap/FavouriteList.aspx" publishTime="06/20/2017 00:25:32" />
     <file relUrl="UserCenter/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.css" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="bin/LtpPageControl.dll" publishTime="03/06/2014 18:33:00" />
     <file relUrl="imgs/system/sf-wzba_r1_c7.gif" publishTime="01/08/2017 11:52:22" />
     <file relUrl="imgs/xuexiao/贵州师范大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/css/iCheck/polaris/polaris.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="wap/images/open.jpg" publishTime="02/20/2017 00:14:19" />
+    <file relUrl="UserCenter/js/plugins/flot/jquery.flot.time.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/img/credit/paypal2.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/lang/pt.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="imgs/system/indexbg1.jpg" publishTime="01/09/2017 23:18:54" />
-    <file relUrl="ckeditor/lang/eu.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/img/element/6.jpg" publishTime="06/15/2017 10:40:47" />
     <file relUrl="imgs/system/wx300_300.png" publishTime="06/15/2017 09:31:38" />
     <file relUrl="wap/handlers/addSubscribe.ashx" publishTime="02/25/2017 23:14:33" />
     <file relUrl="UserCenter/css/ionicons.min.css" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="images/tel.png" publishTime="06/15/2017 10:57:28" />
     <file relUrl="UserCenter/css/images/ui-bg_glass_95_fef1ec_1x400.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/js/plugins/misc/modernizr.min.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/css/images/ui-icons_cd0a0a_256x240.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/UserCenterPage/Logout.aspx" publishTime="06/23/2017 14:44:55" />
     <file relUrl="UserCenter/css/iCheck/flat/red.css" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/UserCenterPage/SystemInfo/SpiderList.aspx" publishTime="07/03/2017 09:11:22" />
     <file relUrl="UserCenter/css/iCheck/minimal/green.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/skins/v2/images/mini.gif" publishTime="12/18/2016 00:25:09" />
     <file relUrl="ckeditor/plugins/showblocks/images/block_h2.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/ar.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="imgs/system/sucai/3.png" publishTime="06/27/2017 17:15:42" />
     <file relUrl="UserCenter/css/images/ui-icons_d8e7f3_256x240.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/bootstrap-slider/bootstrap-slider.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/css/iCheck/flat/yellow.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/sparkline/jquery.sparkline.min.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/css/iCheck/line/line.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="CheckCodeHandler.ashx" publishTime="12/18/2016 20:11:04" />
-    <file relUrl="BidNewsDetail.aspx" publishTime="06/29/2017 18:03:20" />
+    <file relUrl="UserCenter/css/ionslider/ion.rangeSlider.skinFlat.css" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/xuexiao/华南师范大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/id.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js" publishTime="12/17/2016 12:01:47" />
@@ -62,12 +63,11 @@
     <file relUrl="bin/OpenSmtp.dll" publishTime="03/06/2014 18:33:02" />
     <file relUrl="BidCompanyList.aspx" publishTime="06/28/2017 13:43:58" />
     <file relUrl="images/weixin.png" publishTime="06/15/2017 10:57:28" />
-    <file relUrl="ckeditor/images/spacer.gif" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/plugins/smiley/images/thumbs_up.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/plugins/xml/plugin.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="ckeditor/skins/kama/images/toolbar_start.gif" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/si.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="bin/CKEditor.NET.dll" publishTime="07/04/2013 13:59:57" />
     <file relUrl="wap/Imgs/bidtype_16.png" publishTime="01/02/2017 22:49:16" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/nl.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/lang/el.js" publishTime="12/18/2016 00:25:07" />
@@ -75,7 +75,7 @@
     <file relUrl="wap/Imgs/area.png" publishTime="12/29/2016 20:07:50" />
     <file relUrl="ckeditor/plugins/tabletools/dialogs/tableCell.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/css/iCheck/flat/grey.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="bin/GoBiding.Model.pdb" publishTime="07/03/2017 17:50:23" />
+    <file relUrl="bin/GoBiding.Model.pdb" publishTime="07/14/2017 13:07:20" />
     <file relUrl="wap/UserControls/Bottom.ascx" publishTime="06/26/2017 15:10:35" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/magicline/images/hidpi/icon.png" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.selection.js" publishTime="12/17/2016 12:01:47" />
@@ -84,31 +84,35 @@
     <file relUrl="UserCenter/css/iCheck/minimal/pink.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/bootstrap.min.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="bin/Microsoft.Web.UI.WebControls.dll" publishTime="03/06/2014 18:32:58" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/wsc/dialogs/tmp.html" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="bin/GoBiding.Model.dll" publishTime="07/03/2017 17:50:23" />
+    <file relUrl="bin/GoBiding.Model.dll" publishTime="07/14/2017 13:07:20" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.image.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/css/iCheck/flat/grey@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="imgs/zhaobiaogongsi/湖北招标.png" publishTime="06/27/2017 09:47:50" />
-    <file relUrl="UserCenter/UserCenterPage/SystemInfo/SpiderList.aspx" publishTime="07/03/2017 09:11:22" />
+    <file relUrl="UserCenter/HighSchool/FirstAlphaList.ascx" publishTime="06/16/2017 13:13:11" />
+    <file relUrl="imgs/xuexiao/郑州大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="ckeditor/plugins/smiley/images/sad_smile.gif" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="ckeditor/lang/en-au.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/lang/ja.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="imgs/ad/m_220.gif" publishTime="06/24/2017 10:46:37" />
+    <file relUrl="UserCenter/css/timepicker/bootstrap-timepicker.css" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/plugins/uicolor/yui/assets/picker_thumb.png" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/js/plugins/flot/jquery.colorhelpers.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/xuexiao/苏州大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="js/npm.js" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/et.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/is.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="WebForm2.aspx" publishTime="07/05/2017 12:01:04" />
     <file relUrl="UserCenter/img/avatar2.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/UserCenterPage/CreateWinBid.ashx" publishTime="12/23/2016 17:39:42" />
     <file relUrl="ckeditor/plugins/templates/templates/default.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="imgs/xuexiao/中国人民大学.png" publishTime="06/15/2017 20:26:52" />
-    <file relUrl="ValidateCode.aspx" publishTime="06/28/2017 16:06:24" />
-    <file relUrl="UserCenter/css/iCheck/minimal/purple.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/images/hidpi/lock.png" publishTime="12/17/2016 12:01:47" />
     <file relUrl="ckeditor/lang/en.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="ckeditor/lang/fi.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/sk.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/dialog.css" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="Regist.ashx" publishTime="12/19/2016 21:15:08" />
     <file relUrl="ckeditor/plugins/styles/styles/default.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/plugins/showblocks/images/block_div.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/lang/lt.js" publishTime="12/18/2016 00:25:07" />
@@ -121,40 +125,38 @@
     <file relUrl="ckeditor/lang/vi.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/datatables/jquery.dataTables.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="ckeditor/skins/office2003/images/sprites.png" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/UserCenterPage/CreateAbortive.ashx" publishTime="12/23/2016 17:39:24" />
     <file relUrl="imgs/system/weixinaccount2.png" publishTime="01/08/2017 01:10:17" />
     <file relUrl="imgs/xuexiao/河南师范大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="ckeditor/plugins/flash/images/placeholder.png" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/ug.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="ckeditor/plugins/adobeair/plugin.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/wsc/dialogs/wsc.css" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/css/iCheck/square/aero.css" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/lang/en-au.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/img/ajax-loader.gif" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/skins/v2/templates.css" publishTime="12/18/2016 00:25:09" />
     <file relUrl="UserCenter/UserCenterPage/FavouriteBids.aspx" publishTime="12/18/2016 13:34:14" />
     <file relUrl="UserCenter/js/plugins/slimScroll/jquery.slimscroll.min.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/img/bootstrap-colorpicker/saturation.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/img/bootstrap-colorpicker/hue-horizontal.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/system/synctime.png" publishTime="06/23/2017 18:14:51" />
     <file relUrl="css/bootstrap-theme.min.css" publishTime="12/17/2016 12:01:48" />
     <file relUrl="ckeditor/plugins/devtools/lang/en.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="imgs/xuexiao/宁夏大学.png" publishTime="06/15/2017 20:26:53" />
+    <file relUrl="UserCenter/css/jQueryUI/images/ui-bg_flat_65_ffffff_40x100.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/system/ad_empty_360.jpg" publishTime="06/20/2017 18:57:03" />
-    <file relUrl="ckeditor/skins/kama/images/dialog_sides.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="ckeditor/contents.css" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/pages/examples/register.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="wap/css/register.css" publishTime="06/21/2017 18:31:21" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/image/images/noimage.png" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/sq.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/iCheck/flat/purple.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/css/iCheck/square/purple.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="ckeditor/lang/pt-br.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/lang/id.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/plugins/link/dialogs/link.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/jqueryKnob/jquery.knob.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/ca.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/misc/html5shiv.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/Index/BidListByCategory2.ascx" publishTime="06/15/2017 15:12:45" />
     <file relUrl="UserCenter/UserControls/UserCenterMenu.ascx" publishTime="12/17/2016 12:01:48" />
+    <file relUrl="UserCenter/js/plugins/misc/jquery.placeholder.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ionslider/ion.rangeSlider.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/font-awesome.css" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/css/iCheck/square/orange@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/plugins/smiley/images/omg_smile.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/et.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/ka.js" publishTime="12/17/2016 12:01:45" />
@@ -162,19 +164,23 @@
     <file relUrl="ckeditor/plugins/forms/dialogs/select.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/he.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/no.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/vi.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="ckeditor/lang/en-ca.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/css/iCheck/square/grey.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/images/close.png" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="imgs/system/sf-wzba_r1_c1.gif" publishTime="01/08/2017 11:52:22" />
     <file relUrl="ckeditor/plugins/forms/dialogs/textfield.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/plugins/uicolor/lang/he.js" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="ckeditor/ckeditor.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/pages/js/raphael-min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/dialog_opera.css" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/datatables/images/sort_desc.png" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/css/jQueryUI/images/animated-overlay.gif" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/lang/sl.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/js/raphael-min.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="imgs/zhaobiaogongsi/招标公司.jpg" publishTime="06/27/2017 09:47:50" />
+    <file relUrl="UserCenter/img/bootstrap-colorpicker/saturation.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/plugins/flash/dialogs/flash.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/UserCenterPage/PublishedBids.aspx" publishTime="12/23/2016 20:54:26" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/cy.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="wap/images/show.png" publishTime="02/20/2017 00:14:19" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/en-gb.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/jquery-ui-1.10.3.js" publishTime="12/17/2016 12:01:45" />
@@ -184,25 +190,31 @@
     <file relUrl="UserCenter/css/iCheck/minimal/orange@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/css/iCheck/minimal/red.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/plugins/showblocks/images/block_address.png" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="ckeditor/plugins/uicolor/dialogs/uicolor.js" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="wap/Imgs/list_16.png" publishTime="01/02/2017 22:03:07" />
     <file relUrl="imgs/ad/clipboard.png" publishTime="01/15/2017 02:50:56" />
+    <file relUrl="ckeditor/themes/default/theme.js" publishTime="12/18/2016 00:25:09" />
     <file relUrl="UserCenter/css/iCheck/flat/yellow@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/lang/hi.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="bin/GoBiding.DAL.dll" publishTime="07/03/2017 17:50:24" />
+    <file relUrl="bin/GoBiding.DAL.dll" publishTime="07/14/2017 13:07:21" />
     <file relUrl="wap/Imgs/404.jpg" publishTime="01/02/2017 23:37:14" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/ms.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/INSTALL.html" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/img/credit/cirrus.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="imgs/xuexiao/河北大学.png" publishTime="06/15/2017 20:26:53" />
+    <file relUrl="ckeditor/lang/gu.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/lang/et.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="BidNewsList.aspx" publishTime="06/30/2017 10:17:58" />
+    <file relUrl="UserCenter/css/jQueryUI/images/ui-icons_ffffff_256x240.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="ckeditor/lang/da.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/skins/office2003/images/dialog_sides.png" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/img/ajax-loader.gif" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.stack.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/wsc/dialogs/wsc.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/el.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="imgs/zhaobiaogongsi/招标公司.jpg" publishTime="06/27/2017 09:47:50" />
     <file relUrl="imgs/xuexiao/天津大学.png" publishTime="06/15/2017 20:26:53" />
+    <file relUrl="bin/MySql.Data.dll" publishTime="03/06/2014 18:33:00" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/eo.js" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="UserCenter/js/plugins/flot/jquery.flot.time.min.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="bin/GoBiding.Common.pdb" publishTime="07/14/2017 13:07:20" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="wap/Imgs/time_16.png" publishTime="01/02/2017 21:46:09" />
     <file relUrl="ckeditor/skins/kama/images/dialog_sides_rtl.png" publishTime="12/18/2016 00:25:08" />
@@ -220,27 +232,24 @@
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/ar.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/img/credit/american-express.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/editor_gecko.css" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/css/iCheck/flat/pink@2x.png" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="wap/images/open.jpg" publishTime="02/20/2017 00:14:19" />
     <file relUrl="imgs/xuexiao/贵州大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.crosshair.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/xuexiao/安徽大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="sitemap.xml" publishTime="07/03/2017 15:01:36" />
     <file relUrl="imgs/xuexiao/西南交通大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="ckeditor/plugins/iframe/dialogs/iframe.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="js/login.js" publishTime="02/20/2017 01:36:53" />
     <file relUrl="UserCenter/css/images/ui-bg_flat_55_fbec88_40x100.png" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="imgs/xuexiao/西北工业大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/css/iCheck/minimal/yellow.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/skins/office2003/icons.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="imgs/system/qq.png" publishTime="06/29/2017 19:33:19" />
     <file relUrl="UserCenter/UserCenterPage/Admin/UserEdit.aspx" publishTime="06/17/2017 21:42:32" />
+    <file relUrl="UserCenter/css/iCheck/square/yellow@2x.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="wap/images/zc-1.jpg" publishTime="02/20/2017 00:14:19" />
     <file relUrl="UserCenter/css/iCheck/all.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/km.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/plugins/placeholder/lang/en.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/images/arrow.png" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/css/iCheck/line/grey.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/pages/js/jquery.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/fo.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/plugins/pastefromword/filter/default.js" publishTime="12/18/2016 00:25:08" />
@@ -250,9 +259,10 @@
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/hr.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="js/jquery-3.1.1.min.js" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/scayt/dialogs/toolbar.css" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="bin/LTP.Accounts.dll" publishTime="03/06/2014 18:33:00" />
     <file relUrl="imgs/xuexiao/长江大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/js/plugins/iCheck/icheck.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="ckeditor/plugins/showblocks/images/block_h4.png" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/img/element/4.jpg" publishTime="06/15/2017 10:40:47" />
     <file relUrl="ckeditor/lang/ko.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/pages/tables/data.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/img/credit/mastercard.png" publishTime="12/17/2016 12:01:45" />
@@ -265,18 +275,15 @@
     <file relUrl="UserCenter/img/element/5.jpg" publishTime="06/15/2017 10:40:47" />
     <file relUrl="ckeditor/plugins/smiley/images/cry_smile.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/plugins/bbcode/plugin.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="ckeditor/plugins/wsc/dialogs/ciframe.html" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/css/images/ui-icons_f9bd01_256x240.png" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/lang/th.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/css/iCheck/square/blue.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/skins/v2/images/dialog_sides.png" publishTime="12/18/2016 00:25:09" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="imgs/xuexiao/深圳大学.png" publishTime="06/15/2017 20:26:53" />
+    <file relUrl="bin/AspNetPager.dll" publishTime="06/08/2015 18:35:28" />
     <file relUrl="ckeditor/plugins/smiley/images/regular_smile.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/lang/th.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/img/avatar04.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/morris/morris.min.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/css/iCheck/square/yellow.css" publishTime="12/17/2016 12:01:45" />
     <file relUrl="js/bootstrap-datetimepicker.js" publishTime="12/18/2016 02:24:31" />
     <file relUrl="ckeditor/lang/is.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/css/iCheck/minimal/grey.css" publishTime="12/17/2016 12:01:44" />
@@ -285,6 +292,7 @@
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/icons.png" publishTime="12/17/2016 12:01:47" />
     <file relUrl="ckeditor/lang/bn.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.navigate.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/css/jQueryUI/images/ui-bg_flat_75_e6e6e6_40x100.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/system/bidlistbg.jpg" publishTime="06/21/2017 18:52:19" />
     <file relUrl="bin/Newtonsoft.Json.dll" publishTime="07/06/2014 17:18:11" />
     <file relUrl="imgs/system/logo_gobiding.jpg" publishTime="12/17/2016 12:01:44" />
@@ -292,10 +300,11 @@
     <file relUrl="bin/IBatisNet.DataMapper.dll" publishTime="03/06/2014 18:33:02" />
     <file relUrl="ckeditor/plugins/find/dialogs/find.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.canvas.min.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/css/jQueryUI/images/ui-bg_flat_65_ffffff_40x100.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="ckeditor/lang/mn.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="ckeditor/ckeditor.asp" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/lang/km.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/plugins/placeholder/dialogs/placeholder.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="imgs/xuexiao/汕头大学.png" publishTime="06/15/2017 20:26:53" />
+    <file relUrl="ckeditor/skins/kama/dialog.css" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/zh.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/lang/nl.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="wap/WeixinInterface.ashx" publishTime="12/28/2016 21:56:40" />
@@ -311,30 +320,28 @@
     <file relUrl="wap/Imgs/category_16.png" publishTime="01/02/2017 21:25:47" />
     <file relUrl="wap/Imgs/subscribelogo.png" publishTime="06/26/2017 13:29:04" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/dialog_ie7.css" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/css/jQueryUI/images/ui-bg_flat_100_e6e7e8_40x100.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="sitemap.xml" publishTime="07/03/2017 15:01:36" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/mk.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/editor_ie7.css" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/img/ajax-loader1.gif" publishTime="12/17/2016 12:01:45" />
     <file relUrl="wap/Imgs/location_16.png" publishTime="01/02/2017 21:23:56" />
     <file relUrl="ckeditor/skins/v2/icons_rtl.png" publishTime="12/18/2016 00:25:09" />
+    <file relUrl="NewsEdit.aspx" publishTime="06/28/2017 16:05:59" />
+    <file relUrl="css/biddetail.css" publishTime="06/16/2017 12:44:35" />
     <file relUrl="ckeditor/lang/hr.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/UserCenterPage/Admin/UserList.aspx" publishTime="06/29/2017 13:49:26" />
+    <file relUrl="UserCenter/UserCenterPage/Admin/UserList.aspx" publishTime="07/12/2017 12:47:11" />
     <file relUrl="css/qqstyle.css" publishTime="06/28/2017 19:22:55" />
     <file relUrl="ckeditor/plugins/templates/dialogs/templates.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/plugins/scayt/dialogs/options.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/LICENSE.html" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="ckeditor/ckeditor_basic_source.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="css/bootstrap.css" publishTime="12/17/2016 12:01:48" />
     <file relUrl="UserCenter/css/jQueryUI/images/ui-bg_flat_0_aaaaaa_40x100.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/lang/gl.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="Web.sitemap" publishTime="06/28/2017 13:31:15" />
-    <file relUrl="imgs/ad/ad_oculus.jpg" publishTime="06/25/2017 20:28:53" />
     <file relUrl="UserCenter/UserCenterPage/CreateBid.ashx" publishTime="12/18/2016 01:32:29" />
-    <file relUrl="wap/Imgs/sub_3.jpg" publishTime="12/29/2016 20:07:50" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/link/images/anchor.png" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/table/dialogs/table.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/xuexiao/新疆大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="UserCenter/css/iCheck/square/pink@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/editor.css" publishTime="12/17/2016 12:01:47" />
     <file relUrl="ckeditor/plugins/forms/dialogs/textarea.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/skins/kama/editor.css" publishTime="12/18/2016 00:25:08" />
@@ -342,48 +349,47 @@
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.time.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="bin/PublicAccount.pdb" publishTime="04/18/2016 17:28:50" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/eo.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/specialchar.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/sq.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/pages/charts/js/raphael-min.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/uk.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="css/calendar.css" publishTime="12/17/2016 12:01:48" />
     <file relUrl="ckeditor/plugins/uicolor/yui/yui.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/plugins/colordialog/dialogs/colordialog.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/UserCenterPage/BrowseHistoryBids.aspx" publishTime="12/23/2016 22:49:08" />
     <file relUrl="ckeditor/plugins/smiley/images/kiss.gif" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="bin/GoBiding.DBUtility.pdb" publishTime="07/03/2017 09:11:22" />
+    <file relUrl="bin/GoBiding.DBUtility.pdb" publishTime="07/14/2017 13:07:20" />
     <file relUrl="UserCenter/pages/UI/buttons.html" publishTime="12/17/2016 12:01:48" />
     <file relUrl="ckeditor/lang/cs.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/styles.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="wap/images/wx.png" publishTime="02/20/2017 00:14:19" />
+    <file relUrl="UserCenter/pages/mailbox.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="css/bootstrap-theme.css" publishTime="12/17/2016 12:01:48" />
+    <file relUrl="UserCenter/UserCenterPage/Admin/CompanyList.aspx" publishTime="07/03/2017 17:57:20" />
     <file relUrl="UserCenter/img/bootstrap-colorpicker/alpha.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/iCheck/minimal/red.css" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="imgs/xuexiao/中山大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="BidDetail.aspx" publishTime="07/03/2017 09:11:22" />
+    <file relUrl="BidDetail.aspx" publishTime="07/04/2017 17:24:47" />
+    <file relUrl="ckeditor/skins/kama/images/toolbar_start.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/css/iCheck/line/orange.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/lang/he.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="ckeditor/lang/ro.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/UserCenterHeader.Master" publishTime="07/03/2017 09:11:22" />
     <file relUrl="UserCenter/css/iCheck/minimal/grey.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/css/images/animated-overlay.gif" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/lang/ka.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/lang/fa.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/magicline/images/icon.png" publishTime="12/17/2016 12:01:46" />
     <file relUrl="oauth/QQLogin.aspx" publishTime="06/17/2017 10:33:53" />
     <file relUrl="UserCenter/css/iCheck/square/_all.css" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/jQueryUI/jquery-ui-1.10.3.custom.css" publishTime="12/17/2016 12:01:45" />
     <file relUrl="bin/Excel.dll" publishTime="03/06/2014 18:32:58" />
-    <file relUrl="ckeditor/plugins/forms/dialogs/radio.js" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/lang/ja.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/xuexiao/常州大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="Web.config" publishTime="07/03/2017 14:12:44" />
+    <file relUrl="Web.config" publishTime="07/11/2017 09:24:13" />
     <file relUrl="UserCenter/css/iCheck/minimal/green.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/css/iCheck/flat/pink.png" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/css/jQueryUI/images/ui-bg_flat_75_ffffff_40x100.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/xuexiao/西南大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="bin/COM.Excel.dll" publishTime="03/06/2014 18:32:56" />
     <file relUrl="UserCenter/img/element/2.png" publishTime="06/15/2017 10:40:47" />
-    <file relUrl="UserCenter/js/plugins/flot/jquery.flot.crosshair.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="imgs/xuexiao/西安理工大学.png" publishTime="06/15/2017 20:26:53" />
+    <file relUrl="UserCenter/js/plugins/daterangepicker/daterangepicker.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/iCheck/minimal/_all.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/plugins/templates/templates/images/template1.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="imgs/system/companybg.jpg" publishTime="06/21/2017 13:51:50" />
@@ -393,14 +399,14 @@
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/bg.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/css/images/ui-bg_glass_85_dfeffc_1x400.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/xuexiao/山西大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="UserCenter/css/iCheck/flat/red.png" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="ckeditor/lang/ro.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="wap/handlers/addFavourite.ashx" publishTime="02/21/2017 01:07:43" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.canvas.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/sr-latn.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/UserCenterPage/GetCityList.ashx" publishTime="12/18/2016 11:21:46" />
     <file relUrl="UserCenter/css/iCheck/flat/grey.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/lang/ar.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/editor_ie.css" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/magicline/images/icon.png" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/ro.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/skins/office2003/images/noimage.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="imgs/news/News_9937b5b2-35f5-45f5-aef4-5c07e58c3447_108_108.png" publishTime="06/22/2017 09:07:04" />
@@ -408,8 +414,7 @@
     <file relUrl="ckeditor/skins/kama/images/noimage.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="imgs/system/print.png" publishTime="06/22/2017 11:39:04" />
     <file relUrl="UserCenter/css/iCheck/minimal/blue.css" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/pages/mailbox.html" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="imgs/zhaobiaogongsi/浙江工程.png" publishTime="06/27/2017 10:02:29" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/fi.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/plugins/table/dialogs/table.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/css/iCheck/line/_all.css" publishTime="12/17/2016 12:01:44" />
@@ -420,7 +425,6 @@
     <file relUrl="js/index/chinamapPath.js" publishTime="01/08/2017 14:50:07" />
     <file relUrl="UserCenter/css/iCheck/line/line@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/pages/examples/lockscreen.html" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/css/iCheck/minimal/grey@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/lang/fr.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/plugins/smiley/images/confused_smile.gif" publishTime="12/18/2016 00:25:08" />
@@ -428,24 +432,22 @@
     <file relUrl="UserCenter/css/jQueryUI/images/ui-icons_454545_256x240.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/AdminLTE/dashboard.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="imgs/ad/ad_xiecheng.jpg" publishTime="06/25/2017 20:16:54" />
-    <file relUrl="imgs/system/sucai/5.png" publishTime="06/27/2017 17:15:42" />
     <file relUrl="ckeditor/plugins/uicolor/yui/assets/picker_mask.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/css/iCheck/flat/red@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/css/iCheck/square/green@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/css/font-awesome.min.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="imgs/system/zhidingTJ.png" publishTime="06/16/2017 10:56:08" />
-    <file relUrl="ckeditor/plugins/iframe/images/placeholder.png" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/ckeditor.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/css/jQueryUI/images/ui-icons_222222_256x240.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/link/dialogs/link.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="Default.aspx" publishTime="07/03/2017 18:08:14" />
+    <file relUrl="Default.aspx" publishTime="07/04/2017 18:41:43" />
     <file relUrl="UserCenter/js/plugins/fullcalendar/fullcalendar.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/iCheck/minimal/minimal.css" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="imgs/system/resizeApi _city.png" publishTime="07/07/2017 13:53:22" />
     <file relUrl="wap/Imgs/sugges_16.png" publishTime="01/02/2017 22:04:52" />
     <file relUrl="UserCenter/css/iCheck/line/pink.css" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="ckeditor/plugins/autogrow/plugin.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/Index/ucSubCategoryList.ascx" publishTime="01/08/2017 14:54:14" />
+    <file relUrl="UserCenter/img/blur-background09.jpg" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/Index/ucSubCategoryList.ascx" publishTime="07/04/2017 17:40:28" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/gl.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/images/ui-bg_glass_75_d0e5f5_1x400.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/misc/respond.min.js" publishTime="12/17/2016 12:01:47" />
@@ -457,18 +459,18 @@
     <file relUrl="imgs/xuexiao/华南农业大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/css/iCheck/line/red.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/plugins/showblocks/images/block_pre.png" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="ckeditor/lang/mn.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/iCheck/minimal/orange.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="ckeditor/lang/zh.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/js/plugins/flot/jquery.flot.crosshair.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="ckeditor/plugins/wsc/dialogs/wsc.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/fakeobjects/images/spacer.gif" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/pages/forms/empty.html" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/css/timepicker/bootstrap-timepicker.css" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/iCheck/flat/yellow.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/css/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/iCheck/line/green.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/css/iCheck/line/aero.css" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="wap/Error.aspx" publishTime="01/09/2017 20:15:52" />
     <file relUrl="ckeditor/skins/v2/images/sprites_ie6.png" publishTime="12/18/2016 00:25:09" />
     <file relUrl="UserCenter/css/iCheck/line/yellow.css" publishTime="12/17/2016 12:01:44" />
@@ -476,43 +478,40 @@
     <file relUrl="wap/Imgs/404_2.jpg" publishTime="01/02/2017 23:40:28" />
     <file relUrl="ckeditor/plugins/templates/templates/images/template3.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.image.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/css/bootstrap.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="bin/System.Data.SQLite.dll" publishTime="03/06/2014 18:33:06" />
     <file relUrl="UserCenter/pages/calendar.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="wap/Logout.aspx" publishTime="02/20/2017 01:26:41" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/css/iCheck/minimal/red@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/no.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="ckeditor/skins/kama/icons.png" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/css/iCheck/polaris/polaris.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="js/thirdplugin.js" publishTime="01/09/2017 20:14:22" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/ru.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="SecurityLogin.ashx" publishTime="12/18/2016 19:59:53" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/hr.js" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="UserCenter/css/jvectormap/jquery-jvectormap-1.2.2.css" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="ckeditor/skins/v2/images/toolbar_start.gif" publishTime="12/18/2016 00:25:09" />
     <file relUrl="imgs/system/weixinaccount.png" publishTime="01/08/2017 01:08:22" />
     <file relUrl="wap/Imgs/key.png" publishTime="12/29/2016 20:07:50" />
     <file relUrl="ckeditor/ckeditor_source.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="logingateway.ashx" publishTime="06/20/2017 11:03:14" />
     <file relUrl="ckeditor/plugins/uicolor/yui/assets/hue_bg.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="imgs/seo/userguide/1.png" publishTime="06/22/2017 13:07:53" />
     <file relUrl="UserCenter/css/iCheck/square/red.css" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="imgs/news/News_f7865285-d769-4b62-a970-a1cfb4f52f5b_80_80.png" publishTime="06/22/2017 09:08:27" />
     <file relUrl="UserCenter/img/bootstrap-colorpicker/alpha-horizontal.png" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="bin/GoBiding.Common.dll" publishTime="07/03/2017 09:11:22" />
+    <file relUrl="bin/GoBiding.Common.dll" publishTime="07/14/2017 13:07:20" />
     <file relUrl="UserCenter/css/iCheck/line/line.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/pages/tables/empty.html" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="ckeditor/plugins/showblocks/images/block_p.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="imgs/xuexiao/兰州理工大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/css/images/ui-icons_2e83ff_256x240.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ForgetPassword.aspx" publishTime="06/28/2017 16:05:14" />
+    <file relUrl="UserCenter/js/raphael-min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/bootstrap-slider/slider.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/th.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="imgs/zhaobiaogongsi/浙江工程.png" publishTime="06/27/2017 10:02:29" />
+    <file relUrl="UserCenter/img/credit/mestro.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/bootstrap-switch.min.css" publishTime="12/18/2016 14:34:58" />
     <file relUrl="UserCenter/css/iCheck/flat/orange@2x.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="ckeditor/lang/fi.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/editor_ie.css" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="ckeditor/images/spacer.gif" publishTime="12/18/2016 00:25:07" />
     <file relUrl="imgs/system/bg.png" publishTime="06/20/2017 18:18:21" />
     <file relUrl="imgs/system/sucai/2.png" publishTime="06/27/2017 17:15:42" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/it.js" publishTime="12/17/2016 12:01:45" />
@@ -520,10 +519,10 @@
     <file relUrl="imgs/system/logo_16_16.png" publishTime="06/21/2017 11:03:14" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/fr.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/plugins/placeholder/plugin.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="bin/CKEditor.NET.dll" publishTime="07/04/2013 13:59:57" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/lang/ku.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/xuexiao/武汉理工大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="ckeditor/skins/office2003/dialog.css" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/clipboard/dialogs/paste.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="imgs/system/resizeApi_news.png" publishTime="07/04/2017 17:53:35" />
+    <file relUrl="imgs/system/sucai/5.png" publishTime="06/27/2017 17:15:42" />
     <file relUrl="UserCenter/js/bootstrap-switch.js" publishTime="12/18/2016 14:30:04" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/vi.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="imgs/system/content_background3.png" publishTime="01/07/2017 20:59:38" />
@@ -532,58 +531,57 @@
     <file relUrl="UserCenter/css/iCheck/minimal/pink.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="imgs/ad/21_10_46_1D9A2C2C.jpg" publishTime="01/15/2017 02:52:10" />
     <file relUrl="ckeditor/plugins/a11yhelp/lang/en.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/img/blur-background09.jpg" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="bin/GoBiding.DAL.pdb" publishTime="07/14/2017 13:07:21" />
     <file relUrl="ckeditor/skins/v2/images/sprites.png" publishTime="12/18/2016 00:25:09" />
     <file relUrl="wap/Imgs/logo.png" publishTime="06/16/2017 19:28:00" />
     <file relUrl="imgs/xuexiao/华中科技大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/es.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/UserCenterPage/SystemInfo/SmartCategoryList.aspx" publishTime="07/03/2017 09:11:22" />
+    <file relUrl="ckeditor/plugins/a11yhelp/lang/he.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/UserCenterPage/SystemInfo/SmartCategoryList.aspx" publishTime="07/04/2017 08:54:39" />
     <file relUrl="UserCenter/pages/empty.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/Index/BidListByCategory3.ascx" publishTime="06/28/2017 18:59:56" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/dialog_ie.css" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="ckeditor/plugins/smiley/images/envelope.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/lang/zh-cn.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/css/iCheck/square/purple.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/lang/fo.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="Login.aspx" publishTime="07/03/2017 09:11:22" />
     <file relUrl="ckeditor/skins/kama/images/mini.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/lt.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/id.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="imgs/xuexiao/南开大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="UserCenter/js/plugins/input-mask/jquery.inputmask.regex.extensions.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/link/dialogs/anchor.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/css/iCheck/flat/aero.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/images/hidpi/refresh.png" publishTime="12/17/2016 12:01:47" />
     <file relUrl="ckeditor/plugins/forms/dialogs/hiddenfield.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/css/iCheck/flat/aero.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/plugins/devtools/plugin.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="imgs/xuexiao/浙江大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="imgs/system/sf-wzba_r1_c1.gif" publishTime="01/08/2017 11:52:22" />
+    <file relUrl="imgs/xuexiao/西安理工大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.threshold.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/scayt/dialogs/options.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="wap/images/zc-3.jpg" publishTime="02/20/2017 00:14:19" />
-    <file relUrl="imgs/ad/m_220.gif" publishTime="06/24/2017 10:46:37" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.symbol.min.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="wap/Imgs/industry.png" publishTime="12/29/2016 20:07:50" />
     <file relUrl="UserCenter/css/iCheck/futurico/futurico.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="HighSchoolListByAlpha.aspx" publishTime="06/28/2017 16:05:35" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/lang/ca.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/system/true.jpg" publishTime="06/20/2017 18:14:22" />
-    <file relUrl="UserCenter/img/bootstrap-colorpicker/hue.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/pages/charts/morris.html" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="BidList.aspx" publishTime="07/03/2017 18:26:48" />
-    <file relUrl="bin/MySql.Data.dll" publishTime="03/06/2014 18:33:00" />
+    <file relUrl="BidList.aspx" publishTime="07/12/2017 13:09:58" />
+    <file relUrl="UserCenter/css/iCheck/minimal/grey@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="imgs/xuexiao/河北师范大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/el.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="ckeditor/plugins/smiley/images/angel_smile.gif" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="imgs/system/sucai/3.png" publishTime="06/27/2017 17:15:42" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/wsc/dialogs/tmpFrameset.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="wap/handlers/waplogin.ashx" publishTime="02/20/2017 00:16:18" />
     <file relUrl="UserCenter/css/iCheck/line/purple.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="wap/wapLogin.aspx" publishTime="06/21/2017 19:24:08" />
+    <file relUrl="ckeditor/plugins/autogrow/plugin.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/skins/office2003/templates.css" publishTime="12/18/2016 00:25:09" />
     <file relUrl="UserCenter/pages/UI/jquery-ui.html" publishTime="12/17/2016 12:01:48" />
     <file relUrl="imgs/xuexiao/湘潭大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/css/iCheck/square/orange.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="Logout.aspx" publishTime="07/03/2017 09:11:22" />
-    <file relUrl="BindAccountHandle.ashx" publishTime="06/22/2017 17:11:23" />
+    <file relUrl="UserCenter/UserCenterPage/PublishedBids.aspx" publishTime="12/23/2016 20:54:26" />
     <file relUrl="UserCenter/img/sprite-skin-nice.png" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="css/index.css" publishTime="06/27/2017 17:22:33" />
+    <file relUrl="css/index.css" publishTime="07/04/2017 16:00:57" />
     <file relUrl="UserCenter/css/datatables/images/sort_both.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="bin/Newtonsoft.Json.pdb" publishTime="07/03/2014 23:52:14" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/da.js" publishTime="12/17/2016 12:01:45" />
@@ -591,27 +589,29 @@
     <file relUrl="ckeditor/skins/kama/icons_rtl.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="imgs/news/News_e51c722c-7033-4e46-876b-5afdf6638a9d_108_108.png" publishTime="06/22/2017 09:08:00" />
     <file relUrl="ckeditor/skins/kama/images/sprites.png" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/css/iCheck/square/pink.css" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/es.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/lang/fr-ca.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/css/iCheck/flat/blue.png" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/css/iCheck/square/aero.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/css/bootstrap-datetimepicker.min.css" publishTime="12/18/2016 14:31:40" />
     <file relUrl="UserCenter/css/datatables/dataTables.bootstrap.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/sl.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/UserCenterPage/PublishPurchaseOrder.aspx" publishTime="06/30/2017 13:03:19" />
     <file relUrl="ckeditor/skins/v2/skin.js" publishTime="12/18/2016 00:25:09" />
+    <file relUrl="BindAccount.aspx" publishTime="07/03/2017 09:11:22" />
     <file relUrl="UserCenter/pages/examples/404.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/flot/excanvas.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/da.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="imgs/xuexiao/云南农业大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/Index.aspx" publishTime="07/03/2017 17:02:55" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/about/dialogs/logo_ckeditor.png" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="imgs/xuexiao/郑州大学.png" publishTime="06/15/2017 20:26:53" />
+    <file relUrl="ckeditor/lang/en-au.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/css/daterangepicker/daterangepicker-bs3.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/en.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/UserCenterPage/Admin/NewsList.aspx" publishTime="06/25/2017 22:00:03" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/pastefromword/filter/default.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="bin/GoBiding.BLL.pdb" publishTime="07/03/2017 17:50:24" />
+    <file relUrl="bin/GoBiding.BLL.pdb" publishTime="07/14/2017 13:07:21" />
     <file relUrl="imgs/system/level.png" publishTime="06/23/2017 18:51:44" />
     <file relUrl="ckeditor/plugins/forms/dialogs/form.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="imgs/seo/userguide/4.png" publishTime="06/22/2017 13:07:44" />
@@ -620,83 +620,79 @@
     <file relUrl="UserCenter/css/iCheck/square/square.css" publishTime="12/17/2016 12:01:45" />
     <file relUrl="WebSpec.config" publishTime="12/23/2016 23:51:41" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/tabletools/dialogs/tableCell.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="ckeditor/plugins/docprops/dialogs/docprops.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="css/bootstrap.min.css" publishTime="12/17/2016 12:01:48" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/images/lock.png" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="imgs/xuexiao/西北工业大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/UserCenterPage/BidTracker.aspx" publishTime="06/15/2017 12:34:45" />
-    <file relUrl="UserCenter/UserCenterPage/Profile.aspx" publishTime="06/29/2017 15:42:46" />
     <file relUrl="ckeditor/plugins/smiley/images/teeth_smile.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/css/images/ui-icons_469bdd_256x240.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/hu.js" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/vi.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="imgs/ad/ad_oculus.jpg" publishTime="06/25/2017 20:28:53" />
     <file relUrl="imgs/xuexiao/西安邮电大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="ckeditor/plugins/ajax/plugin.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="ckeditor/plugins/showblocks/images/block_h6.png" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/pt.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="Global.asax" publishTime="12/17/2016 11:46:17" />
     <file relUrl="imgs/xuexiao/上海交通大学.png" publishTime="06/15/2017 20:26:52" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/pl.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/lang/bg.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/cy.js" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="bin/GoBiding.BLL.dll" publishTime="07/03/2017 17:50:24" />
+    <file relUrl="bin/GoBiding.BLL.dll" publishTime="07/14/2017 13:07:21" />
     <file relUrl="ckeditor/plugins/link/images/anchor.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/css/ionicons.css" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/slimScroll/jquery.slimscroll.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/iCheck/minimal/yellow.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/Index/Top.ascx" publishTime="06/29/2017 13:23:37" />
     <file relUrl="UserCenter/css/iCheck/square/aero@2x.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="bin/GoBiding.DBUtility.dll" publishTime="07/03/2017 09:11:22" />
+    <file relUrl="bin/GoBiding.DBUtility.dll" publishTime="07/14/2017 13:07:20" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/nb.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/UserCenterPage/SystemInfo/LogList.aspx" publishTime="06/21/2017 18:01:06" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/he.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="ckeditor/plugins/pagebreak/images/pagebreak.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/ku.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="BidLaws.aspx" publishTime="06/28/2017 16:04:11" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.selection.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="js/qc_loader.js" publishTime="06/17/2017 09:30:30" />
-    <file relUrl="UserCenter/css/jQueryUI/images/ui-icons_222222_256x240.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/css/iCheck/line/grey.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/colorpicker/bootstrap-colorpicker.min.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="ckeditor/plugins/showblocks/images/block_h1.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="wap/Imgs/weixin.png" publishTime="12/29/2016 20:07:50" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/gu.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/img/element/3.jpg" publishTime="06/15/2017 10:40:47" />
     <file relUrl="ckeditor/plugins/smiley/images/angry_smile.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/de.js" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="ckeditor/plugins/wsc/dialogs/tmpFrameset.html" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/empty.html" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ThirdLogin.aspx" publishTime="07/03/2017 09:11:22" />
     <file relUrl="bin/IBatisNet.Common.dll" publishTime="03/06/2014 18:32:56" />
     <file relUrl="wap/images/wb.png" publishTime="02/20/2017 00:14:19" />
     <file relUrl="wap/Imgs/sub_2.jpg" publishTime="12/29/2016 20:07:50" />
-    <file relUrl="UserCenter/css/jQueryUI/images/animated-overlay.gif" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/css/colorpicker/bootstrap-colorpicker.css" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="imgs/system/sucai/6.png" publishTime="06/27/2017 17:15:42" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/lang/pt-br.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/img/element/1.png" publishTime="06/15/2017 10:40:47" />
     <file relUrl="UserCenter/js/plugins/morris/morris.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/si.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="ckeditor/plugins/showblocks/images/block_h4.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/css/jQueryUI/images/ui-bg_flat_75_ffffff_40x100.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/styles.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="wap/Imgs/sub.jpg" publishTime="12/29/2016 20:07:50" />
+    <file relUrl="UserCenter/css/iCheck/flat/red.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/lang/hu.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/timepicker/bootstrap-timepicker.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="ckeditor/skins/office2003/skin.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/images/lock-open.png" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="ckeditor/skins/kama/images/dialog_sides.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="imgs/system/gobiding_logo.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/skins/kama/skin.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="imgs/xuexiao/兰州大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="ckeditor/plugins/specialchar/dialogs/specialchar.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/dialog.css" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="imgs/system/sucai/6.png" publishTime="06/27/2017 17:15:42" />
     <file relUrl="HighSchoolBid.aspx" publishTime="06/28/2017 17:25:45" />
     <file relUrl="ckeditor/plugins/specialchar/lang/en.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/iCheck/icheck.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/xuexiao/四川大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="ckeditor/ckeditor_basic.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/pages/examples/500.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/system/Connect_logo_1.png" publishTime="12/24/2016 11:04:24" />
     <file relUrl="wap/wapRegist.aspx" publishTime="06/21/2017 18:29:40" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/el.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/system/sucai/1.png" publishTime="06/27/2017 17:15:42" />
-    <file relUrl="ckeditor/lang/no.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/editor_ie8.css" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/fullcalendar/fullcalendar.print.css" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/css/iCheck/square/yellow.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="ckeditor/plugins/iframe/images/placeholder.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/skins/v2/images/noimage.png" publishTime="12/18/2016 00:25:09" />
     <file relUrl="UserCenter/js/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/xuexiao/西安交通大学.png" publishTime="06/15/2017 20:26:53" />
@@ -708,15 +704,14 @@
     <file relUrl="UserCenter/css/iCheck/flat/flat.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/css/fullcalendar/fullcalendar.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/Index/ucBidCategoryList.ascx" publishTime="06/15/2017 15:12:32" />
-    <file relUrl="Province/Index.aspx" publishTime="06/28/2017 18:53:00" />
+    <file relUrl="Province/Index.aspx" publishTime="07/04/2017 19:51:18" />
     <file relUrl="bin/AspNetPager.pdb" publishTime="06/08/2015 18:35:28" />
     <file relUrl="ckeditor/lang/ms.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/js/plugins/input-mask/jquery.inputmask.extensions.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="ckeditor/lang/it.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/plugins/link/dialogs/anchor.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/css/iCheck/square/blue.css" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/clipboard/dialogs/paste.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="wap/Imgs/source_16.png" publishTime="01/02/2017 21:28:21" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/specialchar.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/lang/pt-br.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.errorbars.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/input-mask/phone-codes/readme.txt" publishTime="12/17/2016 12:01:47" />
@@ -726,51 +721,56 @@
     <file relUrl="BidContentSource.aspx" publishTime="06/28/2017 13:44:01" />
     <file relUrl="ckeditor/lang/af.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/css/iCheck/flat/orange.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/css/iCheck/square/aero.png" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="ckeditor/lang/no.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/lang/hi.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="wap/css/common.css" publishTime="02/20/2017 00:14:19" />
     <file relUrl="imgs/seo/userguide/2.png" publishTime="06/22/2017 13:07:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/icons_hidpi.png" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/skins/kama/templates.css" publishTime="12/18/2016 00:25:08" />
     <file relUrl="WebForm1.aspx" publishTime="06/30/2017 19:18:42" />
-    <file relUrl="UserCenter/css/jQueryUI/images/ui-bg_flat_75_e6e6e6_40x100.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/css/iCheck/square/pink.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/img/element/8.jpg" publishTime="06/15/2017 10:40:47" />
     <file relUrl="ckeditor/plugins/clipboard/dialogs/paste.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/zh.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="ckeditor/themes/default/theme.js" publishTime="12/18/2016 00:25:09" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/dialog_iequirks.css" publishTime="12/17/2016 12:01:47" />
     <file relUrl="js/locales/bootstrap-datetimepicker.zh-CN.js" publishTime="12/18/2016 02:24:31" />
     <file relUrl="UserCenter/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/flot/excanvas.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/pages/UI/empty.html" publishTime="12/17/2016 12:01:48" />
+    <file relUrl="ckeditor/plugins/showblocks/images/block_p.png" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.fillbetween.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/UserCenterPage/PublishBid.aspx" publishTime="06/15/2017 10:28:34" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/bs.js" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="ckeditor/plugins/a11yhelp/lang/he.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/img/credit/mestro.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="ckeditor/plugins/smiley/images/envelope.gif" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/pages/UI/general.html" publishTime="12/17/2016 12:01:48" />
+    <file relUrl="ckeditor/skins/kama/icons.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/sv.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="css/bootstrap-datetimepicker.min.css" publishTime="12/18/2016 02:22:01" />
     <file relUrl="UserCenter/img/blur-background08.jpg" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/plugins/forms/images/hiddenfield.gif" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="imgs/xuexiao/河北大学.png" publishTime="06/15/2017 20:26:53" />
+    <file relUrl="ckeditor/plugins/forms/dialogs/radio.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/UserCenterPage/PublishWinBid.aspx" publishTime="06/15/2017 10:29:24" />
     <file relUrl="UserCenter/css/iCheck/minimal/aero@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/pt.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/fullcalendar/fullcalendar.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/de.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="js/index.js" publishTime="06/17/2017 23:29:35" />
     <file relUrl="UserCenter/UserCenterPage/Admin/NewsEdit.aspx" publishTime="07/03/2017 17:25:48" />
-    <file relUrl="wap/images/qq.png" publishTime="02/20/2017 00:14:19" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/lang/ca.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/plugins/pastetext/dialogs/pastetext.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/css/datatables/images/sort_asc_disabled.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/pages/UI/general.html" publishTime="12/17/2016 12:01:48" />
+    <file relUrl="images/tel.png" publishTime="06/15/2017 10:57:28" />
+    <file relUrl="ckeditor/plugins/docprops/plugin.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="ckeditor/plugins/div/dialogs/div.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="Style.css" publishTime="03/06/2014 18:33:02" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/bn.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/timepicker/bootstrap-timepicker.min.css" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="imgs/xuexiao/广东中医药大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/images/hidpi/close.png" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/wsc/dialogs/tmp.html" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="ValidateCode.aspx" publishTime="06/28/2017 16:06:24" />
     <file relUrl="UserCenter/css/iCheck/flat/green.css" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/css/iCheck/minimal/blue.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.categories.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/gl.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/lang/de.js" publishTime="12/18/2016 00:25:07" />
@@ -782,47 +782,48 @@
     <file relUrl="UserCenter/css/iCheck/flat/aero@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="imgs/ad/ad_2.png" publishTime="06/24/2017 11:26:37" />
     <file relUrl="ckeditor/plugins/smiley/images/tounge_smile.gif" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/lang/id.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="Login.aspx" publishTime="07/03/2017 09:11:22" />
     <file relUrl="UserCenter/img/credit/visa.png" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="ckeditor/plugins/smiley/images/lightbulb.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/skins/v2/images/dialog_sides.gif" publishTime="12/18/2016 00:25:09" />
-    <file relUrl="UserCenter/css/iCheck/square/orange@2x.png" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/css/iCheck/square/blue.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="wap/images/logo.png" publishTime="02/20/2017 00:14:19" />
-    <file relUrl="BindAccount.aspx" publishTime="07/03/2017 09:11:22" />
+    <file relUrl="UserCenter/css/iCheck/square/purple.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/pl.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/img/avatar.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/system/3rdlogin/all.png" publishTime="06/20/2017 14:16:17" />
-    <file relUrl="wap/Imgs/industry.png" publishTime="12/29/2016 20:07:50" />
-    <file relUrl="ckeditor/lang/es.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="BidNewsList.aspx" publishTime="07/04/2017 17:24:29" />
+    <file relUrl="ckeditor/skins/v2/images/toolbar_start.gif" publishTime="12/18/2016 00:25:09" />
     <file relUrl="wap/Imgs/bookmark_book.png" publishTime="12/29/2016 20:07:50" />
-    <file relUrl="imgs/xuexiao/北京科技大学.png" publishTime="06/15/2017 20:26:53" />
+    <file relUrl="UserCenter/UserCenterPage/CreateAbortive.ashx" publishTime="12/23/2016 17:39:24" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/es.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/UploadCKImgHandler.ashx" publishTime="07/14/2017 12:43:31" />
     <file relUrl="imgs/zhaobiaogongsi/国信招标.png" publishTime="06/27/2017 09:47:50" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/en.js" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="ckeditor/plugins/forms/dialogs/checkbox.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/js/plugins/misc/modernizr.min.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/lang/th.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/css/iCheck/square/yellow@2x.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="ckeditor/plugins/ajax/plugin.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/pages/charts/flot.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="js/wapredirect.js" publishTime="06/29/2017 08:49:47" />
-    <file relUrl="ckeditor/plugins/image/dialogs/image.js" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="ckeditor/plugins/image/dialogs/image.js" publishTime="07/14/2017 12:39:30" />
     <file relUrl="ckeditor/plugins/forms/dialogs/button.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/css/iCheck/flat/purple@2x.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="ckeditor/skins/office2003/images/dialog_sides.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/js/plugins/datatables/dataTables.bootstrap.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="ckeditor/skins/office2003/images/dialog_sides_rtl.png" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/HighSchool/FirstAlphaList.ascx" publishTime="06/16/2017 13:13:11" />
-    <file relUrl="UserCenter/css/iCheck/flat/aero.png" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="ckeditor/plugins/docprops/dialogs/docprops.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="ckeditor/lang/ca.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="ckeditor/skins/office2003/images/dialog_sides.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/plugins/dialog/dialogDefinition.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/js/jquery.min.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="imgs/ad/ad_xiecheng.jpg" publishTime="06/25/2017 20:16:54" />
     <file relUrl="js/bootstrap.min.js" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/ckeditor.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/xuexiao/浙江工业大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="images/button-custom-qq.gif" publishTime="06/15/2017 10:57:28" />
     <file relUrl="ckeditor/plugins/smiley/images/thumbs_down.gif" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="ckeditor/lang/eu.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/pages/UI/sliders.html" publishTime="12/17/2016 12:01:48" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/lang/hi.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="imgs/xuexiao/中山大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/ja.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/pages/widgets.html" publishTime="12/17/2016 12:01:48" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/sr.js" publishTime="12/17/2016 12:01:46" />
@@ -832,34 +833,35 @@
     <file relUrl="imgs/xuexiao/武汉大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="js/jquery.min.js" publishTime="06/27/2017 16:44:48" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/it.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/css/iCheck/flat/green@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.categories.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="ckeditor/plugins/smiley/images/devil_smile.gif" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="PurchaseOrderDetail.aspx" publishTime="06/30/2017 14:36:51" />
+    <file relUrl="PurchaseOrderDetail.aspx" publishTime="07/14/2017 12:46:01" />
     <file relUrl="oauth/Auth.aspx" publishTime="12/24/2016 11:45:44" />
     <file relUrl="bin/PublicAccount.dll" publishTime="04/18/2016 17:28:50" />
+    <file relUrl="ckeditor/lang/zh.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/plugins/smiley/images/wink_smile.gif" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="bin/GoBiding.Web.dll" publishTime="07/14/2017 13:07:22" />
     <file relUrl="ckeditor/plugins/scayt/dialogs/toolbar.css" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/UserCenterPage/Admin/NewCompany.aspx" publishTime="07/03/2017 17:46:55" />
     <file relUrl="imgs/zhaobiaogongsi/山东招标.gif" publishTime="06/27/2017 09:47:50" />
     <file relUrl="ckeditor/plugins/uicolor/lang/en.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/css/iCheck/square/red.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/img/user.jpg" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/xuexiao/四川医科大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="js/jquery-1.9.1.js" publishTime="06/28/2017 11:00:28" />
     <file relUrl="UserCenter/css/iCheck/polaris/polaris@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/ru.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/xuexiao/南京大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/pages/charts/empty.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/iCheck/flat/blue.css" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/css/iCheck/flat/green@2x.png" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/css/iCheck/flat/aero.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="imgs/system/3rdlogin/WX.png" publishTime="06/20/2017 14:18:42" />
     <file relUrl="UserCenter/css/datatables/images/sort_desc_disabled.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="wap/Subscribe.aspx" publishTime="06/26/2017 15:09:19" />
     <file relUrl="UserCenter/css/bootstrap.min.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="wap/BidDetail.aspx" publishTime="06/24/2017 13:31:55" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.resize.min.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="bin/GoBiding.DAL.pdb" publishTime="07/03/2017 17:50:23" />
+    <file relUrl="UserCenter/css/iCheck/square/pink@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/css/datatables/images/sort_asc.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.resize.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/editor_iequirks.css" publishTime="12/17/2016 12:01:47" />
@@ -868,128 +870,130 @@
     <file relUrl="UserCenter/css/iCheck/minimal/minimal@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/plugins/stylesheetparser/plugin.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/pages/examples/blank.html" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/js/plugins/daterangepicker/daterangepicker.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="imgs/xuexiao/深圳大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/it.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/css/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.colorhelpers.min.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="ckeditor/lang/sr.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="imgs/xuexiao/汕头大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="imgs/system/loginbg.jpg" publishTime="01/10/2017 00:20:40" />
-    <file relUrl="sitemap.txt" publishTime="07/03/2017 15:01:36" />
     <file relUrl="HighSchoolBidList.aspx" publishTime="06/28/2017 18:58:09" />
-    <file relUrl="ckeditor/plugins/pagebreak/images/pagebreak.gif" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/js/plugins/input-mask/jquery.inputmask.regex.extensions.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/system/sf-wzba_r1_c3.gif" publishTime="01/08/2017 11:52:22" />
+    <file relUrl="UserCenter/css/jQueryUI/jquery-ui-1.10.3.custom.min.css" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/iCheck/minimal/minimal.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/plugins/showblocks/images/block_h5.png" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="imgs/xuexiao/海南大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/js/plugins/ckeditor/contents.css" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/iCheck/flat/orange.css" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/link/dialogs/anchor.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/pages/forms/general.html" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/ug.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="bin/LtpPageControl.dll" publishTime="03/06/2014 18:33:00" />
     <file relUrl="ckeditor/skins/office2003/images/mini.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/skins/v2/editor.css" publishTime="12/18/2016 00:25:09" />
     <file relUrl="UserCenter/css/iCheck/flat/flat@2x.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/img/sprite-skin-flat.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/input-mask/jquery.inputmask.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/pages/UI/icons.html" publishTime="12/17/2016 12:01:48" />
     <file relUrl="ServiceList.aspx" publishTime="06/28/2017 16:06:13" />
     <file relUrl="imgs/xuexiao/陕西师范大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="UserCenter/UserCenterPage/SystemInfo/LogList.aspx" publishTime="06/21/2017 18:01:06" />
+    <file relUrl="ckeditor/plugins/adobeair/plugin.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="wap/images/icon_list.png" publishTime="02/20/2017 00:14:19" />
     <file relUrl="UserCenter/css/jQueryUI/images/ui-bg_flat_75_dadada_40x100.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/pages/UI/timeline.html" publishTime="12/17/2016 12:01:48" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/lang/ku.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/css/iCheck/minimal/purple.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/css/iCheck/square/grey.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.stack.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/lang/he.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="js/jquery-1.9.1.js" publishTime="06/28/2017 11:00:28" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/lv.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/css/jQueryUI/images/ui-bg_flat_55_f39c12_40x100.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/img/credit/paypal.png" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="imgs/ad/ad_m_2.gif" publishTime="06/24/2017 19:19:11" />
-    <file relUrl="UserCenter/css/iCheck/minimal/blue.png" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="ckeditor/plugins/iframedialog/plugin.js" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/images/lock-open.png" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/AdminLTE.css" publishTime="12/22/2016 16:04:26" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/wsc/dialogs/ciframe.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/system/logo_320.jpg" publishTime="01/09/2017 23:17:30" />
     <file relUrl="UserCenter/UserCenterPage/PurchaseOrderList.aspx" publishTime="12/23/2016 20:42:33" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/link/images/hidpi/anchor.png" publishTime="12/17/2016 12:01:46" />
     <file relUrl="imgs/xuexiao/太原科技大学.png" publishTime="06/15/2017 20:26:53" />
+    <file relUrl="UserCenter/css/jQueryUI/images/ui-bg_flat_100_e6e7e8_40x100.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/plugins/uicolor/yui/assets/yui.css" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="ckeditor/lang/it.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="Web.sitemap" publishTime="06/28/2017 13:31:15" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/eu.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/ko.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="CompanyBidList.aspx" publishTime="06/30/2017 14:18:08" />
     <file relUrl="ckeditor/skins/v2/images/dialog_sides_rtl.png" publishTime="12/18/2016 00:25:09" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="ckeditor/plugins/smiley/images/angel_smile.gif" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/pages/tables/simple.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/images/ui-icons_6da8d5_256x240.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/iCheck/minimal/aero.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/plugins/wsc/dialogs/wsc.css" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="Regist.ashx" publishTime="12/19/2016 21:15:08" />
+    <file relUrl="ckeditor/plugins/smiley/images/lightbulb.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/plugins/placeholder/placeholder.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/hu.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/en-ca.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/bootstrap.js" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="UserCenter/css/ionslider/ion.rangeSlider.skinFlat.css" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/js/jquery.min.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="wap/Imgs/link_16.png" publishTime="01/02/2017 21:44:53" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/tr.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/system/zwtp.png" publishTime="06/16/2017 16:33:33" />
     <file relUrl="UserCenter/css/colorpicker/bootstrap-colorpicker.min.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/img/blur-background04.jpg" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/iCheck/futurico/futurico@2x.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="ckeditor/config.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="ckeditor/config.js" publishTime="07/14/2017 13:02:43" />
     <file relUrl="imgs/system/biding_logo_blue.jpg" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/lang/bg.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/lang/ja.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/plugins/showblocks/images/block_h3.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="wap/Imgs/sub_3.png" publishTime="12/29/2016 20:07:50" />
     <file relUrl="UserCenter/img/avatar5.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="ckeditor/skins/kama/dialog.css" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="imgs/xuexiao/中国地质大学.png" publishTime="06/15/2017 20:26:52" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/uk.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/js/plugins/input-mask/jquery.inputmask.extensions.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.pie.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="js/bootstrap.js" publishTime="12/17/2016 12:01:44" />
     <file relUrl="Handlers/GetSubIndustryList.ashx" publishTime="06/28/2017 10:43:08" />
     <file relUrl="imgs/xuexiao/西北大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="imgs/xuexiao/重庆大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/lang/bg.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/css/iCheck/futurico/futurico.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/cy.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="images/hoverbtnbg.gif" publishTime="06/15/2017 10:57:28" />
+    <file relUrl="ckeditor/plugins/wsc/dialogs/tmpFrameset.html" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/lang/he.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/lang/sv.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="imgs/seo/userguide/5.png" publishTime="06/22/2017 13:07:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/dialog/dialogDefinition.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="js/index.js" publishTime="06/17/2017 23:29:35" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/images/arrow.png" publishTime="12/17/2016 12:01:47" />
     <file relUrl="ckeditor/plugins/about/dialogs/about.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/css/images/ui-bg_flat_0_aaaaaa_40x100.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="wap/Imgs/history_16.png" publishTime="01/02/2017 22:03:07" />
     <file relUrl="UserCenter/css/jQueryUI/images/ui-icons_888888_256x240.png" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="wap/Imgs/list_16.png" publishTime="01/02/2017 22:03:07" />
+    <file relUrl="wap/Imgs/sub_3.jpg" publishTime="12/29/2016 20:07:50" />
     <file relUrl="UserCenter/pages/examples/invoice.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/xuexiao/浙江师范大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="ckeditor/lang/ru.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/sl.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/js/plugins/datatables/dataTables.bootstrap.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="wap/css/login.css" publishTime="02/20/2017 00:14:19" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/images/hidpi/close.png" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/css/iCheck/square/red.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/uk.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="imgs/ad/ad_zhaoshang.png" publishTime="06/25/2017 20:39:19" />
     <file relUrl="imgs/system/sucai/4.png" publishTime="06/27/2017 17:15:42" />
-    <file relUrl="bin/AspNetPager.dll" publishTime="06/08/2015 18:35:28" />
+    <file relUrl="imgs/news/News_f7865285-d769-4b62-a970-a1cfb4f52f5b_80_80.png" publishTime="06/22/2017 09:08:27" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/zh-cn.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/sq.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/pages/forms/general.html" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/images/ui-bg_inset-hard_100_fcfdfd_1x100.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/xuexiao/暨南大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="bin/GoBiding.Web.dll" publishTime="07/03/2017 18:26:51" />
+    <file relUrl="UserCenter/img/bootstrap-colorpicker/hue.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="js/index/raphael.js" publishTime="01/08/2017 00:36:44" />
-    <file relUrl="UserCenter/js/plugins/misc/jquery.ba-resize.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/css/iCheck/square/purple@2x.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/nl.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/UserCenterPage/AspNetPager.master" publishTime="12/17/2016 22:44:27" />
+    <file relUrl="UserCenter/Index/Bottom.ascx" publishTime="07/04/2017 17:31:53" />
     <file relUrl="UserCenter/js/plugins/colorpicker/bootstrap-colorpicker.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/de.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/images/hidpi/lock-open.png" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="ckeditor/lang/ca.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/plugins/smiley/images/embaressed_smile.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/pages/examples/login.html" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/css/iCheck/square/yellow.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/plugins/tableresize/plugin.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="css/bootstrap.css" publishTime="12/17/2016 12:01:48" />
+    <file relUrl="imgs/xuexiao/宁夏大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/plugins/uicolor/yui/assets/hue_thumb.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/css/iCheck/minimal/orange.css" publishTime="12/17/2016 12:01:44" />
@@ -997,22 +1001,22 @@
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.fillbetween.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="ckeditor/skins/v2/dialog.css" publishTime="12/18/2016 00:25:09" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/mn.js" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="ckeditor/plugins/uicolor/dialogs/uicolor.js" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="ckeditor/skins/office2003/dialog.css" publishTime="12/18/2016 00:25:08" />
     <file relUrl="sitemap.html" publishTime="07/03/2017 15:01:36" />
     <file relUrl="UserCenter/Index/BidListByCategory.ascx" publishTime="06/15/2017 15:12:39" />
     <file relUrl="ckeditor/lang/_translationstatus.txt" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/img/avatar3.png" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="UserCenter/css/jQueryUI/images/ui-icons_ffffff_256x240.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/css/bootstrap.css" publishTime="12/17/2016 12:01:44" />
     <file relUrl="ckeditor/skins/office2003/editor.css" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/lang/tr.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="bin/LTP.Accounts.dll" publishTime="03/06/2014 18:33:00" />
-    <file relUrl="ckeditor/contents.css" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/UserCenterPage/PublishAbortive.aspx" publishTime="12/23/2016 18:02:42" />
+    <file relUrl="UserCenter/Index/ucBidCategoryList.ascx" publishTime="07/04/2017 16:18:36" />
     <file relUrl="ckeditor/lang/sr-latn.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/plugins/about/dialogs/logo_ckeditor.png" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/sparkline/jquery.sparkline.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/xuexiao/合肥工业大学.png" publishTime="06/15/2017 20:26:53" />
-    <file relUrl="ckeditor/lang/da.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/UserCenterPage/Admin/CompanyList.aspx" publishTime="07/03/2017 17:57:20" />
+    <file relUrl="sitemap.txt" publishTime="07/03/2017 15:01:36" />
+    <file relUrl="UserCenter/css/datatables/images/sort_asc_disabled.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/js/plugins/ckeditor/build-config.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/css/iCheck/minimal/blue@2x.png" publishTime="12/17/2016 12:01:44" />
@@ -1021,38 +1025,39 @@
     <file relUrl="UserCenter/js/plugins/timepicker/bootstrap-timepicker.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="css/bidlist.css" publishTime="07/03/2017 09:11:22" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/about/dialogs/about.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/UserCenterPage/CreateWinBid.ashx" publishTime="12/23/2016 17:39:42" />
-    <file relUrl="bin/GoBiding.Common.pdb" publishTime="07/03/2017 09:11:22" />
+    <file relUrl="ckeditor/ckeditor_basic_source.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/dialog_ie8.css" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="ckeditor/CHANGES.html" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/icons_hidpi.png" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/Index/BidListBySchool.ascx" publishTime="06/29/2017 09:55:11" />
     <file relUrl="wap/images/bj.png" publishTime="02/20/2017 00:14:19" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/image/dialogs/image.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="css/biddetail.css" publishTime="06/16/2017 12:44:35" />
-    <file relUrl="UserCenter/css/iCheck/polaris/polaris.css" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="robots.txt" publishTime="06/28/2017 18:50:05" />
+    <file relUrl="ckeditor/plugins/forms/dialogs/checkbox.js" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/plugins/uicolor/uicolor.gif" publishTime="12/18/2016 00:25:08" />
     <file relUrl="ckeditor/skins/kama/images/dialog_sides.gif" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="ckeditor/lang/pt-br.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/km.js" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/de.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/js/plugins/flot/jquery.colorhelpers.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/pages/UI/icons.html" publishTime="12/17/2016 12:01:48" />
+    <file relUrl="wap/images/qq.png" publishTime="02/20/2017 00:14:19" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="UserCenter/css/jQueryUI/jquery-ui-1.10.3.custom.min.css" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="ckeditor/plugins/showblocks/images/block_h6.png" publishTime="12/18/2016 00:25:08" />
     <file relUrl="UserCenter/css/images/ui-icons_217bc0_256x240.png" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/css/iCheck/minimal/pink@2x.png" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/css/images/ui-bg_inset-hard_100_f5f8f9_1x100.png" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="BidNewsDetail.aspx" publishTime="06/29/2017 18:03:20" />
     <file relUrl="UserCenter/js/plugins/ckeditor/adapters/jquery.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="ckeditor/CHANGES.html" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/si.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/tr.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="ckeditor/ckeditor.asp" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="ckeditor/lang/sr.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="js/jquery-1.7.js" publishTime="06/27/2017 16:51:58" />
+    <file relUrl="images/hoverbtnbg.gif" publishTime="06/15/2017 10:57:28" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="bin/PublicLibrary.dll" publishTime="04/18/2016 17:28:50" />
-    <file relUrl="UserCenter/img/element/4.jpg" publishTime="06/15/2017 10:40:47" />
+    <file relUrl="UserCenter/UserCenterPage/Profile.aspx" publishTime="06/29/2017 15:42:46" />
     <file relUrl="UserCenter/css/iCheck/flat/green.png" publishTime="12/17/2016 12:01:44" />
     <file relUrl="UserCenter/UserCenterPage/SystemInfo/SechduleList.aspx" publishTime="06/29/2017 11:33:59" />
-    <file relUrl="logingateway.ashx" publishTime="06/20/2017 11:03:14" />
+    <file relUrl="wap/css/login.css" publishTime="02/20/2017 00:14:19" />
     <file relUrl="wap/HistoryList.aspx" publishTime="06/20/2017 00:25:39" />
     <file relUrl="UserCenter/pages/charts/js/jquery.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/system/3rdlogin/qq.png" publishTime="06/20/2017 14:18:42" />
@@ -1065,36 +1070,37 @@
     <file relUrl="imgs/system/bg.jpg" publishTime="06/27/2017 17:13:00" />
     <file relUrl="imgs/ad/ad_oculus_2.jpg" publishTime="06/25/2017 20:29:58" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="ckeditor/plugins/showblocks/images/block_h1.png" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/pt.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="UserCenter/js/plugins/flot/jquery.flot.symbol.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/pages/UI/empty.html" publishTime="12/17/2016 12:01:48" />
     <file relUrl="UserCenter/js/plugins/input-mask/jquery.inputmask.numeric.extensions.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/pages/examples/500.html" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="imgs/ad/ad_m_2.gif" publishTime="06/24/2017 19:19:11" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/lv.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="ckeditor/lang/sk.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="ckeditor/lang/nb.js" publishTime="12/18/2016 00:25:07" />
     <file relUrl="imgs/ad/ad_jinrong.jpg" publishTime="06/25/2017 20:22:42" />
-    <file relUrl="ckeditor/ckeditor.js" publishTime="12/18/2016 00:25:07" />
-    <file relUrl="UserCenter/css/images/ui-icons_cd0a0a_256x240.png" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/dialog_ie8.css" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/lang/fr-ca.js" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="UserCenter/js/plugins/misc/jquery.placeholder.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="wap/Suggest.aspx" publishTime="06/20/2017 00:20:06" />
-    <file relUrl="UserCenter/css/iCheck/square/red@2x.png" publishTime="12/17/2016 12:01:45" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/wsc/dialogs/wsc_ie.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="UserCenter/css/iCheck/line/line.css" publishTime="12/17/2016 12:01:44" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/no.js" publishTime="12/17/2016 12:01:46" />
     <file relUrl="ckeditor/plugins/liststyle/dialogs/liststyle.js" publishTime="12/18/2016 00:25:08" />
-    <file relUrl="NewsEdit.aspx" publishTime="06/28/2017 16:05:59" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/el.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="BindAccountHandle.ashx" publishTime="06/22/2017 17:11:23" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/lang/fr-ca.js" publishTime="12/17/2016 12:01:45" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/skins/moono/images/lock.png" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="wap/Suggest.aspx" publishTime="06/20/2017 00:20:06" />
+    <file relUrl="UserCenter/css/iCheck/square/aero.css" publishTime="12/17/2016 12:01:44" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/wsc/dialogs/wsc_ie.js" publishTime="12/17/2016 12:01:47" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="UserCenter/Index/BidListBySchool.ascx" publishTime="06/29/2017 09:55:11" />
+    <file relUrl="imgs/xuexiao/中国地质大学.png" publishTime="06/15/2017 20:26:52" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/lang/en-au.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/lang/fa.js" publishTime="12/17/2016 12:01:45" />
     <file relUrl="imgs/seo/userguide/3.png" publishTime="06/22/2017 13:07:44" />
     <file relUrl="UserCenter/UserCenterPage/MessageDetail.aspx" publishTime="12/23/2016 20:41:34" />
-    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/ca.js" publishTime="12/17/2016 12:01:46" />
-    <file relUrl="ckeditor/lang/gu.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/js/plugins/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js" publishTime="12/17/2016 12:01:46" />
+    <file relUrl="imgs/xuexiao/广东中医药大学.png" publishTime="06/15/2017 20:26:53" />
     <file relUrl="UserCenter/css/morris/morris.css" publishTime="12/17/2016 12:01:45" />
     <file relUrl="UserCenter/js/plugins/ckeditor/plugins/specialchar/dialogs/lang/th.js" publishTime="12/17/2016 12:01:47" />
-    <file relUrl="ckeditor/plugins/docprops/plugin.js" publishTime="12/18/2016 00:25:07" />
+    <file relUrl="UserCenter/js/plugins/misc/jquery.ba-resize.min.js" publishTime="12/17/2016 12:01:47" />
     <file relUrl="imgs/system/smalllogo.png" publishTime="06/22/2017 09:08:27" />
     <file relUrl="imgs/system/3rdlogin/xl.png" publishTime="06/20/2017 16:36:07" />
-    <file relUrl="ckeditor/plugins/iframedialog/plugin.js" publishTime="12/18/2016 00:25:08" />
+    <file relUrl="UserCenter/css/jvectormap/jquery-jvectormap-1.2.2.css" publishTime="12/17/2016 12:01:45" />
   </publishProfile>
 </publishData>

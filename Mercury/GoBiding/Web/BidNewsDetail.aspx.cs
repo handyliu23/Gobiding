@@ -25,7 +25,7 @@ namespace GoBiding.Web
 
         public void Bind()
         {
-
+            BLL.DynamicNews dnBLL = new BLL.DynamicNews();
             string sql = @"
     select top 10 * from DynamicNews n inner join DynamicNewsType t on n.DynamicNewsTypeId = t.Id where DynamicNewsTypeId <> 1 order by 1 desc
 ";
@@ -36,7 +36,7 @@ namespace GoBiding.Web
             if(Request.QueryString["NewsId"] != null)
             {
                 int newId = int.Parse(Request.QueryString["NewsId"]);
-                var newInfo = new BLL.DynamicNews().GetModel(newId);
+                var newInfo = dnBLL.GetModel(newId);
                 ltrContent.Text = newInfo.Content;
                 ltrTitle.Text = newInfo.NewsTitle;
                 ltrKeys.Text = newInfo.Keywords;
@@ -56,6 +56,9 @@ namespace GoBiding.Web
                 keywords.Name = "keywords";
                 keywords.Content = strSeoKey;
                 Page.Header.Controls.Add(keywords);
+
+                newInfo.BrowseCount++;
+                dnBLL.Update(newInfo);
 
             }
         }
